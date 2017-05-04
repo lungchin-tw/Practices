@@ -1,0 +1,2 @@
+# Practices
+store practices projects
