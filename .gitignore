@@ -1,0 +1,5 @@
+*.o
+*.tgz
+*.patch
+*.gz
+*.bk
