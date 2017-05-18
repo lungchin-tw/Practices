@@ -1,0 +1,4 @@
+div { margin: 10px; text-align: center; background-color: coral;}
+img.apple-icon { margin: 10p; border: thick solid gray; padding: 20px; background-color: yellow; }
+p#google-style { text-align: center; margin: 10px gray; border: 20px thick blue; padding: 30px; ;background-color: green; }
+#video-style { position: relative; top: 100px; left: 100px; }
