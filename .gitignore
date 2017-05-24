@@ -3,3 +3,4 @@
 *.patch
 *.gz
 *.bk
+VisualStudioCodeCPP/build/**
