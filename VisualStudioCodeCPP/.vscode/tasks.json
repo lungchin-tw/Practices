@@ -1,0 +1,58 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "sh",
+    "isShellCommand": true,
+    "args": [ "-c" ],
+    "showOutput": "always",
+    "options": { "cwd": "${workspaceRoot}/build" },
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "cmake",
+            "args": [ "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug .." ]
+        },
+        {
+            "taskName": "make",
+            "args": [ "make VERBOSE=1 -j 8" ],
+            "isBuildCommand": true
+        },
+        {
+            "taskName": "clean",
+            "args": [ "make clean VERBOSE=1" ],
+            "isBuildCommand": true
+        },
+        {
+            "taskName": "run",
+            "args": [ "./helloworld" ]
+        }
+    ]
+
+    /*"osx": {
+        "command": "clang++",
+        "args": [
+            "-Wall",
+            "helloworld.cpp",
+            "-v"
+        ],
+        "isShellCommand": true,
+        "showOutput": "always",
+        "problemMatcher": {
+            "owner": "cpp",
+            "fileLocation": [
+                "relative",
+                "${workspaceRoot}"
+            ],
+            "pattern": {
+                "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "severity": 4,
+                "message": 5
+            }
+        }
+    }*/
+    
+}

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.8.1 FATAL_ERROR)
+
+project("helloworld")
+
+add_executable(helloworld helloworld.cpp)
