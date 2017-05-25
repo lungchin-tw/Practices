@@ -1,0 +1,56 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "cmake poco practice",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/build" },
+            "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug .." ]
+        },
+        {
+            "taskName": "clean poco practice",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/build" },
+            "args": [ "-c", "make clean VERBOSE=1" ]
+        },
+        {
+            "taskName": "build poco practice",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/build" },
+            "args": [ "-c", "make VERBOSE=1 -j 8" ]
+        },
+        {
+            "taskName": "run poco practice",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/build" },
+            "args": [ "-c", "./hello-poco" ]
+        },
+        {
+            "taskName": "configure poco library",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/poco-1.7.8p2" },
+            "args": [ "-c", "./configure" ]
+        },
+        {
+            "taskName": "make poco library",
+            "command": "sh",
+            "isShellCommand": true,
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/poco-1.7.8p2" },
+            "args": [ "-c", "make -j 8" ]
+        }
+    ]
+}
