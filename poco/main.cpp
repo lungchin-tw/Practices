@@ -1,4 +1,5 @@
 
+
 #include <iostream>
 #include "Poco/Environment.h"
 #include "Poco/DateTime.h"
@@ -71,8 +72,6 @@ int main()
     std::cout << "Local Date Time:" << datetimestr << std::endl;
 
     std::cout << "=======================================" << std::endl;
-
-    
 
     return 0;
 }
