@@ -1,8 +1,15 @@
 {
-    "configurations":[
+    "configurations": [
         {
             "name": "Mac",
-            "includePath":["/usr/local/include/Poco"]
+            "includePath": [
+                "/usr/local/include/Poco"
+            ],
+            "browse": {
+                "path": [
+                    "/usr/local/include/Poco"
+                ]
+            }
         }
     ]
 }
