@@ -8,6 +8,8 @@
 #include "Poco/DateTimeFormat.h"
 #include "Poco/DateTimeFormatter.h"
 #include "Poco/Timezone.h"
+#include "Poco/Path.h"
+
 
 using namespace Poco;
 
@@ -71,7 +73,11 @@ int main()
     datetimestr = DateTimeFormatter::format( local_now, DateTimeFormat::SORTABLE_FORMAT );
     std::cout << "Local Date Time:" << datetimestr << std::endl;
 
-    std::cout << "=======================================" << std::endl;
+    std::cout << "============== Application Info ================" << std::endl;
+    std::cout << "Current Working Directory:" << Path::current() << std::endl;
+    std::cout << "User's Home Directory:" << Path::home() << std::endl;
+    std::cout << "System's Temporary Directory:" << Path::temp() << std::endl;
+    std::cout << "System's Null Directory:" << Path::null() << std::endl;
 
     return 0;
 }
