@@ -3,12 +3,14 @@
         {
             "name": "Mac",
             "includePath": [
+                "./src",
                 "/usr/include/",
                 "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
                 "/usr/local/include/Poco"
             ],
             "browse": {
                 "path": [
+                    "./src",
                     "/usr/include/",
                     "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
                     "/usr/local/include/Poco"

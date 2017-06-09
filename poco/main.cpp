@@ -9,7 +9,7 @@
 #include "Poco/DateTimeFormatter.h"
 #include "Poco/Timezone.h"
 #include "Poco/Path.h"
-
+#include "src/PocoStream.h"
 
 using namespace Poco;
 
@@ -78,6 +78,8 @@ int main()
     std::cout << "User's Home Directory:" << Path::home() << std::endl;
     std::cout << "System's Temporary Directory:" << Path::temp() << std::endl;
     std::cout << "System's Null Directory:" << Path::null() << std::endl;
+
+    pocoStreamPractice();
 
     return 0;
 }

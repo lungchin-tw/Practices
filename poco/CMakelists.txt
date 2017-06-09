@@ -1,6 +1,12 @@
 cmake_minimum_required(VERSION 3.8.1 FATAL_ERROR)
 
-project("hello-poco")
 
-add_executable(hello-poco main.cpp)
-target_link_libraries(hello-poco PocoFoundation)
+
+set( PROJECT hello-poco )
+set( SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp )
+
+project( ${PROJECT} CXX )
+file( GLOB_RECURSE SRC_FILES main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp )
+
+add_executable( ${PROJECT} ${SRC_FILES} )
+target_link_libraries( ${PROJECT} PocoFoundation)
