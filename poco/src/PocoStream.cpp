@@ -1,3 +1,6 @@
+/*
+** Copyright SOFTSTAR ENTERTAINMENT INC. All Rights Reserved.
+*/
 
 #include <iostream>
 #include <fstream>

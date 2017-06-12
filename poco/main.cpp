@@ -1,4 +1,6 @@
-
+/*
+** Copyright SOFTSTAR ENTERTAINMENT INC. All Rights Reserved.
+*/
 
 #include <iostream>
 #include "Poco/Environment.h"
@@ -10,8 +12,13 @@
 #include "Poco/Timezone.h"
 #include "Poco/Path.h"
 #include "src/PocoStream.h"
+#include "src/PocoLogging.h"
+#include "src/PocoSharedLibrary.h"
+#include "src/PocoThread.h"
+
 
 using namespace Poco;
+
 
 int main()
 {
@@ -82,6 +89,12 @@ int main()
     pocoStreamPractice();
 
     std::cout << std::endl << "===========================================================" << std::endl;
+
+    pocoLoggingPractice();
+
+    pocoSharedLibraryPractice();
+
+    pocoThreadPractice();
 
     return 0;
 }

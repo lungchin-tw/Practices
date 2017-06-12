@@ -4,4 +4,4 @@
 
 #pragma once
 
-void pocoStreamPractice();
+void pocoThreadPractice();
