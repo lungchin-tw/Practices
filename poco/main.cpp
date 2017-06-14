@@ -15,6 +15,7 @@
 #include "src/PocoLogging.h"
 #include "src/PocoSharedLibrary.h"
 #include "src/PocoThread.h"
+#include "src/PocoNetwork.h"
 
 
 using namespace Poco;
@@ -95,6 +96,8 @@ int main()
     pocoSharedLibraryPractice();
 
     pocoThreadPractice();
+
+    pocoNetworkPractice();
 
     return 0;
 }

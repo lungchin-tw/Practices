@@ -8,4 +8,4 @@ project( ${PROJECT} CXX )
 file( GLOB_RECURSE SRC_FILES main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp )
 
 add_executable( ${PROJECT} ${SRC_FILES} )
-target_link_libraries( ${PROJECT} PocoFoundation)
+target_link_libraries( ${PROJECT} PocoFoundation PocoNet)

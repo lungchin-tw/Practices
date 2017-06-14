@@ -4,6 +4,7 @@
 
 #include <iostream>
 
+#include "PocoThread.h"
 #include "Poco/Thread.h"
 #include "Poco/ThreadPool.h"
 #include "Poco/ThreadLocal.h"

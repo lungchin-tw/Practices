@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "Poco/SharedLibrary.h"
+#include "PocoSharedLibrary.h"
 
 void pocoSharedLibraryPractice()
 {
