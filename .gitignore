@@ -6,3 +6,4 @@
 VisualStudioCodeCPP/build/**
 poco/poco-1.7.8p2/**
 poco/build/**
+CMake/build

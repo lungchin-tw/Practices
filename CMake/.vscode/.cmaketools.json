@@ -1,0 +1,28 @@
+{
+  "variant": {
+    "label": "Debug",
+    "keywordSettings": {
+      "buildType": "debug"
+    },
+    "description": "Emit debug information without performing optimizations"
+  },
+  "activeEnvironments": [],
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Debug",
+        "projects": [
+          {
+            "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build",
+            "name": "CMakePractice",
+            "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake",
+            "targets": []
+          }
+        ]
+      }
+    ],
+    "cookie": "0.2276633003394133",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
+}
