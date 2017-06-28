@@ -1,21 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Mac",
-            "includePath": [
-                "{workspaceRoot}/src",
-                "/usr/include/",
-                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-                "/usr/local/include/Poco"
-            ],
+            "name": "null",
+            "includePath": [],
+            "defines": [],
             "browse": {
-                "path": [
-                    "{workspaceRoot}/src",
-                    "/usr/include/",
-                    "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1",
-                    "/usr/local/include/Poco"
-                ]
-            }
+                "path": [],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "intelliSenseMode": "clang-x64"
         }
     ]
 }

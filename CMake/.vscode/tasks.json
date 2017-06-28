@@ -1,0 +1,16 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "cmake configure",
+            "command": "sh",
+            "suppressTaskName": true,
+            "options": { "cwd": "${workspaceRoot}/build" },
+            "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug .." ]
+        }
+    ]
+}
