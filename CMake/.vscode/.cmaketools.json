@@ -16,12 +16,74 @@
             "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build",
             "name": "CMakePractice",
             "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake",
-            "targets": []
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/src/CMakePracticeExe"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "CMakePracticeExe",
+                "linkLanguageFlags": "-g",
+                "linkerLanguage": "CXX",
+                "name": "CMakePracticeExe",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
+                "type": "EXECUTABLE"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src",
+            "name": "CMakePracticeExe",
+            "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/src/CMakePracticeExe"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "CMakePracticeExe",
+                "linkLanguageFlags": "-g",
+                "linkerLanguage": "CXX",
+                "name": "CMakePracticeExe",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
+                "type": "EXECUTABLE"
+              }
+            ]
           }
         ]
       }
     ],
-    "cookie": "0.9765681002863984",
+    "cookie": "0.7291541424291614",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
