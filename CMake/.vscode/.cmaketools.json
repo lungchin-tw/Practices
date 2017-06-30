@@ -39,10 +39,46 @@
                 ],
                 "fullName": "CMakePracticeExe",
                 "linkLanguageFlags": "-g",
+                "linkLibraries": "TestLib/libTestLib.a",
                 "linkerLanguage": "CXX",
                 "name": "CMakePracticeExe",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
                 "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib/libTestLib.a"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc/TestLib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "TestLib.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "../../inc/TestLib/TestLib.h"
+                    ]
+                  }
+                ],
+                "fullName": "libTestLib.a",
+                "linkerLanguage": "CXX",
+                "name": "TestLib",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
+                "type": "STATIC_LIBRARY"
               }
             ]
           },
@@ -73,17 +109,95 @@
                 ],
                 "fullName": "CMakePracticeExe",
                 "linkLanguageFlags": "-g",
+                "linkLibraries": "TestLib/libTestLib.a",
                 "linkerLanguage": "CXX",
                 "name": "CMakePracticeExe",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
                 "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib/libTestLib.a"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc/TestLib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "TestLib.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "../../inc/TestLib/TestLib.h"
+                    ]
+                  }
+                ],
+                "fullName": "libTestLib.a",
+                "linkerLanguage": "CXX",
+                "name": "TestLib",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
+                "type": "STATIC_LIBRARY"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib",
+            "name": "TestLib",
+            "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib/libTestLib.a"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/src/TestLib",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g   -std=gnu++11",
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc/TestLib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "TestLib.cpp"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "../../inc/TestLib/TestLib.h"
+                    ]
+                  }
+                ],
+                "fullName": "libTestLib.a",
+                "linkerLanguage": "CXX",
+                "name": "TestLib",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
+                "type": "STATIC_LIBRARY"
               }
             ]
           }
         ]
       }
     ],
-    "cookie": "0.9616072985571766",
+    "cookie": "0.06425731917152122",
     "inReplyTo": "codemodel",
     "type": "reply"
   }

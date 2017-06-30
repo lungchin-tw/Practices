@@ -1,6 +1,8 @@
 project(CMakePracticeExe)
 
-include_directories(${PROJECT_BINARY_DIR})
+file(GLOB_RECURSE WORKSPACE_HEADERS ${PROJECT_SOURCE_DIR}/inc/*.h )
+
+include_directories(${PROJECT_BINARY_DIR} ${WORKSPACE_HEADERS})
 
 configure_file(
     ${PROJECT_SOURCE_DIR}/CMakeConfig.h.in
@@ -17,8 +19,13 @@ message( "Project Binary Dir: ${PROJECT_BINARY_DIR}")
 
 add_executable( ${PROJECT_NAME} main.cpp )
 
+target_link_libraries(${PROJECT_NAME} TestLib)
+
 install(TARGETS ${PROJECT_NAME}
         RUNTIME DESTINATION bin
+        ARCHIVE DESTINATION lib
 )
+
+add_subdirectory(TestLib)
 
 message( "CMake End == Project ${PROJECT_NAME} ==" )

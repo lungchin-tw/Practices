@@ -4,42 +4,37 @@
     "version": "0.1.0",
     "isShellCommand": true,
     "showOutput": "always",
+    "command": "sh",
+    "suppressTaskName": true,
     "tasks": [
         { 
+            "taskName": "Clean All",
+            "options": { "cwd": "${workspaceRoot}" },
+            "args": [ "-c", "bash -x CleanAll.command" ]
+        },
+        { 
             "taskName": "CMake Debug Configuration",
-            "command": "sh",
-            "suppressTaskName": true,
             "options": { "cwd": "${workspaceRoot}/build/Debug" },
             "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug ../.." ]
             //"args": [ "-c", "cmake -G 'Xcode' -DCMAKE_BUILD_TYPE=Debug .." ]
         },
         { 
             "taskName": "CMake Release Configuration",
-            "command": "sh",
-            "suppressTaskName": true,
             "options": { "cwd": "${workspaceRoot}/build/Release" },
             "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release ../.." ]
         },
         {
             "taskName": "Debug Build",
-            "command": "sh",
-            "suppressTaskName": true,
-            "isBuildCommand": true,
             "options": { "cwd": "${workspaceRoot}/build/Debug" },
-            "args": [ "-c", "make VERBOSE=1 -j8" ]
+            "args": [ "-c", "make install VERBOSE=1 -j8" ]
         },
         { 
             "taskName": "Release Build",
-            "command": "sh",
-            "suppressTaskName": true,
-            "isBuildCommand": true,
             "options": { "cwd": "${workspaceRoot}/build/Release" },
             "args": [ "-c", "make install VERBOSE=1 -j8" ]
         },
         {
             "taskName": "Debug Clean",
-            "command": "sh",
-            "suppressTaskName": true,
             "options": { "cwd": "${workspaceRoot}/build/Debug" },
             "args": [ "-c", "make clean VERBOSE=1" ]
         }

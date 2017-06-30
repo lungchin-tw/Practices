@@ -26,6 +26,14 @@ message( "Project Binary Dir: ${PROJECT_BINARY_DIR}")
 message( "Project Version: ${VERSION}")
 message( "Path: $ENV{PATH}")
 
+file(GLOB_RECURSE PROJECT_HEADERS ${PROJECT_SOURCE_DIR}/inc/*.h )
+
+foreach( filename ${PROJECT_HEADERS} )
+    message( "Header File : ${filename}")
+endforeach(filename)
+
+include_directories( ${PROJECT_SOURCE_DIR}/inc )
+
 add_subdirectory(src)
 
 message( "CMake End == Project ${PROJECT_NAME} ==") 
