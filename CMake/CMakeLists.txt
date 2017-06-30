@@ -12,6 +12,7 @@ set(VERSION_PATCH "0")
 
 set(VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 set( CMAKE_CXX_STANDARD 11 )
+set( CMAKE_INSTALL_PREFIX ${PROJECT_BINARY_DIR} )
 
 message( "CMake Begin == Project ${PROJECT_NAME} ==") 
 message( "CMake Version: ${CMAKE_VERSION}") 
@@ -19,8 +20,8 @@ message( "CMake Source Dir: ${CMAKE_SOURCE_DIR}")
 message( "CMake Current Source Dir: ${CMAKE_CURRENT_SOURCE_DIR}")
 message( "CMake Binary Dir: ${CMAKE_BINARY_DIR}") 
 message( "CMake Current Binary Dir: ${CMAKE_CURRENT_BINARY_DIR}")
-message( "Project Version: ${VERSION}")
 message( "CMake Install Prefix: ${CMAKE_INSTALL_PREFIX}")
+message( "Project Version: ${VERSION}")
 message( "Path: $ENV{PATH}")
 
 add_subdirectory(src)

@@ -12,6 +12,7 @@ message( "CMake Source Dir: ${CMAKE_SOURCE_DIR}" )
 message( "CMake Current Source Dir: ${CMAKE_CURRENT_SOURCE_DIR}" )
 message( "CMake Binary Dir: ${CMAKE_BINARY_DIR}" )
 message( "CMake Current Binary Dir: ${CMAKE_CURRENT_BINARY_DIR}" )
+message( "CMake Install Prefix: ${CMAKE_INSTALL_PREFIX}")
 
 add_executable( ${PROJECT_NAME} main.cpp )
 
