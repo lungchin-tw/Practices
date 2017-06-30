@@ -20,7 +20,7 @@
             "options": { "cwd": "${workspaceRoot}/build/Release" },
             "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release ../.." ]
         },
-        { 
+        {
             "taskName": "Debug Build",
             "command": "sh",
             "suppressTaskName": true,
@@ -34,13 +34,13 @@
             "suppressTaskName": true,
             "isBuildCommand": true,
             "options": { "cwd": "${workspaceRoot}/build/Release" },
-            "args": [ "-c", "make VERBOSE=1 -j8" ]
+            "args": [ "-c", "make install VERBOSE=1 -j8" ]
         },
         {
-            "taskName": "clean",
+            "taskName": "Debug Clean",
             "command": "sh",
             "suppressTaskName": true,
-            "options": { "cwd": "${workspaceRoot}/build" },
+            "options": { "cwd": "${workspaceRoot}/build/Debug" },
             "args": [ "-c", "make clean VERBOSE=1" ]
         }
     ]
