@@ -1,8 +1,6 @@
 project(CMakePracticeExe)
 
-file(GLOB_RECURSE WORKSPACE_HEADERS ${PROJECT_SOURCE_DIR}/inc/*.h )
-
-include_directories(${PROJECT_BINARY_DIR} ${WORKSPACE_HEADERS})
+include_directories(${PROJECT_BINARY_DIR} ${CMAKE_SOURCE_DIR}/inc)
 
 configure_file(
     ${PROJECT_SOURCE_DIR}/CMakeConfig.h.in

@@ -12,7 +12,7 @@
             "options": { "cwd": "${workspaceRoot}" },
             "args": [ "-c", "bash -x CleanAll.command" ]
         },
-        { 
+        {
             "taskName": "CMake Debug Configuration",
             "options": { "cwd": "${workspaceRoot}/build/Debug" },
             "args": [ "-c", "cmake -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Debug ../.." ]
