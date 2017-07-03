@@ -1,13 +1,4 @@
-project(CMakePracticeExe)
-
-file(GLOB_RECURSE WORKSPACE_HEADERS ${PROJECT_SOURCE_DIR}/inc/*.h )
-
-include_directories(${PROJECT_BINARY_DIR} ${WORKSPACE_HEADERS})
-
-configure_file(
-    ${PROJECT_SOURCE_DIR}/CMakeConfig.h.in
-    ${PROJECT_BINARY_DIR}/CMakeConfig.h
-)
+project(TestDll)
 
 message( "CMake Begin == Project ${PROJECT_NAME} ==" )
 message( "CMake Source Dir: ${CMAKE_SOURCE_DIR}" )
@@ -17,17 +8,19 @@ message( "CMake Current Binary Dir: ${CMAKE_CURRENT_BINARY_DIR}" )
 message( "Project Source Dir: ${PROJECT_SOURCE_DIR}")
 message( "Project Binary Dir: ${PROJECT_BINARY_DIR}")
 
-add_executable( ${PROJECT_NAME} main.cpp )
+include_directories( ${PROJECT_SOURCE_DIR}/inc )
 
-target_link_libraries(${PROJECT_NAME} TestLib TestDll)
+file(GLOB ${PROJECT_NAME}_SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp )
 
-SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-
-add_subdirectory(TestLib)
+add_library( ${PROJECT_NAME} SHARED ${${PROJECT_NAME}_SOURCES} )
 
 install(TARGETS ${PROJECT_NAME}
         RUNTIME DESTINATION bin
         ARCHIVE DESTINATION lib-static
+        LIBRARY DESTINATION lib
+)
+
+install(TARGETS ${PROJECT_NAME}
         LIBRARY DESTINATION bin
 )
 

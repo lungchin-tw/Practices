@@ -32,8 +32,14 @@ foreach( filename ${PROJECT_HEADERS} )
     message( "Header File : ${filename}")
 endforeach(filename)
 
-include_directories( ${PROJECT_SOURCE_DIR}/inc )
+include_directories( 
+    ${PROJECT_SOURCE_DIR}/inc 
+    ${PROJECT_SOURCE_DIR}/external/TestDll/inc
+    )
+
+link_directories( ${PROJECT_BINARY_DIR}/lib )
 
 add_subdirectory(src)
+add_subdirectory(external)
 
 message( "CMake End == Project ${PROJECT_NAME} ==") 

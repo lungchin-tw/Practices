@@ -27,6 +27,12 @@
                     "compileFlags": "-g   -std=gnu++11",
                     "includePath": [
                       {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      },
+                      {
                         "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
                       }
                     ],
@@ -39,7 +45,8 @@
                 ],
                 "fullName": "CMakePracticeExe",
                 "linkLanguageFlags": "-g",
-                "linkLibraries": "TestLib/libTestLib.a",
+                "linkLibraries": "-Wl,-rpath,/Users/Ilipton/Documents/Practices/CMake/build/lib -Wl,-rpath,/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll TestLib/libTestLib.a ../external/TestDll/libTestDll.dylib",
+                "linkPath": "-L/Users/Ilipton/Documents/Practices/CMake/build/lib",
                 "linkerLanguage": "CXX",
                 "name": "CMakePracticeExe",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
@@ -55,6 +62,12 @@
                     "compileFlags": "-g   -std=gnu++11",
                     "includePath": [
                       {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      },
+                      {
                         "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
                       },
                       {
@@ -66,12 +79,6 @@
                     "sources": [
                       "TestLib.cpp"
                     ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "../../inc/TestLib/TestLib.h"
-                    ]
                   }
                 ],
                 "fullName": "libTestLib.a",
@@ -79,6 +86,39 @@
                 "name": "TestLib",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
                 "type": "STATIC_LIBRARY"
+              },
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll/libTestDll.dylib"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -fPIC   -std=gnu++11",
+                    "defines": [
+                      "TestDll_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/TestDll.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libTestDll.dylib",
+                "linkPath": "-L/Users/Ilipton/Documents/Practices/CMake/build/lib",
+                "linkerLanguage": "CXX",
+                "name": "TestDll",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll",
+                "type": "SHARED_LIBRARY"
               }
             ]
           },
@@ -97,6 +137,12 @@
                     "compileFlags": "-g   -std=gnu++11",
                     "includePath": [
                       {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      },
+                      {
                         "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
                       }
                     ],
@@ -109,7 +155,8 @@
                 ],
                 "fullName": "CMakePracticeExe",
                 "linkLanguageFlags": "-g",
-                "linkLibraries": "TestLib/libTestLib.a",
+                "linkLibraries": "-Wl,-rpath,/Users/Ilipton/Documents/Practices/CMake/build/lib -Wl,-rpath,/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll TestLib/libTestLib.a ../external/TestDll/libTestDll.dylib",
+                "linkPath": "-L/Users/Ilipton/Documents/Practices/CMake/build/lib",
                 "linkerLanguage": "CXX",
                 "name": "CMakePracticeExe",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src",
@@ -125,6 +172,12 @@
                     "compileFlags": "-g   -std=gnu++11",
                     "includePath": [
                       {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      },
+                      {
                         "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
                       },
                       {
@@ -136,12 +189,6 @@
                     "sources": [
                       "TestLib.cpp"
                     ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "../../inc/TestLib/TestLib.h"
-                    ]
                   }
                 ],
                 "fullName": "libTestLib.a",
@@ -149,6 +196,46 @@
                 "name": "TestLib",
                 "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/src/TestLib",
                 "type": "STATIC_LIBRARY"
+              }
+            ]
+          },
+          {
+            "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll",
+            "name": "TestDll",
+            "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll",
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll/libTestDll.dylib"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -fPIC   -std=gnu++11",
+                    "defines": [
+                      "TestDll_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/TestDll.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libTestDll.dylib",
+                "linkPath": "-L/Users/Ilipton/Documents/Practices/CMake/build/lib",
+                "linkerLanguage": "CXX",
+                "name": "TestDll",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll",
+                "type": "SHARED_LIBRARY"
               }
             ]
           },
@@ -167,6 +254,12 @@
                     "compileFlags": "-g   -std=gnu++11",
                     "includePath": [
                       {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      },
+                      {
                         "path": "/Users/Ilipton/Documents/Practices/CMake/build/src"
                       },
                       {
@@ -178,12 +271,6 @@
                     "sources": [
                       "TestLib.cpp"
                     ]
-                  },
-                  {
-                    "isGenerated": false,
-                    "sources": [
-                      "../../inc/TestLib/TestLib.h"
-                    ]
                   }
                 ],
                 "fullName": "libTestLib.a",
@@ -193,11 +280,51 @@
                 "type": "STATIC_LIBRARY"
               }
             ]
+          },
+          {
+            "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/external",
+            "name": "external",
+            "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/external",
+            "targets": [
+              {
+                "artifacts": [
+                  "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll/libTestDll.dylib"
+                ],
+                "buildDirectory": "/Users/Ilipton/Documents/Practices/CMake/build/external/TestDll",
+                "fileGroups": [
+                  {
+                    "compileFlags": "-g -fPIC   -std=gnu++11",
+                    "defines": [
+                      "TestDll_EXPORTS"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/inc"
+                      },
+                      {
+                        "path": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll/inc"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "src/TestDll.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libTestDll.dylib",
+                "linkPath": "-L/Users/Ilipton/Documents/Practices/CMake/build/lib",
+                "linkerLanguage": "CXX",
+                "name": "TestDll",
+                "sourceDirectory": "/Users/Ilipton/Documents/Practices/CMake/external/TestDll",
+                "type": "SHARED_LIBRARY"
+              }
+            ]
           }
         ]
       }
     ],
-    "cookie": "0.06425731917152122",
+    "cookie": "0.05800194868186348",
     "inReplyTo": "codemodel",
     "type": "reply"
   }
