@@ -2,13 +2,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "lldb-mi",
-            "request": "launch",
-            "name": "Launch Program",
-            "target": "${workspaceRoot}/build/Debug/bin/CMakePracticeExe",
-            "cwd": "${workspaceRoot}"
-        },
-        {
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
