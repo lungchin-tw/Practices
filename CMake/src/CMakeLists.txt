@@ -17,11 +17,14 @@ message( "CMake Current Binary Dir: ${CMAKE_CURRENT_BINARY_DIR}" )
 message( "Project Source Dir: ${PROJECT_SOURCE_DIR}")
 message( "Project Binary Dir: ${PROJECT_BINARY_DIR}")
 
+##SET(CMAKE_SKIP_BUILD_RPATH FALSE)
+##SET(CMAKE_BUILD_WITH_INSTALL_RPATH FALSE)
+SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib" )
+SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable( ${PROJECT_NAME} main.cpp )
 
 target_link_libraries(${PROJECT_NAME} TestLib TestDll)
-
-SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 add_subdirectory(TestLib)
 
