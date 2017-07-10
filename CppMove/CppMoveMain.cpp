@@ -1,21 +1,23 @@
 
 #include <iostream>
+#include <vector>
 
 class TestClass
 {
 public:
     TestClass()
-        : X( 0 )
-        , Y( 1 )
-        , Z( 2 )
     {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+    }
+
+    TestClass( int value )
+    {
+        X.resize( value );
         std::cout << __PRETTY_FUNCTION__ << std::endl;
     }
 
     TestClass( const TestClass& other )
         : X( other.X )
-        , Y( other.Y )
-        , Z( other.Z )
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
 
@@ -23,9 +25,7 @@ public:
     }
 
     TestClass( const TestClass&& other )
-        : X( other.X )
-        , Y( other.Y )
-        , Z( other.Z )
+        : X( std::move(other.X) )
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
     }
@@ -35,27 +35,39 @@ public:
         std::cout << __PRETTY_FUNCTION__ << std::endl;
 
         X = other.X;
-        Y = other.Y;
-        Z = other.Z;
 
         return *this;
     }
 
-    int X, Y, Z;
+    TestClass& operator =( const TestClass&& other )
+    {
+        std::cout << __PRETTY_FUNCTION__ << std::endl;
+
+        X = std::move(other.X);
+
+        return *this;
+    }
+
+    std::vector<int> X;
 };
 
 
-TestClass CloneTestClass( TestClass& in )
+void SwapTestClass( TestClass& a, TestClass& b )
 {
     std::cout << __PRETTY_FUNCTION__ << std::endl;
-    return in;
+
+    TestClass tmp( std::move(a) );
+    a = std::move(b);
+    b = std::move(tmp);
 }
 
 
 int main()
 {
-    TestClass tc;
-    auto copy = CloneTestClass( tc );
-    std::cout << copy.X << std::endl;
+    TestClass tca(1), tcb(2);
+
+    SwapTestClass( tca, tcb );
+    std::cout << tca.X.size() << std::endl;
+    std::cout << tcb.X.size() << std::endl;
     return 0;
 }
