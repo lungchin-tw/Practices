@@ -2,14 +2,21 @@
     "configurations": [
         {
             "name": "null",
-            "includePath": [],
+            "includePath": 
+            [
+                "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"
+            ],
             "defines": [],
             "browse": {
-                "path": [],
+                "path": [
+                    "${workspaceRoot}"
+                    , "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"
+                ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
             "intelliSenseMode": "clang-x64"
         }
-    ]
+    ],
+    "version": 2
 }

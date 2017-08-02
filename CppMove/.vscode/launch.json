@@ -2,12 +2,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Program",
-            "type": "lldb-mi",
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
             "request": "launch",
-            "target": "./CppMove",
-            "cwd": "${workspaceRoot}/CppMove",
-            "showDevDebugOutput": false
+            "program": "./CppMove",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}/build",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
         }
     ]
 }

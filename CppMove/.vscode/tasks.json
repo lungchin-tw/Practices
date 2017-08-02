@@ -15,7 +15,7 @@
         },
         {
             "taskName": "make",
-            "args": [ "make VERBOSE=1 -j 8" ],
+            "args": [ "make VERBOSE=1 -j8" ],
             "isBuildCommand": true
         },
         {
