@@ -17,17 +17,15 @@ public:
     }
 
     TestClass( const TestClass& other )
-        : X( other.X )
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
-
         *this = other;
     }
 
     TestClass( const TestClass&& other )
-        : X( std::move(other.X) )
     {
         std::cout << __PRETTY_FUNCTION__ << std::endl;
+        *this = std::move( other );
     }
 
     TestClass& operator =( const TestClass& other )
