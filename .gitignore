@@ -9,3 +9,4 @@ poco/build/**
 CMake/build
 CppMove/build
 CppTemplate/build
+CppStringLiteral/build
