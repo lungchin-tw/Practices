@@ -1,84 +1,12 @@
 
 #include <iostream>
-#include <vector>
 
-class TestClass
-{
-public:
-    TestClass()
-    {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-    }
-
-    TestClass( int value )
-    {
-        X.resize( value );
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-    }
-
-    TestClass( const TestClass& other )
-    {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-        *this = other;
-    }
-
-    TestClass( const TestClass&& other )
-    {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-        *this = std::move( other );
-    }
-
-    TestClass& operator =( const TestClass& other )
-    {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-
-        X = other.X;
-
-        return *this;
-    }
-
-    TestClass& operator =( const TestClass&& other )
-    {
-        std::cout << __PRETTY_FUNCTION__ << std::endl;
-
-        X = std::move(other.X);
-
-        return *this;
-    }
-
-    std::vector<int> X;
-};
-
-
-void TransferObjectByValue( const TestClass a, const TestClass b )
-{
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
-
-    std::cout << a.X.size() << std::endl;
-    std::cout << b.X.size() << std::endl;
-}
-
-void TransferObjectByRef( const TestClass& a, const TestClass& b )
-{
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
-
-    std::cout << a.X.size() << std::endl;
-    std::cout << b.X.size() << std::endl;
-}
-
-void SwapTestClassByRef( TestClass& a, TestClass& b )
-{
-    std::cout << __PRETTY_FUNCTION__ << std::endl;
-
-    TestClass tmp( std::move(a) );
-    a = std::move(b);
-    b = std::move(tmp);
-}
+#include "TestClass.cpp"
 
 
 int main()
 {
-    TestClass tca(1), tcb(2);
+    TestClass tca(1), tcb(2), tcc(3), tcd(4);
 
     std::cout << std::endl << "Pre TransferObjectByValue" << std::endl;
     TransferObjectByValue( tca, tcb );
@@ -91,5 +19,8 @@ int main()
 
     std::cout << std::endl << tca.X.size() << std::endl;
     std::cout << tcb.X.size() << std::endl;
+
+    TestClass result = tca + tcb + tcc + tcd;
+    
     return 0;
 }
