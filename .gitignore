@@ -10,3 +10,4 @@ CMake/build
 CppMove/build
 CppTemplate/build
 CppStringLiteral/build
+StdContainer/build
