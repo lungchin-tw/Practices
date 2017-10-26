@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.8.1 FATAL_ERROR)
-set(CMAKE_CXX_STANDARD 11)
 
-set( PROJECT hello-poco )
+project(hello-poco LANGUAGES CXX)
+
+SET( CMAKE_CXX_FLAGS "-std=c++14 -Wall" )
+SET( CMAKE_CXX_STANDARD 14 )
+
 set( SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp )
 
-project( ${PROJECT} CXX )
 file( GLOB_RECURSE SRC_FILES main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp )
 
-add_executable( ${PROJECT} ${SRC_FILES} )
-target_link_libraries( ${PROJECT} PocoFoundation PocoNet)
+add_executable( ${PROJECT_NAME} ${SRC_FILES} )
+target_link_libraries( ${PROJECT_NAME} PocoFoundation PocoNet)

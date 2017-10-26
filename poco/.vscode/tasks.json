@@ -35,22 +35,6 @@
             "suppressTaskName": true,
             "options": { "cwd": "${workspaceRoot}/build" },
             "args": [ "-c", "./hello-poco" ]
-        },
-        {
-            "taskName": "configure poco library",
-            "command": "sh",
-            "isShellCommand": true,
-            "suppressTaskName": true,
-            "options": { "cwd": "${workspaceRoot}/poco-1.7.8p2" },
-            "args": [ "-c", "./configure" ]
-        },
-        {
-            "taskName": "make poco library",
-            "command": "sh",
-            "isShellCommand": true,
-            "suppressTaskName": true,
-            "options": { "cwd": "${workspaceRoot}/poco-1.7.8p2" },
-            "args": [ "-c", "make -j 8" ]
         }
     ]
 }

@@ -2,17 +2,30 @@
     "configurations": [
         {
             "name": "null",
-            "includePath": [],
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "/usr/include/c++/4.2.1",
+                "/usr/include/c++/4.2.1/tr1"
+            ],
             "defines": [],
             "browse": {
                 "path": [
                     "${workspaceRoot}"
+                    ,"/usr/include"
+                    ,"/usr/local/include"
+                    ,"/usr/include/c++/4.2.1"
+                    ,"/usr/include/c++/4.2.1/tr1"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
         }
     ],
-    "version": 2
+    "version": 3
 }
