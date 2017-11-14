@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.8.1 FATAL_ERROR)
+
+project(StdDeclType LANGUAGES CXX)
+SET( CMAKE_CXX_FLAGS "-std=c++14 -Wall" )
+SET( CMAKE_CXX_STANDARD 14 )
+
+add_executable(${PROJECT_NAME} StdDeclTypeMain.cpp)
+target_include_directories( ${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/Include )
