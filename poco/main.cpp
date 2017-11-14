@@ -20,6 +20,8 @@
 
 using namespace Poco;
 
+void PocoEventPractice();
+
 
 int main()
 {
@@ -98,6 +100,8 @@ int main()
     pocoThreadPractice();
 
     pocoNetworkPractice();
+
+    PocoEventPractice();
 
     return 0;
 }
