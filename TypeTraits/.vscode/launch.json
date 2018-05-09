@@ -8,7 +8,7 @@
             "name": "(lldb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/StdSort",
+            "program": "${workspaceFolder}/build/TypeTraits",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build",
