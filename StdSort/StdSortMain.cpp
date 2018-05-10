@@ -26,7 +26,7 @@ int main()
     IntList.push_back( 1 );
     IntList.push_back( 9 );
     IntList.push_back( 3 );
-
+    
     std::cout << "Before : ";
     for( auto elem : IntList ) std::cout << elem << " ";
     std::cout << std::endl;
