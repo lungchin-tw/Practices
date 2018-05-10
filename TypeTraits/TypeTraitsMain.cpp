@@ -70,21 +70,25 @@ void PrintTypeTraits()
     << " }";
 }
 
+template< class TYPE >
+void PrintTypeInfo()
+{
+    std::cout 
+    << "{ HashCode : " << typeid( TYPE ).hash_code()
+    << ", Name : " << typeid( TYPE ).name()
+    << " }";
+}
+
 int main()
 {
-    std::cout << "Int's typename : " << typeid( int ).name() << std::endl;
-    std::cout << "Const Int's typename : " << typeid( const int ).name() << std::endl;
-    std::cout << "Int*'s typename : " << typeid( int* ).name() << std::endl;
-    std::cout << "Const Int*'s typename : " << typeid( const int* ).name() << std::endl;
-    std::cout << "Int&'s typename : " << typeid( int& ).name() << std::endl;
-    std::cout << "Const Int&'s typename : " << typeid( const int& ).name() << std::endl;
-    std::cout << "Float's typename : " << typeid( float ).name() << std::endl;
-    std::cout << "Int's TypeTraits : "; PrintTypeTraits<int>(); std::cout << std::endl;
-    std::cout << "const Int's TypeTraits : "; PrintTypeTraits<const int>(); std::cout << std::endl;
-    std::cout << "Int*'s TypeTraits : "; PrintTypeTraits<int*>(); std::cout << std::endl;
-    std::cout << "const Int*'s TypeTraits : "; PrintTypeTraits<const int*>(); std::cout << std::endl;
-    std::cout << "Int&'s TypeTraits : "; PrintTypeTraits<int&>(); std::cout << std::endl;
-    std::cout << "const Int&'s TypeTraits : "; PrintTypeTraits<const int&>(); std::cout << std::endl;
+    std::cout << "Int : TypeInfo=";  PrintTypeInfo<int>(); std::cout << ", TypeTraits="; PrintTypeTraits<int>(); std::cout << std::endl;
+    std::cout << "const Int : TypeInfo=";  PrintTypeInfo<const int>(); std::cout << ", TypeTraits="; PrintTypeTraits<const int>(); std::cout << std::endl;
+    std::cout << "int* : TypeInfo=";  PrintTypeInfo<int*>(); std::cout << ", TypeTraits="; PrintTypeTraits<int*>(); std::cout << std::endl;
+    std::cout << "int** : TypeInfo=";  PrintTypeInfo<int**>(); std::cout << ", TypeTraits="; PrintTypeTraits<int**>(); std::cout << std::endl;
+    std::cout << "const int* : TypeInfo=";  PrintTypeInfo<const int*>(); std::cout << ", TypeTraits="; PrintTypeTraits<const int*>(); std::cout << std::endl;
+    std::cout << "const int** : TypeInfo=";  PrintTypeInfo<const int**>(); std::cout << ", TypeTraits="; PrintTypeTraits<const int**>(); std::cout << std::endl;
+    std::cout << "int& : TypeInfo=";  PrintTypeInfo<int&>(); std::cout << ", TypeTraits="; PrintTypeTraits<int&>(); std::cout << std::endl;
+    std::cout << "const int& : TypeInfo=";  PrintTypeInfo<const int&>(); std::cout << ", TypeTraits="; PrintTypeTraits<const int&>(); std::cout << std::endl;
     
     return 0;
 }
