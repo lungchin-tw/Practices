@@ -14,6 +14,11 @@ union EndianDatum
 };
 
 
+bool operator==( const EndianDatum& lhs, const EndianDatum& rhs )
+{
+    return ( lhs.Value == rhs.Value );
+}
+
 void PrintEndianness()
 {
     EndianDatum ed;
@@ -58,6 +63,10 @@ int main()
 
     UInt32 net_value = htonl( 0x12345678 );
     printf( "The 0x12345678's Value in Networking : 0x%X\n", net_value );
+
+    EndianDatum lhs; lhs.Value = 0x12345678;
+    EndianDatum rhs; rhs.Value = net_value;
+    std::cout << "Are they the equal? " << ( lhs == rhs ) << std::endl;
     std::cout << "The 0x12345678's <Address:Value> in Networking :\n";
     PrintBytesOrder( net_value );
 
