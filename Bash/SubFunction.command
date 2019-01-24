@@ -5,5 +5,6 @@
 set -x
 echo "`dirname "$0"`"
 cd "`dirname "$0"`"
-
-./SubFunction.command $@
+echo "$@"
+shift 2
+echo "$@"
