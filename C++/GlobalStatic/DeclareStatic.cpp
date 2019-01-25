@@ -11,3 +11,8 @@ IntPtr GetAnotherGlobalIntPtr()
 {
 	return GlobalIntPtr;
 }
+
+IntPtrPtr GetAnotherGlobalIntPtrPtr()
+{
+	return &GlobalIntPtr;
+}

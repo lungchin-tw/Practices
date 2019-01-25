@@ -12,3 +12,4 @@ static IntPtr GlobalIntPtr = nullptr;
 
 
 IntPtr GetAnotherGlobalIntPtr();
+IntPtrPtr GetAnotherGlobalIntPtrPtr();

@@ -6,4 +6,5 @@
 #pragma once 
 
 
-typedef int* IntPtr;
+typedef int*  IntPtr;
+typedef int** IntPtrPtr;
