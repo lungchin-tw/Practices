@@ -3,4 +3,7 @@
 */
 
 
+#pragma once 
+
+
 typedef int* IntPtr;

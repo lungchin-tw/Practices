@@ -3,6 +3,9 @@
 */
 
 
+#pragma once
+
+
 template<class TYPE>
 struct IsPointerType
 {
