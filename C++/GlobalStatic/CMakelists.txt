@@ -9,7 +9,7 @@ message( "[${PROJECT_NAME}]::CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DI
 message( "[${PROJECT_NAME}]::PROJECT_BINARY_DIR: ${PROJECT_BINARY_DIR}")
 message( "[${PROJECT_NAME}]::PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
 
-add_executable( ${PROJECT_NAME} GlobalStaticMain.cpp DeclareStatic.cpp )
+add_executable( ${PROJECT_NAME} GlobalStaticMain.cpp DeclareStatic.cpp DeclareStatic.h )
 target_link_libraries( ${PROJECT_NAME} Utilities )
 add_subdirectory( Utilities )
 

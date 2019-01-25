@@ -3,7 +3,9 @@
 ** Copyright SOFTSTAR ENTERTAINMENT INC. All Rights Reserved.
 */
 
+
 #pragma once
+
 
 #if defined(_MSC_VER)
     #define FUNCTION_NAME __FUNCSIG__

@@ -20,10 +20,9 @@ target_include_directories(
         ${PROJECT_NAME}
         PUBLIC
         ${PROJECT_SOURCE_DIR}/Public
-        ${PROJECT_SOURCE_DIR}/Private
-        ${PROJECT_BINARY_DIR} )
+        ${PROJECT_SOURCE_DIR}/Private )
 
 install(TARGETS ${PROJECT_NAME} ARCHIVE DESTINATION lib-static)
-install(DIRECTORY Public/ DESTINATION include/Utilities FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY Public/ DESTINATION include/${PROJECT_NAME} FILES_MATCHING PATTERN "*.h")
 
 message( "========== ${PROJECT_NAME} End ==========")
