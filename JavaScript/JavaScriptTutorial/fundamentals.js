@@ -11,7 +11,10 @@ function buildGreeting( name )
 
 console.log( message );
 console.log( `Do Alert: ${doAlert}` ); 
-console.log( typeof( message) );
+console.log( `typeof(message): ${typeof(message)}` );
+console.log( `typeof(null): ${typeof(null)}` );
+console.log( `typeof(undefined): ${typeof(undefined)}` );
+console.log( `typeof(function): ${typeof(function(){})}` );
 
 console.log( `Boolean("0") : ${ Boolean("0") }` );
 console.log( `null == undefined : ${ null == undefined }` );
@@ -53,3 +56,7 @@ askMood(
 	, function() { console.log( "Good Mood Today" ); }
 	, cancel
 );
+
+let num = prompt( "Input a Square Root" );
+let square = n => n * n;
+console.log( `Square of ${num} = ${square(num)}` );
