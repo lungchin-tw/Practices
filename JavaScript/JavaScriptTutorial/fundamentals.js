@@ -4,11 +4,6 @@
 let message = 'Hello New World';
 let doAlert = false;
 
-function buildGreeting( name )
-{
-	return `${name}, ${message}`;
-}
-
 console.log( message );
 console.log( `Do Alert: ${doAlert}` ); 
 console.log( `typeof(message): ${typeof(message)}` );
@@ -38,11 +33,7 @@ else
 	console.log( buildGreeting( your_name ) );
 }
 
-function askMood( context, yes, no )
-{
-	confirm( context ) ? yes() : no();
-}
-
+// Function Expression
 let cancel = function() { console.log( "Bad Mood Today" ); };
 
 console.log( "========= cancel vs. cancel() =========" );
@@ -50,6 +41,7 @@ console.log( `cancel=${cancel}` );
 console.log( `cancel()=${cancel()}` );
 console.log( "=======================================" );
 
+debugger;
 
 askMood(
 	"Are you in a good mood today?"
@@ -58,5 +50,21 @@ askMood(
 );
 
 let num = prompt( "Input a Square Root" );
-let square = n => n * n;
+let square = n => n * n; // Function Expression
 console.log( `Square of ${num} = ${square(num)}` );
+
+
+/*
+** Function Declaration
+*/
+
+function buildGreeting( name )
+{
+	return `${name}, ${message}`;
+}
+
+
+function askMood( context, yes, no )
+{
+	confirm( context ) ? yes() : no();
+}
