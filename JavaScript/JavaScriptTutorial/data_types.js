@@ -1,6 +1,7 @@
 
 'use strict'; // -> This directive let this script work in modern mode
 
+
 // exercise e description for numbers
 {
 	console.log( '========== Exercise Number Description ===========' );
@@ -61,7 +62,7 @@ console.log( '\n' );
 // Exercise Bitwise NOT ~
 {
 	console.log( '========== Exercise Bitwise NOT ~ ===========' );
-	
+
 	console.log( `
 		~2: ${~2}
 		~1: ${~1}
@@ -70,4 +71,83 @@ console.log( '\n' );
 	` );
 
 	console.log( '==================================================' );
+}
+
+// String Demo
+{
+	console.log( '========== String Demo ===========' );
+	let name = '陳龍進';
+
+	console.log( `${name}.toLocaleUpperCase(): ${name.toLocaleUpperCase()}, length: ${name.toLocaleUpperCase().length}` );
+	for ( let elem of name )
+	{
+		console.log( `Code Point of ${elem}: 0x${elem.codePointAt(0).toString(16)},	Length of ${elem}: ${elem.length}` );
+	}
+
+	console.log( `\\u9f8d: ${'\u9f8d'}` );
+
+	console.log( '==================================================' );
+}
+
+// Iterator Demo
+{
+	console.log( '========== Iterator Demo ===========' );
+	let iterator_demo = {
+		from: 1,
+		to: 5,
+
+		[Symbol.iterator]() {
+			this.current = this.from;
+			return this;
+		},
+
+		next() {
+			if ( this.current <= this.to ) {
+				console.log( `iterator_demo.next(): this.current: ${this.current}` );
+				let result = { done: false, value: this.current++ };
+				console.log( `result.current: ${result.value}` );
+				return result;
+			} else {
+				return { done: true };
+			}
+		}
+	};
+
+	//debugger;
+
+	for ( let elem of iterator_demo )
+	{
+		console.log( `for ( let elem of iterator_demo ): ${elem}` );
+	}
+
+	console.log( '==================================================' );
+}
+
+// Destructuring assignment Demo
+{
+	console.log( '========== Destructuring assignment Demo ===========' );
+	let args = {
+		title: "Backpack Menu",
+		items: [ "book", "phone" ],
+	};
+
+	openMenu( args );
+	openMenu();
+
+	function openMenu( {
+		title = "Untitled",
+		items = [],
+		numCol = 0,
+		numRow = 0,
+	} = {} ) {
+		console.log( ` openMenu
+			title: ${title}
+			items: ${items}, items.length: ${items.length}
+			numCol: ${numCol}
+			numRow: ${numRow}
+		` );
+		
+	}
+
+	console.log( '====================================================' );
 }
