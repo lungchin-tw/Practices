@@ -1,1 +1,3 @@
-export let user = "John";
+export function sayHi( user ) {
+    return `Hello, ${user}!!`;
+}
