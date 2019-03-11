@@ -5,8 +5,18 @@
   document.body.innerHTML = sayHi('John');
 </script> -->
 
-<!DOCTYPE html>
+<!-- Demo: Dynamic import -->
+<!-- <!doctype html>
+<script>
+    async function loadModule() {
+      let lib = await import( './module/my_module.js' );
+      document.body.innerHTML = lib.sayHi('John');
+    }
+</script>
+<button onclick="loadModule()">Click me</button> -->
 
+
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
