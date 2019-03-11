@@ -5,4 +5,3 @@
 *.bk
 poco/poco-1.7.8p2/**
 **/build
-**/.vscode/**
