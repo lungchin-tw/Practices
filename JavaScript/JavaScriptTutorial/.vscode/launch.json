@@ -68,6 +68,24 @@
 			"request": "launch",
 			"name": "Debug class_demo.js",
 			"program": "${workspaceFolder}/class_demo.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug object_properties_configuration.js",
+			"program": "${workspaceFolder}/object_properties_configuration.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug prototypes_inheritance.js",
+			"program": "${workspaceFolder}/prototypes_inheritance.js"
+		},
+		{
+			"type": "node",
+			"request": "launch",
+			"name": "Debug decorators_forwarding_call_apply.js",
+			"program": "${workspaceFolder}/decorators_forwarding_call_apply.js"
 		}
 	]
 }
