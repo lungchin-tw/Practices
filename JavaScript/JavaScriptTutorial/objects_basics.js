@@ -105,6 +105,18 @@ console.log( `========= Object Copy ============` );
 }
 console.log( `==================================` );
 
+console.log( '\n' );
+
+console.log( `========= Object to String ============` );
+{
+	let object_2_string = Object.prototype.toString;
+	console.log( `Array: ${object_2_string.call( new Array() )}` );
+	console.log( `Number: ${object_2_string.call( new Number() )}` );
+	console.log( `console: ${object_2_string.call( console )}` );
+	console.log( `console.log: ${object_2_string.call( console.log )}` );
+}
+console.log( `==================================` );
+
 
 // People's Constructor
 function People( name, age ) {
