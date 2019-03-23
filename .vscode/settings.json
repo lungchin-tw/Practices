@@ -1,0 +1,6 @@
+{
+    "code-runner.defaultLanguage": "php",
+    "code-runner.executorMap": {
+        "php": "C:\\php-7.3.3-Win32-VC15-x64\\php.exe",
+    }
+}
