@@ -77,14 +77,22 @@ echo '============================================================'.PHP_EOL.PHP_
 
 // Experiment NULL
 {
+    echo '==================== Experiment Null Type ============'.PHP_EOL;
     $var_string_uninit;
-    echo '($var_string_uninit == NULL): '.( $var_string_uninit == NULL ).PHP_EOL;
+    echo '($var_string_uninit == NULL): '.( $var_string_uninit === NULL ).PHP_EOL;
     echo 'var_dump($var_string_uninit)'.PHP_EOL;
     var_dump( $var_string_uninit );
 
     $var_null = NULL;
     echo 'var_dump($var_null)'.PHP_EOL;
     var_dump( $var_null );
+    echo '========================================================'.PHP_EOL.PHP_EOL;
+}
+
+// Experiment Constants
+{
+    echo '==================== Experiment Constants ============'.PHP_EOL;
+    echo '======================================================'.PHP_EOL.PHP_EOL;
 }
 
 ?>
