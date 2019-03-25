@@ -56,6 +56,13 @@ $var_array = array( 'Abel', 'Aiden', 'Jacky', 'JJ' );
 echo 'var_dump($var_array)'.PHP_EOL;
 var_dump( $var_array );
 
+echo 'Array is an iterable:'.PHP_EOL;
+echo 'foreach ( $var_array as $elem )'.PHP_EOL;
+$index = 0;
+foreach ( $var_array as $elem ) {
+    echo '$var_array['.$index++.']: '.$elem.PHP_EOL;
+}
+
 echo PHP_EOL;
 class Car {
     public $modelName = '';
@@ -78,14 +85,22 @@ echo '============================================================'.PHP_EOL.PHP_
 // Experiment NULL
 {
     echo '==================== Experiment Null Type ============'.PHP_EOL;
+    /* This session of code will cause a lot warnings.
     $var_string_uninit;
     echo '($var_string_uninit == NULL): '.( $var_string_uninit === NULL ).PHP_EOL;
-    echo 'var_dump($var_string_uninit)'.PHP_EOL;
+    echo 'var_dump( is_null($var_string_uninit): '.var_dump( is_null($var_string_uninit) ).PHP_EOL;
+    echo 'isset($var_string_uninit): '.isset($var_string_uninit).PHP_EOL;
+    echo 'var_dump( $var_string_uninit )'.PHP_EOL;
     var_dump( $var_string_uninit );
+    */
 
     $var_null = NULL;
-    echo 'var_dump($var_null)'.PHP_EOL;
-    var_dump( $var_null );
+    echo 'var_dump( is_null($var_null) ): ';
+    var_dump( is_null($var_null) );
+    echo is_null($var_null).PHP_EOL;
+    echo 'var_dump( isset($var_null) ): ';
+    var_dump( isset($var_null) );
+    echo isset($var_null).PHP_EOL;
     echo '========================================================'.PHP_EOL.PHP_EOL;
 }
 
@@ -95,4 +110,6 @@ echo '============================================================'.PHP_EOL.PHP_
     echo '======================================================'.PHP_EOL.PHP_EOL;
 }
 
-?>
+/*
+* ?> : Prefer Omiting PHP closing tag if this file contain only PHP script.
+*/
