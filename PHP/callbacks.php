@@ -1,5 +1,0 @@
-<?php
-/*
-* Experiment Callbacks Skills
-*/
-

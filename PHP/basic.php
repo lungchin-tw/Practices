@@ -170,11 +170,30 @@ echo '============================================================'.PHP_EOL.PHP_
 // Experiment Strict Types
 {
     echo '==================== Experiment Strict Types ============'.PHP_EOL;
-    function buildCounterString( $name )
-    {
 
+    function mathAdd( int $a, int $b ) : int
+    {
+        return $a + $b;
     }
+
+    //echo mathAdd( 1, 2.3 ).PHP_EOL;
+    echo 'mathAdd( 1, 2 ): '.mathAdd( 1, 2 ).PHP_EOL;
+    // echo 'mathAdd( 1, 2 ): '.mathAdd( 1, 2.3 ).PHP_EOL; // Will throw errors because parameter 2.3.
     echo '======================================================'.PHP_EOL.PHP_EOL;
+}
+
+// Experiment Arrays
+{
+    echo '==================== Experiment Associative Arrays ============'.PHP_EOL;
+    $var_associative_array = array( 'C-Class'=>'BENZ', 'IS250'=>'LEXUS' );
+    $var_associative_array[ '3-Series' ] = 'BMW';
+    $var_associative_array[ 'R8' ] = 'AUDIO';
+
+    echo 'foreach( $var_associative_array as $key => $value )'.PHP_EOL;
+    foreach( $var_associative_array as $key => $value ) {
+        echo '$key: '.$key.', $value: '.$value.PHP_EOL;
+    }
+    echo '==============================================================='.PHP_EOL.PHP_EOL;
 }
 
 /*
