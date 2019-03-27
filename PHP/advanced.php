@@ -68,6 +68,7 @@ var_dump( $_SESSION );
     echo 'IInterface::CONST_INTERFACE_INT: '.IInterface::CONST_INTERFACE_INT.PHP_EOL;
     echo 'BaseClass::CONST_BASE_VALUE: '.BaseClass::CONST_BASE_VALUE.PHP_EOL;
     echo '(new BaseClass())->getNum(): '.(new BaseClass())->getNum().PHP_EOL;
+    echo '(new jacky\ExtendedClass())->getNum(): '.(new jacky\ExtendedClass())->getNum().PHP_EOL;
     
     echo '===================================================================='.PHP_EOL.PHP_EOL;
 }
