@@ -78,6 +78,42 @@ $var_array = array( 'Abel', 'Aiden', 'Jacky', 'JJ' );
 echo 'var_dump($var_array)'.PHP_EOL;
 var_dump( $var_array );
 
+echo '$var_array[ count($var_array) ] = '.$var_array[ count($var_array) ].PHP_EOL;
+
+$var_array_len = count($var_array);
+
+/**
+ * Unset Array Element Demo: the array will not be reindexing.
+ */
+$un_set_demo_array = $var_array;
+for ( $count = 0; $count < $var_array_len - 1; ++$count ) {
+    echo 'Before: count($un_set_demo_array): '.count($un_set_demo_array).PHP_EOL;
+    $rand_value = rand( 0, ( count($un_set_demo_array) - 1 ) );
+    echo '$rand_value: '.$rand_value.PHP_EOL;
+    echo 'unset( $un_set_demo_array['.$rand_value.'] )'.PHP_EOL;
+    unset( $un_set_demo_array[ $rand_value ] );
+    echo 'After: count($un_set_demo_array): '.count($un_set_demo_array).PHP_EOL;
+}
+
+echo 'var_dump($un_set_demo_array)'.PHP_EOL;
+var_dump( $un_set_demo_array );
+
+/**
+ * Splice Array Element Demo: the array will not be reindexing.
+ */
+$splice_demo_array = $var_array;
+for ( $count = 0; $count < $var_array_len - 1; ++$count ) {
+    echo 'Before: count($splice_demo_array): '.count($splice_demo_array).PHP_EOL;
+    $rand_value = rand( 0, ( count($splice_demo_array) - 1 ) );
+    echo '$rand_value: '.$rand_value.PHP_EOL;
+    echo 'array_splice( $splice_demo_array, '.$rand_value.', 1 )'.PHP_EOL;
+    array_splice( $splice_demo_array, $rand_value, 1 );
+    echo 'After: count($splice_demo_array): '.count($splice_demo_array).PHP_EOL;
+}
+
+echo 'var_dump($splice_demo_array)'.PHP_EOL;
+var_dump( $splice_demo_array );
+
 echo 'Array is an iterable:'.PHP_EOL;
 echo 'foreach ( $var_array as $elem )'.PHP_EOL;
 $index = 0;
