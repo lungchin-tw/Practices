@@ -47,6 +47,7 @@ var_dump( $_SESSION );
         echo 'inverse( 0 ): '.inverse( 0 ).PHP_EOL;
     } catch ( Exception $e ) {
         echo $e->__toString().PHP_EOL;
+        echo 'Exception::Message='.$e->getMessage().PHP_EOL;
     } finally {
         echo 'Second finally'.PHP_EOL;
     }
