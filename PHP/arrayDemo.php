@@ -84,3 +84,21 @@ declare( strict_types=1 );
     var_dump( $spliceArrayDemo );
     echo '======================================================================'.PHP_EOL.PHP_EOL;
 }
+
+
+{
+    echo '==================== Demo Array Destructuring =================='.PHP_EOL;
+    $demoArray = array( 'Abel', 'Aiden', 'Jacky', 'JJ' );
+
+    [ '0' => $abel, '2' => $jacky ] = $demoArray;
+    echo '$abel= '.$abel.PHP_EOL;
+    echo '$jacky= '.$jacky.PHP_EOL;
+    echo PHP_EOL;
+
+    [ $abel, $aiden, $jacky ] = $demoArray;
+    echo '$abel= '.$abel.PHP_EOL;
+    echo '$aiden= '.$aiden.PHP_EOL;
+    echo '$jacky= '.$jacky.PHP_EOL;
+    
+    echo '======================================================================'.PHP_EOL.PHP_EOL;
+}

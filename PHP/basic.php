@@ -249,6 +249,15 @@ echo '============================================================'.PHP_EOL.PHP_
     echo '==============================================================='.PHP_EOL.PHP_EOL;
 }
 
+{
+    echo '==================== Demo Null Coalescing Operator ============'.PHP_EOL;
+    $enable_output = true;
+    $callable = function () { echo 'Enable Output'.PHP_EOL; };
+    $enable_output ?? $callable();
+    echo '==============================================================='.PHP_EOL.PHP_EOL;
+}
+
+
 /*
 * ?> : Prefer Omiting PHP closing tag if this file contain only PHP script.
 */
