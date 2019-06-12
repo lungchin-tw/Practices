@@ -18,14 +18,14 @@ declare( strict_types=1 );
         }
     }
 
-    var_dump( $demoArray );
+    print_r( $demoArray );
     echo '======================================================================'.PHP_EOL.PHP_EOL;
 }
 
 {
     echo '============================ Array : Demo sort ======================='.PHP_EOL;
 
-    class sortElem {
+    class SortElem {
         private $_key = 0;
         private $_value = 0;
 
@@ -47,19 +47,19 @@ declare( strict_types=1 );
     $sortArrayDemo = array();
 
     for ( $count = 0; $count < 5; ++$count ) {
-        array_push( $sortArrayDemo, new sortElem( rand( 1, 100 ), rand( 1, 100 ) ) );
+        array_push( $sortArrayDemo, new SortElem( rand( 1, 100 ), rand( 1, 100 ) ) );
     }
 
     echo 'Before Sorting:'.PHP_EOL;
-    var_dump( $sortArrayDemo );
+    print_r( $sortArrayDemo );
     echo 'End Sorting:'.PHP_EOL;
     usort( 
         $sortArrayDemo,
-        function ( sortElem $a, sortElem $b ) : int {
+        function ( SortElem $a, SortElem $b ) : int {
             return ( $a->getValue() <=> $b->getValue() );
         } 
     );
-    var_dump( $sortArrayDemo );
+    print_r( $sortArrayDemo );
     echo '======================================================================'.PHP_EOL.PHP_EOL;
 }
 

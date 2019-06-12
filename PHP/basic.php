@@ -1,5 +1,8 @@
 <?php 
 declare( strict_types=1 );
+phpinfo();
+
+error_reporting(E_ALL);
 
 echo 'echo Hello, World'.PHP_EOL;
 eCHo 'eCHo <h2>PHP is Fun!</h2>'.PHP_EOL;
@@ -8,6 +11,18 @@ ECHO 'ECHO This ', 'string ', 'was ', 'made ', 'with multiple parameters.'.PHP_E
 $color = 'red';
 echo '$color: '.$color.PHP_EOL;
 // echo "coLor = $coLor;\n"; <= This result will be [ Notice: Undefined variable ... ]
+
+echo PHP_EOL;
+
+$heredoc_str = <<<EOT
+this
+is
+an eot
+test: color = {$color}.
+
+EOT;
+
+echo $heredoc_str.PHP_EOL;
 
 // global keyworld
 $gx = 5;

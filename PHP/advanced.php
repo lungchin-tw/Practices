@@ -27,8 +27,10 @@ var_dump( $_SESSION );
     echo '==================== Expirement Exceptions =================='.PHP_EOL;
     function inverse( float $value ) : float {
         if ( isset( $value ) == false ) {
+            var_dump( debug_backtrace() );
             throw new Exception( 'isset( $value ) == false.' );
         } elseif ( abs($value) < FLOAT_NEAR_ZERO ) {
+            var_dump( debug_backtrace() );
             throw new Exception( '( abs($value) < FLOAT_NEAR_ZERO ).' );
         }
 
@@ -63,6 +65,8 @@ var_dump( $_SESSION );
     require_once 'include/extended_class.php';
 
     echo '==================== Expirement Classs, Interface =================='.PHP_EOL;
+    print_r( new stdClass() );
+    print_r( new class{} );
     echo 'namspace of IInterface: '.IInterface::class.PHP_EOL;
     echo 'namspace of BaseClass: '.BaseClass::class.PHP_EOL;
     echo PHP_EOL.'BaseClass::printSymbol(): '.PHP_EOL;

@@ -17,7 +17,9 @@
             "label": "Run advanced.php",
             "command": "php",
             "args": [
-                "advanced.php"
+                "advanced.php",
+                "--dump-instr=yes"
+
             ],
             "group": {
                 "kind": "test",
