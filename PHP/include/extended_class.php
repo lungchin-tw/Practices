@@ -10,6 +10,7 @@ namespace jacky{
         }
 
         public function getNum() : int {
+            echo __METHOD__.PHP_EOL;
             return 1010;
         }
     }
