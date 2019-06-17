@@ -10,7 +10,7 @@ class BaseClass implements IInterface {
     static function printSymbol() {
         echo 'Desc: '.self::CONST_BASE_CLASS_DESC.PHP_EOL;
         echo 'self::class: '.self::class.PHP_EOL;
-        echo 'static::class: '.static::class.PHP_EOL;
+        //echo 'static::class: '.static::class.PHP_EOL; // Will Crash When Execute parent::printSymbol in ExtendedClass
         echo '__CLASS__: '.__CLASS__.PHP_EOL;
         echo '__METHOD__: '.__METHOD__.PHP_EOL;
         echo '__FUNCTION__: '.__FUNCTION__.PHP_EOL;
