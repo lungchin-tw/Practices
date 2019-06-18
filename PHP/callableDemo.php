@@ -9,8 +9,6 @@ function DemoPrintBackTrace() {
 }
 
 
-
-
 echo PHP_EOL;
 echo "Type 1: Simple callback".PHP_EOL;
 echo "call_user_func( 'DemoPrintBackTrace' ): ".PHP_EOL;
@@ -45,7 +43,7 @@ echo PHP_EOL;
 
 
 {
-    class CustomizedCallee {
+        class CustomizedCallee {
         public function __invoke( string $val ) : string {
             echo __METHOD__.', Pass in $val= '.$val.PHP_EOL;
             return $val;
@@ -54,7 +52,7 @@ echo PHP_EOL;
 
     echo "Type 4: Objects Implementing __invoke can be used as callables.".PHP_EOL;
     echo '$val = '."call_user_func( (new CustomizedCallee()), 'This is a customized callee.' )".PHP_EOL;
-    $val = call_user_func( (new CustomizedCallee()), 'This is a customized callee.' );
+    $val = call_user_func( (new CustomizedCallee()), 'Call by call_user_func.' );
     var_dump( $val );
     echo PHP_EOL;
 }
