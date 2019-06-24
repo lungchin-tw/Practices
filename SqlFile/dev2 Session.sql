@@ -1,0 +1,1 @@
+SELECT * FROM platform.manage_ip_info WHERE info = 'BangkokDev';
