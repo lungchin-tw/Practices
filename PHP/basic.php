@@ -176,6 +176,9 @@ $new_car1 = new Car( 'BMW 3 Series' );
 var_dump( $new_car1 );
 $new_car2 = new Car( 'Benz C Class' );
 var_dump( $new_car2 );
+
+echo 'is_array( $new_car1 ): '.is_array( $new_car1 ).PHP_EOL;
+echo 'is_object( $new_car1 ): '.is_object( $new_car1 ).PHP_EOL;
 echo '============================================================'.PHP_EOL.PHP_EOL;
 
 // Experiment NULL
@@ -261,6 +264,9 @@ echo '============================================================'.PHP_EOL.PHP_
     foreach( $var_associative_array as $key => $value ) {
         echo '$key: '.$key.', $value: '.$value.PHP_EOL;
     }
+
+    echo 'is_array( $var_associative_array ): '.is_array( $var_associative_array ).PHP_EOL;
+    echo 'is_object( $var_associative_array ): '.is_object( $var_associative_array ).PHP_EOL;
     echo '==============================================================='.PHP_EOL.PHP_EOL;
 }
 
