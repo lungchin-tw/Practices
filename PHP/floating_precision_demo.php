@@ -18,6 +18,7 @@ echo PHP_EOL;
 
 var_dump( $result );
 
+
 echo sprintf( "%0.20f", $x );
 echo PHP_EOL;
 
@@ -38,4 +39,12 @@ echo PHP_EOL;
 
 $result = bcadd( strval($x), strval($y), 2 );
 echo ( $result == 0.3 ) ? 'true' : 'false';
+echo PHP_EOL;
+
+$result = ( $y - $x );
+echo ( $result == 0.1 ) ? 'true' : 'false';
+echo PHP_EOL;
+
+
+echo sprintf( "%0.20f", $result );
 echo PHP_EOL;
