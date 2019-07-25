@@ -4,47 +4,48 @@ declare( strict_types=1 );
 $x = 0.1;
 $y = 0.2;
 $z = 0.2;
+$w = 0.3;
 $zero = 0;
 
-echo ( $y == $z ) ? 'true' : 'false';
+echo '( $y == $z ): '.(( $y == $z ) ? 'true' : 'false');
 echo PHP_EOL;
 
-echo ( ( $y - $z ) == $zero ) ? 'true' : 'false';
+echo '( ( $y - $z ) == $zero ): '.(( ( $y - $z ) == $zero ) ? 'true' : 'false');
 echo PHP_EOL;
 
 $result = ( $x + $y );
-echo ( $result == 0.3 ) ? 'true' : 'false';
-echo PHP_EOL;
-
 var_dump( $result );
-
-
-echo sprintf( "%0.20f", $x );
+echo '( $result == $w ): '.(( $result == $w ) ? 'true' : 'false');
 echo PHP_EOL;
 
-echo sprintf( "%0.20f", $y );
+echo sprintf( '$x: '."%0.20f", $x );
 echo PHP_EOL;
 
-echo sprintf( "%0.20f", $z );
+echo sprintf( '$y: '."%0.20f", $y );
 echo PHP_EOL;
 
-echo sprintf( "%0.20f", $zero );
+echo sprintf( '$z: '."%0.20f", $z );
 echo PHP_EOL;
 
-echo sprintf( "%0.20f", $result );
+echo sprintf( '$w: '."%0.20f", $w );
 echo PHP_EOL;
 
-echo sprintf( "%0.20f", 0.3 );
+echo sprintf( '$result: '."%0.20f", $result );
 echo PHP_EOL;
+
 
 $result = bcadd( strval($x), strval($y), 2 );
-echo ( $result == 0.3 ) ? 'true' : 'false';
+var_dump($result);
+echo '( $result == $w ): '.(( $result == $w ) ? 'true' : 'false');
+echo PHP_EOL;
+echo sprintf( '$result: '."%0.20f", $result );
 echo PHP_EOL;
 
 $result = ( $y - $x );
-echo ( $result == 0.1 ) ? 'true' : 'false';
+var_dump($result);
+echo '( $result == $x ): '.( ( $result == $x ) ? 'true' : 'false' );
 echo PHP_EOL;
 
 
-echo sprintf( "%0.20f", $result );
+echo sprintf( '$result: '."%0.20f", $result );
 echo PHP_EOL;
