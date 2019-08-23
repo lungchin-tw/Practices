@@ -102,3 +102,20 @@ declare( strict_types=1 );
     
     echo '======================================================================'.PHP_EOL.PHP_EOL;
 }
+
+
+{
+    echo '==================== Demo Array Map =================='.PHP_EOL;
+    $arr1 = array( 0, 1, 2 );
+    $arr2 = array( 0 => 1, 1 => 2, 2 => 3 );
+
+    $map_result = array_map( function( int $x, int $y ): int {
+            return ($x * $y);
+        },
+        $arr1, $arr2
+    );
+
+    print_r( $map_result );
+    echo PHP_EOL;
+    echo '======================================================================'.PHP_EOL.PHP_EOL;
+}

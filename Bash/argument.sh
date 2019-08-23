@@ -28,3 +28,11 @@ ax=( 1, 2, 3 )
 ay=( 10, 20, 30 )
 
 receiver "$(echo ${ax[@]})" "$(echo ${ay[@]})"
+
+empty='';
+if [ -z "$empty" ]
+then
+    echo "\$var is empty"
+else
+    echo "\$var is NOT empty"
+fi
