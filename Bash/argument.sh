@@ -13,6 +13,8 @@ function receiver {
         echo "elem: "$elem
     done
 
+    sleep 3s
+
     vy=( "$2" )
     echo "1st Arg: "${vy[@]}
 

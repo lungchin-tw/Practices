@@ -5,7 +5,7 @@
 *.bk
 poco/poco-1.7.8p2/**
 **/build
-tempCodeRunnerFile.php
+**/tempCodeRunnerFile.php
 **/node_modules
 package-lock.json
 
