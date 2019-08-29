@@ -7,5 +7,9 @@ poco/poco-1.7.8p2/**
 **/build
 **/tempCodeRunnerFile.php
 **/node_modules
+**/vendor
+**/cache
+**/templates_c
+**/composer.lock
 package-lock.json
 
