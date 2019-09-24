@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .error {color: red;}
+    </style>
+    <body>
+        <p><h2>hello_form.php POST</h2></p>
+        <!-- <form action="hello_form.php" method="POST"> -->
+        <!-- <form method="post" action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>> can't work, don't know why.  -->
+            Account: <input type="text" name="account">
+            <span class="error">* <?php echo $nameErr;?></span>
+            <br>
+            Password: <input type="text" name="password">
+            <span class="error">* <?php echo $passwordErr;?></span>
+            <br>
+            <input type="submit">
+        </form>
+
+        <p><h2>hello_form.php GET</h2></p>
+        <form action="hello_form.php" method="GET">
+            Account: <input type="text" name="account"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit">
+        </form>
+
+        <p><h2>hello_html.php</h2></p>
+        <form action="hello_html.php" method="POST">
+            Account: <input type="text" name="account"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit" value="Login">
+        </form>
+
+        <p><h2>Cross-site scripting(XSS)</h2></p>
+        <form method="POST" action="hello_html.php">
+            Account: <input type="text" name="account"><br>
+            Password: <input type="text" name="password"><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

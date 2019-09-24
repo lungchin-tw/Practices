@@ -16,3 +16,6 @@ SELECT * FROM platform.manage_ip_info WHERE info = 'BangkokDev';
 UPDATE platform.manage_ip_info 
 SET startip = '$ip_decimal', endip = '$ip_decimal' 
 WHERE info = 'BangkokDev';
+
+-- 時間的語法
+and UNIX_TIMESTAMP(created_at) > UNIX_TIMESTAMP('2018-10-22 16:00:00');

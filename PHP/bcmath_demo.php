@@ -29,3 +29,8 @@ echo "bcmod( $b, $a, 4 )=".bcmod( strval($b), strval($a), 4 ).PHP_EOL;
 echo "bcmul( $b, $a, 4 )=".bcmul( strval($b), strval($a), 4 ).PHP_EOL;
 echo "bcpow( $a, 5, 0 )=".bcpow( strval($a), '5', 0 ).PHP_EOL;
 echo "bcsqrt( $a, 4 )=".bcsqrt( strval($a), 4 ).PHP_EOL;
+
+
+// echo "bcdiv( '100', '15', 2 )=".bcdiv( '100', '11', 2 ).PHP_EOL;
+$val = bcmod( '10', '13', 0 ).PHP_EOL;
+var_dump( $val );

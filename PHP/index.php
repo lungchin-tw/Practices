@@ -1,5 +1,11 @@
 <?php 
-phpinfo();
-$http = curl_init();
+
+$prototype = new stdClass();
+$prototype->str = '123';
+
+$list = array();
+array_push( $list, clone $prototype );
+
+print_r( $list );
 
 ?>
