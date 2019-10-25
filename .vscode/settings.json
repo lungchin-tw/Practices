@@ -5,4 +5,5 @@
     },
     "editor.tabCompletion": "on",
     "workbench.editor.highlightModifiedTabs": true,
+    "python.pythonPath": "C:\\Users\\sgl-n31\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
 }

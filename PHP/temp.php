@@ -1,13 +1,6 @@
 <?php 
 declare( strict_types=1 );
 
-$a = array
-(
-    array( 'x' => 1, 'y' => 2 )
-);
+$obj = new stdClass();
 
-$b = $a;
-$b[ 0 ]['x'] = 10;
-
-print_r( $a );
-print_r( $b );
+echo is_null( $obj ) ?: '$obj is not null.';
