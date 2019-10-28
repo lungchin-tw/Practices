@@ -13,3 +13,5 @@ poco/poco-1.7.8p2/**
 **/composer.lock
 package-lock.json
 
+**/__pycache__/**
+*.pyc
