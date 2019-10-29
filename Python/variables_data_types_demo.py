@@ -43,7 +43,7 @@ print( 'type(bytearray(5)) = ' + str(type(bytearray(5))) )
 print( 'memoryview(bytes(5)) = ' + str(memoryview(bytes(5))) )
 print( 'type(memoryview(bytes(5))) = ' + str(type(memoryview(bytes(5)))) )
 
-print
+print( '' )
 
 print( 'type(None): {}'.format( type(None) ) )
 print( 'type({{}}): {}'.format( type({}) ) )

@@ -1,9 +1,11 @@
 {
-    "code-runner.defaultLanguage": "php",
+    "code-runner.defaultLanguage": "python",
     "code-runner.executorMap": {
         "php": "C:\\php-7.3.3-Win32-VC15-x64\\php.exe",
+        "python": "python"
     },
+
     "editor.tabCompletion": "on",
     "workbench.editor.highlightModifiedTabs": true,
-    "python.pythonPath": "C:\\Users\\sgl-n31\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "python.pythonPath": "C:\\Python27\\python.exe",
 }
