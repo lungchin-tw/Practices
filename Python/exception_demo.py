@@ -7,15 +7,20 @@ print( '\n{}\n'.format( sys.version ) )
 
 try:
     print(x)
-except NameError:
-    print( 'Exception: NameError' )
-except:
+except NameError as e:
+    print( 'Exception: NameError, {}'.format(e) )
+except Exception as e:
     print( 'An exception occurred!!!' )
 finally:
     print( 'Finally block.' )
 
 
+print( '' )
+
 x = -1
 
-if x == -1:
-    raise Exception( 'Error: x is invalid!!' )
+try:
+    if x == -1:
+        raise Exception( 'Error: x is invalid!!' )
+except Exception as e:
+    print( e )
