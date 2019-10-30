@@ -16,9 +16,13 @@ class Actor:
     def introduction( self ):
         return '{{ name:{}, age:{}, x:{}, y:{} }}'.format( self.name, self.age, self.x, self.y )
 
+# assign by parameters's order
+an_actor_vivian = Actor( 'Vivian', 50 )
+print( 'an_actor_vivian: {}'.format( an_actor_vivian.introduction() ) )
 
-an_actor = Actor( 'Jacky', 43 )
-print( 'an_actor: {}'.format( an_actor.introduction() ) )
+# assign by each parameter's name
+an_actor_jacky = Actor( age=43, name='Jacky' )
+print( 'an_actor_jacky: {}'.format( an_actor_jacky.introduction() ) )
 
     
 # Simple inheritance
