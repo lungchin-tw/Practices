@@ -107,8 +107,10 @@ def result(request, question_id):
     print_frame_info( getframeinfo(currentframe()) )
     print_request(request)
 
+    q = get_object_or_404(Question, pk=question_id)
+
     print( 'question_id: %d' % question_id )
-    return HttpResponse( 'You\'re looking at the result of question %s.' % question_id )
+    return render(request, 'polls/result.html', {'question': q})
 
 
 def vote(request, question_id):
