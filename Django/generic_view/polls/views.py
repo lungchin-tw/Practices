@@ -54,7 +54,7 @@ def print_frame_info( fi ):
     Frame Info:
         doc:{}
         method:{}
-        file:{}:{}
+        file:{}, line {},
         name:{}
         package:{}
         '''.format(
