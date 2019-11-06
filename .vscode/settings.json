@@ -8,4 +8,6 @@
     "editor.tabCompletion": "on",
     "workbench.editor.highlightModifiedTabs": true,
     "python.pythonPath": "C:\\Program Files\\Python38\\python.exe",
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.vetOnSave": "off"
 }

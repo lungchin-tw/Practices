@@ -8,5 +8,15 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\Go\\src\\flowcontrol\\flow_control.go",
+		"bookmarks": [
+			{
+				"line": 49,
+				"column": 23,
+				"label": ""
+			}
+		]
 	}
 ]
