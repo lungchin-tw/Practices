@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strings"
 )
 
@@ -83,5 +84,59 @@ func main() {
 
 	for index, value := range s2 {
 		fmt.Printf("range s2: index=%v, value=%v\n", index, value)
+	}
+
+	fmt.Println("\nMaps:")
+
+	var a_map map[string]Vertex
+	fmt.Printf("a_map - Type: %T, Value: %#v, len=%v\n", a_map, a_map, len(a_map))
+
+	a_map = make(map[string]Vertex)
+	fmt.Printf("a_map - Type: %T, Value: %#v, len=%v\n", a_map, a_map, len(a_map))
+
+	a_map["home"] = Vertex{123, 456}
+	fmt.Printf("a_map - Type: %T, Value: %#v, len=%v\n", a_map, a_map, len(a_map))
+
+	{
+		value, found := a_map["work"]
+		fmt.Printf("a_map[\"work\"]: value: %v, found: %v\n", value, found)
+	}
+
+	{
+		value, found := a_map["home"]
+		fmt.Printf("a_map[\"home\"]: value: %v, found: %v\n", value, found)
+	}
+
+	fmt.Println("\nFunction Values:")
+	{
+		hypot := func(x, y float64) float64 {
+			return math.Sqrt(x*x + y*y)
+		}
+
+		fmt.Printf("hypot: Type=%T, Value=%v\n", hypot, hypot)
+		fmt.Printf("hypot( 5, 12 ): %v\n", hypot(5, 12))
+		fmt.Printf("pass_3_4(hypot): %v\n", pass_3_4(hypot))
+		fmt.Printf("pass_3_4((math.Pow): %v\n", pass_3_4(math.Pow))
+	}
+
+	fmt.Println("\nFunction closures:")
+	{
+		pos, neg := adder(), adder()
+		for index := 0; index < 5; index++ {
+			fmt.Printf("pos(%v): %v\n", index, pos(index))
+			fmt.Printf("neg(-2*%v): %v\n", index, neg(-2*index))
+		}
+	}
+}
+
+func pass_3_4(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
 	}
 }

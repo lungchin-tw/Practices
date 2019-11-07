@@ -16,3 +16,6 @@ package-lock.json
 **/__pycache__/**
 *.pyc
 *.exe
+__debug_bin
+**/bookmarks.json
+

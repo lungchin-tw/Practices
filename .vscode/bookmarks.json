@@ -18,5 +18,20 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\Go\\src\\moretypes\\moretypes.go",
+		"bookmarks": [
+			{
+				"line": 7,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 89,
+				"column": 9,
+				"label": ""
+			}
+		]
 	}
 ]

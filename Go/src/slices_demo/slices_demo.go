@@ -19,7 +19,7 @@ func main() {
 	slice = append(slice, 999)
 	fmt.Printf("slice - Type: %T, Value: %#v, len=%v, cap=%v\n", slice, slice, len(slice), cap(slice))
 
-	slice = append(slice, 999)
+	slice = append(slice, 1999)
 	fmt.Printf("slice - Type: %T, Value: %#v, len=%v, cap=%v\n", slice, slice, len(slice), cap(slice))
 
 	fmt.Printf("int_list - Type: %T, Value: %#v, len=%v, cap=%v\n", int_list, int_list, len(int_list), cap(int_list))
@@ -34,5 +34,4 @@ func main() {
 
 	board_2 := make([][]int, 3)
 	fmt.Printf("board_2 - Type: %T, Value: %#v, len=%v, cap=%v\n", board_2, board_2, len(board_2), cap(board_2))
-
 }
