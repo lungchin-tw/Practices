@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Goroutines:")
-
 	go say("hello")
 
 	for index := 0; index < 10; index++ {
