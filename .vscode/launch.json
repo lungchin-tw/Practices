@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Golan: leave server",
+            "type": "go",
+            "request": "launch",
+            "mode": "exec",
+            "args": ["run"],
+            "program": "${workspaceFolder}\\Go\\leaf\\leafserver\\bin\\server.exe"
+        },
+        {
             "name": "Golan: Current File",
             "type": "go",
             "request": "launch",
