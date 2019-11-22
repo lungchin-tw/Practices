@@ -43,6 +43,8 @@ func printOS() {
 func main() {
 	defer fmt.Println("Test Defer Statement")
 
+	a, b, c := 1, 2, 3
+	
 	fmt.Println("Common for:")
 	sum := 0
 	for index := 0; index < 10; index++ {

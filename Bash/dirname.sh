@@ -2,8 +2,8 @@
 
 set -x
 
-echo $(dirname $0)
-echo $(pwd)
+echo 'dirname $0': $(dirname $0)
+echo 'pwd': $(pwd)
 
 cd $(dirname $0)
 

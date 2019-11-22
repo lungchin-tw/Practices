@@ -18,4 +18,4 @@ package-lock.json
 __debug_bin
 **/bookmarks.json
 
-.DS_Store
+**/.DS_Store
