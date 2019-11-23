@@ -48,7 +48,5 @@ func main() {
 		writer.Flush()
 
 		defer file.Close()
-
 	}
-
 }
