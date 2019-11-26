@@ -52,6 +52,12 @@ func (value MF) String() string {
 	return fmt.Sprintf("Mother Fucker ~~~")
 }
 
+func ReturnValues() (odds int, winnings float64) {
+	odds = 1
+	winnings = 2.1
+	return
+}
+
 func main() {
 	v := Vertex{X: 3, Y: 4}
 	fmt.Printf("v=%+v\n", v)
@@ -116,9 +122,12 @@ func main() {
 	demoTypeSwitches(ok)
 
 	fmt.Println("\nStringers:")
-	fmt.Printf("MF{}: %v", MF{})
+	fmt.Printf("MF{}: %v\n", MF{})
 
 	// int_value = empty_intf.(int) this will raise a exception
+
+	a, b := ReturnValues()
+	fmt.Printf("ReturnValues:%v, %v", a, b)
 }
 
 func demoTypeSwitches(value interface{}) {
