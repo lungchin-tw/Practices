@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"sync"
 	"time"
 
 	progressbar "github.com/schollz/progressbar/v2"
 	mpb "github.com/vbauerster/mpb/v4"
-	"github.com/vbauerster/mpb/v4/decor"
+	decor "github.com/vbauerster/mpb/v4/decor"
 )
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
 		bar := progressbar.New(1000)
 		for index := 0; index < 10; index++ {
 			time.Sleep(100 * time.Millisecond)
-			bar.Add(1)
+			bar.Add(100)
 		}
 	}
 
@@ -33,12 +34,14 @@ func main() {
 	{
 		var wg sync.WaitGroup
 		p := mpb.New(mpb.WithWaitGroup(&wg))
-		num_bars := 3
+		total, num_bars := 100, 3
 		wg.Add(num_bars)
+
+		rand.Seed(time.Now().UnixNano())
 
 		for index := 0; index < num_bars; index++ {
 			name := fmt.Sprintf("Bar#%v", index)
-			bar := p.AddBar(100,
+			bar := p.AddBar(int64(total),
 				mpb.PrependDecorators(
 					decor.Name(name),
 					decor.Percentage(decor.WCSyncSpace),
@@ -54,8 +57,14 @@ func main() {
 			go func() {
 				defer wg.Done()
 
+				for index := 0; index < total; index++ {
+					start := time.Now()
+					time.Sleep(time.Duration((rand.Intn(10) + 1)) * 10 * time.Millisecond)
+					bar.Increment(time.Since(start))
+				}
 			}()
 		}
-	}
 
+		p.Wait()
+	}
 }
