@@ -23,5 +23,6 @@ package-lock.json
 *.exe
 __debug_bin
 **/bookmarks.json
+**/go.sum
 
 **/.DS_Store
