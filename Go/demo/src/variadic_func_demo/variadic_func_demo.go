@@ -1,8 +1,9 @@
 package main
 
-import "fmt"
-
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 func variadic_primitives(args ...string) {
 	fmt.Printf("[variadic_primitives], args:%#v\n", args)
@@ -17,6 +18,16 @@ func variadic_interfaces(args ...interface{}) {
 
 	for index, arg := range args {
 		fmt.Printf("[variadic_interfaces], Index=%v, Args=%v, Type=%T\n", index, arg, arg)
+	}
+
+	variadic_interface_subroutine(args...)
+}
+
+func variadic_interface_subroutine(args ...interface{}) {
+	fmt.Printf("\n[variadic_interface_subroutine], args=%#v\n", args)
+
+	for index, arg := range args {
+		fmt.Printf("[variadic_interface_subroutine], Index=%v, Args=%v, Type=%T\n", index, arg, arg)
 	}
 }
 
