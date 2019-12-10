@@ -28,6 +28,12 @@ func main() {
 	// DoFatal(err)
 	// fmt.Println("After Fatal")
 
-	DoPanic(err)
-	fmt.Println("After Panic")
+	// DoPanic(err)
+	// fmt.Println("After Panic")
+
+	{
+		err := fmt.Errorf("%v: %w", "Wrapper", errors.New("Be Wrapped"))
+		fmt.Printf("\n[wrapError], %+v\n", err)
+		fmt.Printf("[wrapError.Unwrap], %+v\n", errors.Unwrap(err))
+	}
 }

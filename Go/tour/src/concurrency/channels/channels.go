@@ -73,51 +73,51 @@ func default_selection() {
 }
 
 func main() {
-	s := []int{7, 2, 8, -9, 4, 0}
-	fmt.Println("s[:len(s)/2]=", s[:len(s)/2])
+	// s := []int{7, 2, 8, -9, 4, 0}
+	// fmt.Println("s[:len(s)/2]=", s[:len(s)/2])
 
-	c := make(chan int)
-	go sum(s[:len(s)/2], c)
-	go sum(s[len(s)/2:], c)
-	x := <-c
-	fmt.Println("x := <-c, x=", x)
-	y := <-c
-	fmt.Println("y := <-c, y=", y)
+	// c := make(chan int)
+	// go sum(s[:len(s)/2], c)
+	// go sum(s[len(s)/2:], c)
+	// x := <-c
+	// fmt.Println("x := <-c, x=", x)
+	// y := <-c
+	// fmt.Println("y := <-c, y=", y)
 
-	fmt.Println("\nBuffered Channels:")
+	// fmt.Println("\nBuffered Channels:")
 
-	ch := make(chan int, 2)
-	ch <- 1
-	ch <- 2
-	// ch <- 3 This will raise an exception!!!
-	fmt.Println("<-ch: ", <-ch)
-	fmt.Println("<-ch: ", <-ch)
-	// fmt.Println("<-ch: ", <-ch) This will raise an exception
-	ch <- 1
-	fmt.Println("<-ch: ", <-ch)
-
+	// ch := make(chan int, 2)
 	// ch <- 1
-	go sum(s[:len(s)/2], ch)
 	// ch <- 2
-	go sum(s[len(s)/2:], ch)
+	// // ch <- 3 This will raise an exception!!!
+	// fmt.Println("<-ch: ", <-ch)
+	// fmt.Println("<-ch: ", <-ch)
+	// // fmt.Println("<-ch: ", <-ch) This will raise an exception
+	// ch <- 1
+	// fmt.Println("<-ch: ", <-ch)
 
-	{
-		x, ok := <-ch
-		fmt.Printf("x := <-ch, x=%v, ok=%v\n", x, ok)
-		y, ok := <-ch
-		fmt.Printf("y := <-ch, y=%v, ok=%v\n", y, ok)
-		// y, ok = <-ch This will raise an exception
-		// fmt.Printf("y := <-ch, y=%v, ok=%v\n", y, ok)
-	}
+	// // ch <- 1
+	// go sum(s[:len(s)/2], ch)
+	// // ch <- 2
+	// go sum(s[len(s)/2:], ch)
 
-	{
-		fmt.Println("\nRange and Close:")
-		c := make(chan int, 10)
-		go range_and_close(cap(c), c)
-		for index := range c {
-			fmt.Println("index: ", index)
-		}
-	}
+	// {
+	// 	x, ok := <-ch
+	// 	fmt.Printf("x := <-ch, x=%v, ok=%v\n", x, ok)
+	// 	y, ok := <-ch
+	// 	fmt.Printf("y := <-ch, y=%v, ok=%v\n", y, ok)
+	// 	// y, ok = <-ch This will raise an exception
+	// 	// fmt.Printf("y := <-ch, y=%v, ok=%v\n", y, ok)
+	// }
+
+	// {
+	// 	fmt.Println("\nRange and Close:")
+	// 	c := make(chan int, 10)
+	// 	go range_and_close(cap(c), c)
+	// 	for index := range c {
+	// 		fmt.Println("index: ", index)
+	// 	}
+	// }
 
 	{
 		fmt.Println("\nSelect:")
@@ -133,8 +133,8 @@ func main() {
 		select_demo(c, quit)
 	}
 
-	{
-		fmt.Println("\nDefault Selection:")
-		default_selection()
-	}
+	// {
+	// 	fmt.Println("\nDefault Selection:")
+	// 	default_selection()
+	// }
 }
