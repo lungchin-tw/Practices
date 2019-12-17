@@ -32,9 +32,12 @@ func main() {
 	printer := message.NewPrinter(language.English)
 
 	fmt.Println("\nUNITS:")
+	printer.Println("time.Microsecond:", int64(time.Microsecond))
+	printer.Println("time.Nanosecond:", int64(time.Nanosecond))
 	printer.Println("time.Millisecond:", int64(time.Millisecond))
 	printer.Println("time.Second:", int64(time.Second))
 	printer.Println("time.Minute:", int64(time.Minute))
+
 	t2 := t.Add(time.Minute * 2)
 	printer.Println("time.Add(time.Minute):", t2)
 	printer.Println("(t2 > t):", (t2.After(t)))
