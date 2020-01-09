@@ -97,6 +97,9 @@ func main() {
 	a_map["home"] = Vertex{123, 456}
 	fmt.Printf("a_map - Type: %T, Value: %#v, len=%v\n", a_map, a_map, len(a_map))
 
+	a_map["office"] = Vertex{3, 9}
+	fmt.Printf("a_map - Type: %T, Value: %#v, len=%v\n", a_map, a_map, len(a_map))
+
 	{
 		value, found := a_map["work"]
 		fmt.Printf("a_map[\"work\"]: value: %v, found: %v\n", value, found)

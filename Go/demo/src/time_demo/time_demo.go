@@ -13,6 +13,7 @@ func main() {
 
 	fmt.Println("time.Now():", t)
 	fmt.Println("time.Now().UTC():", t.UTC())
+	fmt.Println("time.Now().UTC().Unix():", t.UTC().Unix())
 	fmt.Println("time.Now().UTC().UnixNano():", t.UTC().UnixNano())
 	fmt.Println("time.Now().Format(\"15-04-05\"):", t.Format("15-04-05"))
 	fmt.Println("time.Day():", t.Day())
