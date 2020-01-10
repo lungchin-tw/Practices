@@ -44,4 +44,6 @@ func main() {
 	printer.Println("(t2 > t):", (t2.After(t)))
 	printer.Println("(t2 == t):", (t2 == t))
 	printer.Println("(t2 < t):", (t2.Before(t)))
+
+	fmt.Println("time.Unix(1578633001, 0).Local():", time.Unix(1578633001, 0).Local())
 }
