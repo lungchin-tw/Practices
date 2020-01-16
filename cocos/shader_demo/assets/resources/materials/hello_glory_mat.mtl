@@ -1,0 +1,16 @@
+{
+  "__type__": "cc.Material",
+  "_name": "",
+  "_objFlags": 0,
+  "_native": "",
+  "_effectAsset": {
+    "__uuid__": "234b48c9-d3b6-45f8-95c5-949f3c211731"
+  },
+  "_defines": {
+    "USE_TEXTURE": true
+  },
+  "_props": {
+    "posx": 0.5,
+    "gloryslope": 3
+  }
+}
