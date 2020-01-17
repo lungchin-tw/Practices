@@ -27,7 +27,7 @@ export default class SpriteShaderUpdate extends cc.Component {
     ExtendX = 0;
 
     @property
-    SpeedX = 10;
+    SpeedX = 0.5;
 
     _material: cc.Material = null;
     _posx = 0;
