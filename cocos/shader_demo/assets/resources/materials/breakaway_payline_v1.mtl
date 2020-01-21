@@ -4,15 +4,12 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "40ead53a-ea23-45c7-b6e7-6d715ba2f87f"
+    "__uuid__": "2de8aa14-99bf-4bf3-80f6-dc95250405b7"
   },
   "_defines": {
     "USE_TEXTURE": true
   },
   "_props": {
-    "posx": 0.3,
-    "gloryslope": 0,
-    "gloryrange": 0.05,
-    "gloryintensity": 10
+    "su": 0
   }
 }
