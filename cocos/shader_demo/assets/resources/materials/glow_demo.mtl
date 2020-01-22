@@ -9,5 +9,8 @@
   "_defines": {
     "USE_TEXTURE": true
   },
-  "_props": {}
+  "_props": {
+    "glow_range_unit": 0.001,
+    "glow_intensity": 5
+  }
 }

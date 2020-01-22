@@ -10,8 +10,12 @@
     "USE_TEXTURE": true
   },
   "_props": {
-    "start": -0.5,
+    "start": 0.5,
     "dist": 0.1,
-    "tail_len": 0.25
+    "tail_len": 0.25,
+    "glow_range_unit": 0.001,
+    "glow_intensity": 10,
+    "num_glow_slices": 4,
+    "num_glow_ranges": 3
   }
 }

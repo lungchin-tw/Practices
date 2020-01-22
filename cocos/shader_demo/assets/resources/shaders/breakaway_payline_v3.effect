@@ -17,8 +17,10 @@ CCEffect %{
         dist: { value: 0. }
         tail_len: { value: 0.5 }
         tail_uv: { value: 0.5 }
-        glow_range_unit: { value: 0.001 }
+        glow_range_unit: { value: 0.005 }
         glow_intensity: { value: 5. }
+        num_glow_slices: { value: 4. }
+        num_glow_ranges: { value: 5. }
 }%
 
 
@@ -82,9 +84,13 @@ CCProgram fs %{
 
   #define NUM_GLOW_SLICES 4.
   #define NUM_GLOW_RANGE 20.
+  #define MAX_GLOW_SLICES 100.
+  #define MAX_GLOW_RANGE 100.
   uniform GLOW {
     float glow_range_unit;
     float glow_intensity;
+    float num_glow_slices;
+    float num_glow_ranges;
   }
 
   vec4 calc_bloom_color_simple( vec4 clr ) {
@@ -144,6 +150,41 @@ CCProgram fs %{
     }
   }
 
+  vec4 calc_bloom_color_v3( vec4 clr ) {
+    vec4 final_clr = clr;
+    if ( final_clr.a > 1. ) {
+      return final_clr;
+    }
+
+    final_clr = vec4(0.,0.,0.,0.);
+    float num_repeat = num_glow_ranges * num_glow_slices;
+    float degree_slice = 360. / num_glow_slices;
+    for ( float range = 0.; range < MAX_GLOW_RANGE; range++ ) {
+      if ( range >= num_glow_ranges ) {
+        break;
+      }
+
+      float dist = (range * glow_range_unit);
+      for ( float slice = 0.; slice < MAX_GLOW_SLICES; slice++ ) {
+        if ( slice >= num_glow_slices ) {
+          break;
+        }
+
+        float rad = radians( slice * degree_slice );
+        vec2 offset = normalize(vec2( cos(rad), sin(rad) )) * dist;
+        final_clr += texture(texture, (v_uv0 + offset));
+      }
+    }
+
+    if ( final_clr.a > 0. ) {
+      final_clr.rgb *= ( glow_intensity / num_repeat );
+      final_clr.a /= num_repeat;
+      return final_clr;
+    } else {
+      return clr;
+    }
+  }
+
   void main () {
     vec4 o = vec4(1, 1, 1, 1);
 
@@ -156,7 +197,7 @@ CCProgram fs %{
 
     // o = calc_bloom_color_simple(o);
     // o = calc_bloom_color(o);
-    o = calc_bloom_color_v2(o);
+    o = calc_bloom_color_v3(o);
     
     o *= v_color;
 
