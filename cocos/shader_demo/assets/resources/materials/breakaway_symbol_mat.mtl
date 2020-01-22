@@ -4,14 +4,18 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "a282a0ac-5b86-4c39-a2d4-c9d39a2df8ae"
+    "__uuid__": "de193718-697f-4d70-8273-02e69bcba740"
   },
   "_defines": {
     "USE_TEXTURE": true
   },
   "_props": {
-    "start": -0.5,
-    "dist": 0.1,
-    "tail_len": 0.5
+    "ambient": {
+      "__type__": "cc.Vec4",
+      "x": 1,
+      "y": 1,
+      "z": 1,
+      "w": 0.5
+    }
   }
 }

@@ -4,14 +4,10 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "a282a0ac-5b86-4c39-a2d4-c9d39a2df8ae"
+    "__uuid__": "ea6a9797-e4c2-4932-bcca-dbf6bced5411"
   },
   "_defines": {
     "USE_TEXTURE": true
   },
-  "_props": {
-    "start": -0.5,
-    "dist": 0.1,
-    "tail_len": 0.5
-  }
+  "_props": {}
 }

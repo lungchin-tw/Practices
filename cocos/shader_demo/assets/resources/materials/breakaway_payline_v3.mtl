@@ -4,7 +4,7 @@
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
-    "__uuid__": "a282a0ac-5b86-4c39-a2d4-c9d39a2df8ae"
+    "__uuid__": "3d936d7e-7015-4143-bfd3-587098432ca5"
   },
   "_defines": {
     "USE_TEXTURE": true
@@ -12,6 +12,6 @@
   "_props": {
     "start": -0.5,
     "dist": 0.1,
-    "tail_len": 0.5
+    "tail_len": 0.25
   }
 }
