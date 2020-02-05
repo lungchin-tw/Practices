@@ -10,10 +10,10 @@
 
 const {ccclass, property} = cc._decorator;
 
-import UVAnimMatl from '../materials/UVAnimMatl';
+import UVAnimGlowMatl from '../materials/UVAnimGlowMatl';
 
 @ccclass
-export default class UVAnimMatlComp extends cc.Component {
+export default class UVAnimGlowMatlComp extends cc.Component {
 
     @property(cc.Sprite)
     sprite: cc.Sprite = null;
@@ -22,7 +22,7 @@ export default class UVAnimMatlComp extends cc.Component {
     Start = 1.0;
 
     @property
-    Speed = -0.51;
+    Speed = -0.5;
     
     @property
     Delay = 2;
@@ -43,7 +43,7 @@ export default class UVAnimMatlComp extends cc.Component {
             return;
         }
 
-        let mat = new UVAnimMatl(this.Start);
+        let mat = new UVAnimGlowMatl(this.Start);
         let sf = this.sprite.spriteFrame;
         if ( sf.textureLoaded() ) {
             if ( mat.texture !== sf.getTexture() ) {
