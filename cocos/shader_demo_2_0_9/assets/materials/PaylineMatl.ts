@@ -16,20 +16,20 @@ const gfx = renderEngine.gfx;
 const Material = renderEngine.Material;
 
 @ccclass
-export default class ScreenCoordMatl extends Material {
+export default class PaylineMatl extends Material {
 
     _effect = null;
 	_mainTech = null;
     _texture = null;
     
-    constructor() {
+    constructor( payline_uv, payline_start, payline_len ) {
         super(true);
 
         /**
          * Register Shader
          */
         let shader = {
-            name: "ScreenCoord",
+            name: "Payline",
 
             vs: `
             uniform mat4 viewProj;
@@ -37,18 +37,20 @@ export default class ScreenCoordMatl extends Material {
 
             attribute vec2 a_uv0;
             varying vec2 uv0;
-            
-            const float tail_head = 0.625;
-            const float tail_len = 0.25;
-            const float tail_uv = 0.5;
+
+            uniform float payline_uv;
+            uniform float payline_start;
+            uniform float payline_len;
+            uniform float move_dist;
 
             void main () {
                 vec4 pos = viewProj * vec4(a_position, 1);
                 gl_Position = pos;
                 uv0 = a_uv0;
                 float cx = ( (pos.x / pos.z) + 1. ) * 0.5;
-                float tail_end = tail_head - tail_len;
-                uv0.x = ((cx - tail_end) / tail_len) * tail_uv;
+                float head = payline_start + move_dist;
+                float tail = head - payline_len;
+                uv0.x = ((cx - tail) * payline_uv) / payline_len;
             }`,
 
             fs: `
@@ -85,10 +87,29 @@ export default class ScreenCoordMatl extends Material {
 		// 2.parameters sprite必带 textrue color
 		// 3 pass 上面的标准来 单pass	
 		// 4.lay无用
-		this._mainTech = new renderer.Technique( ['transparent'], [{ name: 'texture', type: renderer.PARAM_TEXTURE_2D }], [ pass ] );
+		this._mainTech = new renderer.Technique( 
+            ['transparent'], 
+            [
+                { name: 'texture', type: renderer.PARAM_TEXTURE_2D },
+                { name: 'payline_uv', type: renderer.PARAM_FLOAT },
+                { name: 'payline_start', type: renderer.PARAM_FLOAT },
+                { name: 'payline_len', type: renderer.PARAM_FLOAT },
+                { name: 'move_dist', type: renderer.PARAM_FLOAT },
+            ], 
+            [ pass ] 
+        );
 
-		// Effect
-		this._effect = new renderer.Effect(	[this._mainTech], {}, [] );
+        // Effect
+		this._effect = new renderer.Effect(	
+            [this._mainTech],
+            {
+                'payline_uv': payline_uv,
+                'payline_start': payline_start,
+                'payline_len': payline_len,
+            },
+            []
+        );
+
 		this._texture = null;
     }
 

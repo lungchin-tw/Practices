@@ -62,7 +62,7 @@ export default class UVAnimGlowMatl extends Material {
                     return final_clr;
                 }
 
-                vec4 final_clr = vec4(0.,0.,0.,0.);
+                final_clr = vec4(0.,0.,0.,0.);
                 float num_repeat = num_glow_ranges * num_glow_slices;
                 float degree_slice = 360. / num_glow_slices;
                 for ( float range = 0.; range < num_glow_ranges; range++ ) {
