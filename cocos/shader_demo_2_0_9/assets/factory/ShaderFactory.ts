@@ -1,6 +1,11 @@
 
 
 import GrayColorShader from '../shaders/GrayColorShader';
+import AmbientColorShader from '../shaders/AmbientColorShader';
+import UVAnimShader from '../shaders/UVAnimShader';
+import UVAnimGlowShader from '../shaders/UVAnimGlowShader';
+import ScreenCoordShader from '../shaders/ScreenCoordShader';
+import PaylineShader from '../shaders/PaylineShader';
 
 let ShaderFactory = {
     _shaders: {},
@@ -12,6 +17,11 @@ let ShaderFactory = {
         }
 
         this._registerShader( GrayColorShader );
+        this._registerShader( AmbientColorShader );
+        this._registerShader( UVAnimShader );
+        this._registerShader( UVAnimGlowShader );
+        this._registerShader( ScreenCoordShader );
+        this._registerShader( PaylineShader );
         this._initialized = true;
     },
 

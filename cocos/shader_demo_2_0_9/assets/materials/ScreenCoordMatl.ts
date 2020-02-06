@@ -15,6 +15,8 @@ const renderer = renderEngine.renderer;
 const gfx = renderEngine.gfx;
 const Material = renderEngine.Material;
 
+import ShaderFactory from '../factory/ShaderFactory';
+
 @ccclass
 export default class ScreenCoordMatl extends Material {
 
@@ -25,52 +27,17 @@ export default class ScreenCoordMatl extends Material {
     constructor() {
         super(true);
 
-        /**
-         * Register Shader
-         */
-        let shader = {
-            name: "ScreenCoord",
-
-            vs: `
-            uniform mat4 viewProj;
-            attribute vec3 a_position;
-
-            attribute vec2 a_uv0;
-            varying vec2 uv0;
-            
-            const float tail_head = 0.625;
-            const float tail_len = 0.25;
-            const float tail_uv = 0.5;
-
-            void main () {
-                vec4 pos = viewProj * vec4(a_position, 1);
-                gl_Position = pos;
-                uv0 = a_uv0;
-                float cx = ( (pos.x / pos.z) + 1. ) * 0.5;
-                float tail_end = tail_head - tail_len;
-                uv0.x = ((cx - tail_end) / tail_len) * tail_uv;
-            }`,
-
-            fs: `
-            uniform sampler2D texture;
-            varying vec2 uv0;
-            void main() {
-                gl_FragColor = texture2D(texture, uv0);
-            }`,
-        };
-
-        if (cc.renderer._forward) {
-            cc.renderer._forward._programLib.define(shader.name, shader.vs, shader.fs, []);
-        } else {
-            cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
-                cc.renderer._forward._programLib.define(shader.name, shader.vs, shader.fs, []);
-            });
+        ShaderFactory.init();
+        let shader_name = "ScreenCoord";
+        if ( ShaderFactory.shaderExists(shader_name) == false ) {
+            console.error( "Shader Not Exist:", shader_name );
+            return;
         }
 
         /**
          * Build Pass
          */
-        let pass = new renderer.Pass(shader.name);
+        let pass = new renderer.Pass(shader_name);
 		pass.setDepth(false, false);
 		pass.setCullMode(gfx.CULL_NONE);
 		pass.setBlend(

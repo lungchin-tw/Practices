@@ -46,6 +46,8 @@ export default class PaylineMatlComp extends cc.Component {
         } else if ( this.sprite.spriteFrame == null ) {
             return;
         } else if (cc.game.renderType === cc.game.RENDER_TYPE_CANVAS) {
+            this.sprite.markForUpdateRenderData(true);
+            this.sprite.markForRender(true);
             return;
         }
 

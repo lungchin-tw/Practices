@@ -15,6 +15,8 @@ const renderer = renderEngine.renderer;
 const gfx = renderEngine.gfx;
 const Material = renderEngine.Material;
 
+import ShaderFactory from '../factory/ShaderFactory';
+
 @ccclass
 export default class UVAnimMatl extends Material {
 
@@ -25,48 +27,17 @@ export default class UVAnimMatl extends Material {
     constructor( start ) {
         super(true);
         
-        /**
-         * Register Shader
-         */
-        let shader = {
-            name: "UVAnim",
-
-            vs: `
-            uniform mat4 viewProj;
-            attribute vec3 a_position;
-            attribute vec2 a_uv0;
-            varying vec2 uv0;
-
-            uniform float su;
-            
-            void main () {
-                vec4 pos = viewProj * vec4(a_position, 1);
-                gl_Position = pos;
-                uv0 = a_uv0;
-                uv0.x += su;
-            }`,
-
-            fs: `
-            uniform sampler2D texture;
-            varying vec2 uv0;
-            void main() {
-                vec4 o = texture2D(texture, uv0);
-                gl_FragColor = o;
-            }`,
-        };
-
-        if (cc.renderer._forward) {
-            cc.renderer._forward._programLib.define(shader.name, shader.vs, shader.fs, []);
-        } else {
-            cc.game.once(cc.game.EVENT_ENGINE_INITED, function () {
-                cc.renderer._forward._programLib.define(shader.name, shader.vs, shader.fs, []);
-            });
+        ShaderFactory.init();
+        let shader_name = "UVAnim";
+        if ( ShaderFactory.shaderExists(shader_name) == false ) {
+            console.error( "Shader Not Exist:", shader_name );
+            return;
         }
 
         /**
          * Build Pass
          */
-        let pass = new renderer.Pass(shader.name);
+        let pass = new renderer.Pass(shader_name);
 		pass.setDepth(false, false);
 		pass.setCullMode(gfx.CULL_NONE);
 		pass.setBlend(
