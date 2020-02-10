@@ -69,7 +69,7 @@ let shader = {
     }
     void main() {
         vec4 o = texture2D(texture, uv0);
-        gl_FragColor = calc_glow_color(o);
+        gl_FragColor = o;
     }`,
 }
 
