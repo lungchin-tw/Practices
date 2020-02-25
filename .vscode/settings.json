@@ -9,5 +9,6 @@
     "workbench.editor.highlightModifiedTabs": true,
     "python.pythonPath": "C:\\Program Files\\Python38\\python.exe",
     "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.vetOnSave": "off"
+    "go.vetOnSave": "off",
+    "go.inferGopath": false
 }

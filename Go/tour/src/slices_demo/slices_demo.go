@@ -7,8 +7,20 @@ import (
 func main() {
 	fmt.Println("Arrays:")
 
+	source_list := make([]int, 6)
+	for index := range source_list {
+		source_list[0] = index
+	}
+
+	dest_list := source_list
+	dest_list[0] = 10
+	fmt.Printf("source_list: %#v, dest_list:%#v\n", source_list, dest_list)
+
 	int_list := [6]int{1, 3, 5, 9, 7, 2}
 	fmt.Printf("int_list - Type: %T, Value: %#v, len=%v, cap=%v\n", int_list, int_list, len(int_list), cap(int_list))
+	copy_int_list := int_list
+	copy_int_list[0] = 10
+	fmt.Printf("int_list: %#v, copy_int_list:%#v\n", int_list, copy_int_list)
 
 	var slice []int = int_list[1:4]
 	fmt.Printf("slice - Type: %T, Value: %#v, len=%v, cap=%v\n", slice, slice, len(slice), cap(slice))
