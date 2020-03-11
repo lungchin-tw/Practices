@@ -60,6 +60,12 @@ func main() {
 	fmt.Printf("str_list[0] - Type: %T, Value: %#v, len=%v\n", str_list[0], str_list[0], len(str_list[0]))
 	fmt.Printf("strings.Join(): %s\n", strings.Join(str_list[:], "-"))
 
+	{
+		lx := [2]int{1, 2}
+		ly := [...]int{3, 4}
+		fmt.Printf("Type of x=%T, Type of y=%T\n", lx, ly)
+	}
+
 	int_list := [6]int{1, 3, 5, 9, 7, 2}
 	fmt.Printf("int_list - Type: %T, Value: %#v, len=%v, cap=%v\n", int_list, int_list, len(int_list), cap(int_list))
 

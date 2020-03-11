@@ -22,6 +22,9 @@ func main() {
 	fmt.Println("time.IsZero():", t.IsZero())
 	fmt.Println("time.Local():", t.Local())
 	fmt.Println("time.Location():", *(t.Location()))
+	loc, _ := time.LoadLocation("Asia/Taipei")
+	// loc, _ := time.LoadLocation("America/Los_Angeles")
+	fmt.Println("time.In(time.LoadLocation(\"America/Los_Angeles\")):", t.In(loc))
 	fmt.Println("time.Minute():", t.Minute())
 	fmt.Println("time.Month():", t.Month())
 	fmt.Println("time.Nanosecond():", t.Nanosecond())
@@ -47,4 +50,5 @@ func main() {
 	printer.Println("(t2 < t):", (t2.Before(t)))
 
 	fmt.Println("time.Unix(1578633001, 0).Local():", time.Unix(1578633001, 0).Local())
+
 }

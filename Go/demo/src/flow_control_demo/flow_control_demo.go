@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 )
 
 func do_defer() {
@@ -51,7 +52,9 @@ func main() {
 
 	fmt.Println("[do_defer_return],", do_defer_return())
 
-	if 1 == 2 {
+	value := rand.Int()
+
+	if value > 1 {
 		do_panic()
 		fmt.Println("After do_panic()")
 	}
