@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 const (
-	NONE int = iota
+	NONE int = iota * -1
 	FIRST
 	SECOND
 	THIRD

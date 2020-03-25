@@ -1,8 +1,9 @@
 package main
 
-import "testing"
-
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestError(t *testing.T) {
 	fmt.Printf("testing.T=%+v:", *t)

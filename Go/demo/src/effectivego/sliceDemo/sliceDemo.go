@@ -16,4 +16,12 @@ func main() {
 	s = s[1:4]
 	fmt.Printf("s=%#v, len=%v, cap=%v\n", s, len(s), cap(s))
 
+	{
+		dynamic := []int{
+			5: 5,
+			2: 2,
+		}
+		fmt.Printf("dynamic=%#v, len=%v, cap=%v\n", dynamic, len(dynamic), cap(dynamic))
+	}
+
 }
