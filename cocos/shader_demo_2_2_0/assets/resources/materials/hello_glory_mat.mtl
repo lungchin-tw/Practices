@@ -1,18 +1,22 @@
 {
   "__type__": "cc.Material",
-  "_name": "",
+  "_name": "hello_glory_mat",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
     "__uuid__": "40ead53a-ea23-45c7-b6e7-6d715ba2f87f"
   },
-  "_defines": {
-    "USE_TEXTURE": true
-  },
-  "_props": {
-    "posx": 0.3,
-    "gloryslope": 0,
-    "gloryrange": 0.05,
-    "gloryintensity": 10
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "posx": 0.3,
+        "gloryslope": 0,
+        "gloryrange": 0.05,
+        "gloryintensity": 10
+      },
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
   }
 }

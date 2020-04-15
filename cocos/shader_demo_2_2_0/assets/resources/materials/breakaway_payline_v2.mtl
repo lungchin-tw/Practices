@@ -1,17 +1,21 @@
 {
   "__type__": "cc.Material",
-  "_name": "",
+  "_name": "breakaway_payline_v2",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
     "__uuid__": "a282a0ac-5b86-4c39-a2d4-c9d39a2df8ae"
   },
-  "_defines": {
-    "USE_TEXTURE": true
-  },
-  "_props": {
-    "start": -0.5,
-    "dist": 0.1,
-    "tail_len": 0.5
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "start": -0.5,
+        "dist": 0.1,
+        "tail_len": 0.5
+      },
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
   }
 }

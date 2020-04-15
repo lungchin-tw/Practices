@@ -55,7 +55,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -91,6 +91,9 @@
     "_components": [
       {
         "__id__": 5
+      },
+      {
+        "__id__": 41
       }
     ],
     "_prefab": null,
@@ -114,7 +117,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         960,
         540,
@@ -176,7 +179,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -290,7 +293,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         958.3040161132812,
         539.2169799804688,
@@ -387,7 +390,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         995.3599853515625,
         966.9000244140625,
@@ -507,7 +510,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         292.25,
         476.822998046875,
@@ -572,7 +575,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         254.501953125,
         -438.76568603515625,
@@ -686,7 +689,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -800,7 +803,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         630.9559936523438,
         -1098.4698486328125,
@@ -914,7 +917,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         251.63900756835938,
         -879.3980102539062,
@@ -1034,7 +1037,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         323.1679992675781,
         476.822998046875,
@@ -1099,7 +1102,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         25.94700050354004,
         29.26099967956543,
@@ -1213,7 +1216,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         208.39698791503906,
         -360.79522705078125,
@@ -1327,7 +1330,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         462.12799072265625,
         -662.60302734375,
@@ -1441,7 +1444,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         337.8389892578125,
         -1184.3990478515625,
@@ -1552,7 +1555,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         0,
         0,
@@ -1617,7 +1620,7 @@
     },
     "_trs": {
       "__type__": "TypedArray",
-      "ctor": "Float32Array",
+      "ctor": "Float64Array",
       "array": [
         1403.2249755859375,
         740.010009765625,
@@ -1698,5 +1701,31 @@
       "a": 128
     },
     "_id": "1cY1pMZdlO1r52QG+o9uMC"
+  },
+  {
+    "__type__": "cc.Widget",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "alignMode": 1,
+    "_target": null,
+    "_alignFlags": 45,
+    "_left": 0,
+    "_right": 0,
+    "_top": 0,
+    "_bottom": 0,
+    "_verticalCenter": 0,
+    "_horizontalCenter": 0,
+    "_isAbsLeft": true,
+    "_isAbsRight": true,
+    "_isAbsTop": true,
+    "_isAbsBottom": true,
+    "_isAbsHorizontalCenter": true,
+    "_isAbsVerticalCenter": true,
+    "_originalWidth": 0,
+    "_originalHeight": 0
   }
 ]

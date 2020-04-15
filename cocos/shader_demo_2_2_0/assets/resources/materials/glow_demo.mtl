@@ -1,16 +1,20 @@
 {
   "__type__": "cc.Material",
-  "_name": "",
+  "_name": "glow_demo",
   "_objFlags": 0,
   "_native": "",
   "_effectAsset": {
     "__uuid__": "ea6a9797-e4c2-4932-bcca-dbf6bced5411"
   },
-  "_defines": {
-    "USE_TEXTURE": true
-  },
-  "_props": {
-    "glow_range_unit": 0.001,
-    "glow_intensity": 5
+  "_techniqueData": {
+    "0": {
+      "props": {
+        "glow_range_unit": 0.001,
+        "glow_intensity": 5
+      },
+      "defines": {
+        "USE_TEXTURE": true
+      }
+    }
   }
 }
