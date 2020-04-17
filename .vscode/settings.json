@@ -10,5 +10,6 @@
     "python.pythonPath": "C:\\Program Files\\Python38\\python.exe",
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.vetOnSave": "off",
-    "go.inferGopath": false
+    "go.inferGopath": false,
+    "liveServer.settings.port": 5501
 }
