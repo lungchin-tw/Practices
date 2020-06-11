@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "e760e4a9-48b5-4d4d-b44a-adb3446b6792",
+  "uuid": "dbea5243-2b1b-4847-9b2d-2d2baf730122",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -11,8 +11,8 @@
   "subMetas": {
     "btn_bet_01_org": {
       "ver": "1.0.4",
-      "uuid": "0b6c1acc-3737-40e2-b754-7f8e0ccee250",
-      "rawTextureUuid": "e760e4a9-48b5-4d4d-b44a-adb3446b6792",
+      "uuid": "33097e86-8590-4801-ab62-af6fab164564",
+      "rawTextureUuid": "dbea5243-2b1b-4847-9b2d-2d2baf730122",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
