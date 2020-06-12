@@ -32,17 +32,16 @@ cc.Class({
 
     updateByLang (language) {
         if (!this.skeleton) {
-            this.fetchRender();
-            if (!this.skeleton){
-                cc.error('Failed to update localized skeleton, skeleton component is invalid!');
-                return;
-            }
+            cc.error('Failed to update localized skeletondata, skeleton component is invalid!');
+            return;
         }
 
         let spineset = this.getSpineSetByLang(language);
         if (!spineset) {
             return;
         }
+
+        this.skeleton.setSkeletonData(spineset.SkeletonData.getRuntimeData());
     }, 
 
     getSpineSetByLang (lang) {

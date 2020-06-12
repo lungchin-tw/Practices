@@ -1137,7 +1137,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "solt_logo",
+    "_name": "StaticSpine",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1147,6 +1147,9 @@
     "_components": [
       {
         "__id__": 34
+      },
+      {
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -1160,8 +1163,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 247.64,
-      "height": 124.1
+      "width": 297.96,
+      "height": 116.03
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1172,8 +1175,8 @@
       "__type__": "TypedArray",
       "ctor": "Float32Array",
       "array": [
-        545.2860107421875,
-        180.47900390625,
+        214.77000427246094,
+        222.5449981689453,
         0,
         0,
         0,
@@ -1238,5 +1241,37 @@
     "_N$useTint": false,
     "_N$enableBatch": false,
     "_id": "13yL2OCvpA6JHfVos+M7jJ"
+  },
+  {
+    "__type__": "d299bRzDEBNtId6XZcaI8Ub",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
+    "SpineSet": [
+      {
+        "__id__": 36
+      },
+      {
+        "__id__": 37
+      }
+    ],
+    "_id": "24oLAW88FGgpKdFqsmfAmL"
+  },
+  {
+    "__type__": "SpineSet",
+    "language": "vi",
+    "SkeletonData": {
+      "__uuid__": "a2752f44-a5c2-4f8e-bb89-5ee254c4b2c9"
+    }
+  },
+  {
+    "__type__": "SpineSet",
+    "language": "zh",
+    "SkeletonData": {
+      "__uuid__": "7fa27e8b-c89d-49e6-9acf-2f220f36cb1a"
+    }
   }
 ]
