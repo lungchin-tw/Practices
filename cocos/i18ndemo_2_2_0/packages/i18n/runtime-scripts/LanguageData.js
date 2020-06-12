@@ -107,5 +107,17 @@ module.exports = {
             if(!button_array.node.active)continue;
             button_array.updateByLang(window.i18n.curLang);
         }
+
+        // walk all nodes with localize button and update
+        let allLocalizedSpines = [];
+        for (let i = 0; i < rootNodes.length; ++i) {
+            let spine_arrays = rootNodes[i].getComponentsInChildren('LocalizedSpine');
+            Array.prototype.push.apply(allLocalizedSpines, spine_arrays);
+        }
+        for (let i = 0; i < allLocalizedSpines.length; ++i) {
+            let spine = allLocalizedSpines[i];
+            if(!spine.node.active)continue;
+            spine.updateByLang(window.i18n.curLang);
+        }
     }
 };

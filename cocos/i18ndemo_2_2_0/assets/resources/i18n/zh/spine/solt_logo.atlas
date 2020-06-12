@@ -1,0 +1,104 @@
+
+solt_logo.png
+size: 1024,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+lin_solt_logo_01
+  rotate: true
+  xy: 121, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_03
+  rotate: true
+  xy: 121, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_01_glow
+  rotate: true
+  xy: 369, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_03_glow
+  rotate: true
+  xy: 369, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_02
+  rotate: true
+  xy: 245, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_02_glow
+  rotate: true
+  xy: 493, 10
+  size: 100, 122
+  orig: 100, 122
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes1
+  rotate: true
+  xy: 617, 16
+  size: 34, 44
+  orig: 34, 44
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes2
+  rotate: false
+  xy: 791, 66
+  size: 34, 44
+  orig: 34, 44
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes3
+  rotate: false
+  xy: 827, 70
+  size: 32, 40
+  orig: 32, 40
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes_m1
+  rotate: false
+  xy: 666, 53
+  size: 47, 57
+  orig: 47, 57
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes_m2
+  rotate: false
+  xy: 617, 52
+  size: 47, 58
+  orig: 47, 58
+  offset: 0, 0
+  index: -1
+lin_solt_logo_wipes_m3
+  rotate: false
+  xy: 715, 56
+  size: 43, 54
+  orig: 43, 54
+  offset: 0, 0
+  index: -1
+lin_win_coins_wipes
+  rotate: false
+  xy: 760, 56
+  size: 29, 54
+  orig: 29, 54
+  offset: 0, 0
+  index: -1
+tom_light_win_particles
+  rotate: false
+  xy: 2, 2
+  size: 117, 108
+  orig: 117, 108
+  offset: 0, 0
+  index: -1
