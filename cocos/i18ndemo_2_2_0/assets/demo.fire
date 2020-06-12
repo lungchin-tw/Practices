@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        403.5678405761719,
+        383.7439880371094,
         0,
         0,
         0,
@@ -1150,6 +1150,9 @@
       },
       {
         "__id__": 35
+      },
+      {
+        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1163,8 +1166,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 297.96,
-      "height": 116.03
+      "width": 247.64,
+      "height": 124.1
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1250,15 +1253,26 @@
       "__id__": 33
     },
     "_enabled": true,
+    "SpineSet": [],
+    "_id": "24oLAW88FGgpKdFqsmfAmL"
+  },
+  {
+    "__type__": "d299bRzDEBNtId6XZcaI8Ub",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
     "SpineSet": [
       {
-        "__id__": 36
+        "__id__": 37
       },
       {
-        "__id__": 37
+        "__id__": 38
       }
     ],
-    "_id": "24oLAW88FGgpKdFqsmfAmL"
+    "_id": "450NS8esxP3J341TbHt/cd"
   },
   {
     "__type__": "SpineSet",

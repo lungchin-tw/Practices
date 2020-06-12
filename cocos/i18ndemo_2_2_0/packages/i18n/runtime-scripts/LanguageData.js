@@ -71,6 +71,8 @@ module.exports = {
     inst: polyInst,
 
     updateSceneRenderers () { // very costly iterations
+        cc.log('[LanguageData::updateSceneRenderers], window.i18n.curLang: ' + window.i18n.curLang);
+        console.log('[LanguageData::updateSceneRenderers], window.i18n.curLang: ' + window.i18n.curLang);
         let rootNodes = cc.director.getScene().children;
         // walk all nodes with localize label and update
         let allLocalizedLabels = [];
