@@ -37,11 +37,17 @@ cc.Class({
         }
 
         let spineset = this.getSpineSetByLang(language);
-        if (!spineset) {
+        if ((!spineset) || (!spineset.SkeletonData)) {
             return;
         }
 
-        this.skeleton.setSkeletonData(spineset.SkeletonData.getRuntimeData());
+        cc.log("LocalizedSpine::updateByLang, " + language);
+
+        let spine = this.node.getComponent(sp.Skeleton);
+        let anim = spine.animation;
+        cc.log("LocalizedSpine::updateByLang, Animation=" + anim);
+        spine.skeletonData = spineset.SkeletonData;
+        spine.animation = anim
     }, 
 
     getSpineSetByLang (lang) {

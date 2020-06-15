@@ -82,7 +82,7 @@ module.exports = {
         }
         for (let i = 0; i < allLocalizedLabels.length; ++i) {
             let label = allLocalizedLabels[i];
-            if(!label.node.active)continue;
+            // if(!label.node.active)continue;
             label.updateLabel();
         }
 
@@ -94,7 +94,7 @@ module.exports = {
         }
         for (let i = 0; i < allLocalizedSprites.length; ++i) {
             let sprite = allLocalizedSprites[i];
-            if(!sprite.node.active)continue;
+            // if(!sprite.node.active)continue;
             sprite.updateSprite(window.i18n.curLang);
         }
 
@@ -106,7 +106,7 @@ module.exports = {
         }
         for (let i = 0; i < allLocalizedButton.length; ++i) {
             let button_array = allLocalizedButton[i];
-            if(!button_array.node.active)continue;
+            // if(!button_array.node.active)continue;
             button_array.updateByLang(window.i18n.curLang);
         }
 
@@ -118,7 +118,7 @@ module.exports = {
         }
         for (let i = 0; i < allLocalizedSpines.length; ++i) {
             let spine = allLocalizedSpines[i];
-            if(!spine.node.active)continue;
+            // if(!spine.node.active)continue;
             spine.updateByLang(window.i18n.curLang);
         }
     }

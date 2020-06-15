@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        383.7439880371094,
+        403.5678405761719,
         0,
         0,
         0,
@@ -266,8 +266,8 @@
       "__id__": 2
     },
     "_enabled": true,
-    "language": "vi",
-    "_id": "8eOEzDV6pBt54H1/bVxw8j"
+    "language": "zh",
+    "_id": "ecUKnCW3NObp0Kyag0LRsB"
   },
   {
     "__type__": "cc.Node",
@@ -1137,7 +1137,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "StaticSpine",
+    "_name": "solt_logo",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -1150,9 +1150,6 @@
       },
       {
         "__id__": 35
-      },
-      {
-        "__id__": 36
       }
     ],
     "_prefab": null,
@@ -1166,8 +1163,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 247.64,
-      "height": 124.1
+      "width": 297.96,
+      "height": 116.03
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1178,8 +1175,8 @@
       "__type__": "TypedArray",
       "ctor": "Float32Array",
       "array": [
-        214.77000427246094,
-        222.5449981689453,
+        203.1750030517578,
+        186.29200744628906,
         0,
         0,
         0,
@@ -1201,7 +1198,7 @@
     "_is3DNode": false,
     "_groupIndex": 0,
     "groupIndex": 0,
-    "_id": "63tSKPw35KNbim/doSJN+v"
+    "_id": "908uBHPKhAg7KuhrpqxbNS"
   },
   {
     "__type__": "sp.Skeleton",
@@ -1235,7 +1232,7 @@
     "_playTimes": 0,
     "_isAniComplete": true,
     "_N$skeletonData": {
-      "__uuid__": "7fa27e8b-c89d-49e6-9acf-2f220f36cb1a"
+      "__uuid__": "a2752f44-a5c2-4f8e-bb89-5ee254c4b2c9"
     },
     "_N$_defaultCacheMode": 0,
     "_N$debugSlots": false,
@@ -1243,18 +1240,7 @@
     "_N$debugMesh": false,
     "_N$useTint": false,
     "_N$enableBatch": false,
-    "_id": "13yL2OCvpA6JHfVos+M7jJ"
-  },
-  {
-    "__type__": "d299bRzDEBNtId6XZcaI8Ub",
-    "_name": "",
-    "_objFlags": 0,
-    "node": {
-      "__id__": 33
-    },
-    "_enabled": true,
-    "SpineSet": [],
-    "_id": "24oLAW88FGgpKdFqsmfAmL"
+    "_id": "8b/lVfzdZPj6KdvoPxKPFP"
   },
   {
     "__type__": "d299bRzDEBNtId6XZcaI8Ub",
@@ -1266,13 +1252,13 @@
     "_enabled": true,
     "SpineSet": [
       {
-        "__id__": 37
+        "__id__": 36
       },
       {
-        "__id__": 38
+        "__id__": 37
       }
     ],
-    "_id": "450NS8esxP3J341TbHt/cd"
+    "_id": "aa1IALjLVH1rM85o7h7OfL"
   },
   {
     "__type__": "SpineSet",
