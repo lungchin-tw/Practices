@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        382.7832336425781,
+        383.6492614746094,
         0,
         0,
         0,
@@ -493,9 +493,7 @@
   {
     "__type__": "SpriteFrameSet",
     "language": "zh",
-    "spriteFrame": {
-      "__uuid__": "a43df67b-ccb9-4a7e-b5d0-d1a2ff142789"
-    }
+    "spriteFrame": null
   },
   {
     "__type__": "SpriteFrameSet",
@@ -740,18 +738,10 @@
   {
     "__type__": "ButtonSet",
     "language": "zh",
-    "normal": {
-      "__uuid__": "33097e86-8590-4801-ab62-af6fab164564"
-    },
-    "pressed": {
-      "__uuid__": "8094cfad-b433-4ba1-848c-3f9b66d735d5"
-    },
-    "hover": {
-      "__uuid__": "33097e86-8590-4801-ab62-af6fab164564"
-    },
-    "disabled": {
-      "__uuid__": "71851f1e-9fc5-4b2f-9da2-4cd66378cbc0"
-    }
+    "normal": null,
+    "pressed": null,
+    "hover": null,
+    "disabled": null
   },
   {
     "__type__": "ButtonSet",
@@ -956,9 +946,7 @@
   {
     "__type__": "SpriteFrameSet",
     "language": "zh",
-    "spriteFrame": {
-      "__uuid__": "b675d593-9cdb-45e4-85df-2e247eb282cf"
-    }
+    "spriteFrame": null
   },
   {
     "__type__": "SpriteFrameSet",
@@ -1270,8 +1258,6 @@
   {
     "__type__": "SpineSet",
     "language": "zh",
-    "SkeletonData": {
-      "__uuid__": "7fa27e8b-c89d-49e6-9acf-2f220f36cb1a"
-    }
+    "SkeletonData": null
   }
 ]
