@@ -183,7 +183,7 @@
       "array": [
         0,
         0,
-        403.5678405761719,
+        382.7832336425781,
         0,
         0,
         0,
@@ -259,15 +259,15 @@
     "_id": "91fW6el+FBhZsVaRBFj/3l"
   },
   {
-    "__type__": "d2a8cIhUWpG5rjEeXnpPiQ5",
+    "__type__": "f56betcqRtAArZ3wXKSxxrS",
     "_name": "",
     "_objFlags": 0,
     "node": {
       "__id__": 2
     },
     "_enabled": true,
-    "language": "zh",
-    "_id": "ecUKnCW3NObp0Kyag0LRsB"
+    "language": "vi",
+    "_id": "1aFVH4tLtGvorLjiac4mAa"
   },
   {
     "__type__": "cc.Node",
