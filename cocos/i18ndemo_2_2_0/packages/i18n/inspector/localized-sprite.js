@@ -1,10 +1,11 @@
 'use strict';
 
-// require('LanguageData');
-
 Vue.component('localized-sprite', {
   template: `
     <cc-array-prop :target.sync="target.spriteFrameSet"></cc-array-prop>
+    <ui-prop name="Update Scene">
+        <ui-button class="green tiny" @confirm="refresh">Refresh</ui-button>
+    </ui-prop>
   `,
 
   props: {
@@ -16,10 +17,9 @@ Vue.component('localized-sprite', {
 
   methods: {
     refresh: function () {
-        cc.log('window.i18n.curLang: ' + window.i18n.curLang);
-        console.log('window.i18n.curLang: ' + window.i18n.curLang);
-        let i18n = window.require('LanguageData');
-        i18n.updateSceneRenderers();
+        console.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
+        cc.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
+        window.languagedata.updateSceneRenderers();
     }
   }
 });
