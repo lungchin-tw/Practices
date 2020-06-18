@@ -6,6 +6,14 @@ const SpriteFrameListSet = cc.Class({
             default: [],
             type: cc.SpriteFrame
         } 
+    },
+
+    getSpriteFrameByIndex( index ) {
+        if ((index < 0) || (index >= this.SpriteFrameList.length)) {
+            return null;
+        }
+
+        return this.SpriteFrameList[index];
     }
 });
 

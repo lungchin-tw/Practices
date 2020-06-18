@@ -5,16 +5,28 @@ cc.Class({
 
     editor: {
         executeInEditMode: true,
-        inspector: 'packages://i18n/inspector/localized_sprite_list.js',
         menu: 'i18n/LocalizedSpriteList'
     },
 
     properties: {
+        SpriteIndex:{
+            get () {
+                return this._spriteIndex;
+            },
+
+            set (value) {
+                this._spriteIndex = value;
+                this.fetchRender();
+            }
+        },
+
+        _spriteIndex: -1,
+
         SpriteFrameListSet: {
             default: [],
             type: SpriteFrameListSet
-        }
-    },
+        },
+    },  
 
     onLoad () {
         if (CC_EDITOR) {
@@ -31,12 +43,10 @@ cc.Class({
     },
 
     fetchRender () {
-        // let sprite = this.getComponent(cc.Sprite);
-        // if (sprite) {
-        //     this.sprite = sprite;
-        //     this.updateSprite(window.i18n.curLang);
-        //     return;
-        // }
+        let sprite = this.getComponent(cc.Sprite);
+        if (sprite) {
+            this.updateSprite(sprite, this.SpriteIndex);
+        }
     },
 
     getSpriteFrameListSetByLang (lang) {
@@ -47,14 +57,16 @@ cc.Class({
         }
     },
 
-    updateSprite (language) {
-        // if (!this.sprite) {
-        //     return;
-        // }
+    updateSprite (sprite, index) {
+        if (!sprite) {
+            return;
+        }
 
-        // let set = this.getSpriteFrameListSetByLang(language);
-        // if (!set) {
-        //     return;
-        // }
+        let set = this.getSpriteFrameListSetByLang(window.i18n.curLang);
+        if (!set) {
+            return;
+        }
+
+        sprite.spriteFrame = set.getSpriteFrameByIndex(index);
     }
 });
