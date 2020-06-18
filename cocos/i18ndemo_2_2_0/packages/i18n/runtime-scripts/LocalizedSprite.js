@@ -17,6 +17,16 @@ cc.Class({
     },
 
     onLoad () {
+        if (CC_EDITOR) {
+            if (this.spriteFrameSet.length == 0) {
+                for ( const value of window.DefaultLangList ) {
+                    let set = new SpriteFrameSet();
+                    set.language = value;
+                    this.spriteFrameSet.push(set);
+                }
+            }
+        }
+
         this.fetchRender();
     },
 

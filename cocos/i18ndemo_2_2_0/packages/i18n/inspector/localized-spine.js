@@ -17,9 +17,9 @@ Vue.component('localized-spine', {
 
   methods: {
     refresh: function () {
-      console.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
-      cc.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
-      window.languagedata.updateSceneRenderers();
+      console.log('[localized-spine], window.i18n.curLang: ' + window.i18n.curLang);
+      cc.log('[localized-spine], window.i18n.curLang: ' + window.i18n.curLang);
+      window.LanguageData.updateSceneRenderers();
     }
   }
 });

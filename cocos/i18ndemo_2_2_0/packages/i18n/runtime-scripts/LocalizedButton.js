@@ -18,6 +18,16 @@ cc.Class({
     },
 
     onLoad () {
+        if (CC_EDITOR) {
+            if (this.ButtonSet.length == 0) {
+                for ( const value of window.DefaultLangList ) {
+                    let set = new ButtonSet();
+                    set.language = value;
+                    this.ButtonSet.push(set);
+                }
+            }
+        }
+        
         this.fetchRender();
     },
 

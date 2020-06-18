@@ -1,0 +1,34 @@
+{
+  "ver": "2.3.3",
+  "uuid": "91f04453-d5bd-427e-83be-038bc163f02d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "platformSettings": {},
+  "subMetas": {
+    "solt_logo": {
+      "ver": "1.0.4",
+      "uuid": "ce4f563b-d5ee-41f3-aa09-1df00731acfa",
+      "rawTextureUuid": "91f04453-d5bd-427e-83be-038bc163f02d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -75.5,
+      "offsetY": 4,
+      "trimX": 14,
+      "trimY": 10,
+      "width": 845,
+      "height": 100,
+      "rawWidth": 1024,
+      "rawHeight": 128,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

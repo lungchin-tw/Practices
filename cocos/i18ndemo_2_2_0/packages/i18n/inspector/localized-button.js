@@ -17,9 +17,9 @@ Vue.component('localized-button', {
 
   methods: {
     refresh: function () {
-      console.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
-      cc.log('[localized-sprite], window.i18n.curLang: ' + window.i18n.curLang);
-      window.languagedata.updateSceneRenderers();
+      console.log('[localized-button], window.i18n.curLang: ' + window.i18n.curLang);
+      cc.log('[localized-button], window.i18n.curLang: ' + window.i18n.curLang);
+      window.LanguageData.updateSceneRenderers();
     }
   }
 });

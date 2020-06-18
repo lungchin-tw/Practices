@@ -18,6 +18,16 @@ cc.Class({
     },
 
     onLoad () {
+        if (CC_EDITOR) {
+            if (this.SpineSet.length == 0) {
+                for ( const value of window.DefaultLangList ) {
+                    let set = new SpineSet();
+                    set.language = value;
+                    this.SpineSet.push(set);
+                }
+            }
+        }
+
         this.fetchRender();
     },
 
