@@ -5,7 +5,7 @@ cc.Class({
 
     editor: {
         executeInEditMode: true,
-        inspector: 'packages://i18n/inspector/localized-sprite.js',
+        inspector: 'packages://i18n/inspector/localized_sprite.js',
         menu: 'i18n/LocalizedSprite'
     },
 
@@ -49,11 +49,8 @@ cc.Class({
 
     updateSprite (language) {
         if (!this.sprite) {
-            this.fetchRender();
-            if (!this.sprite){
-                cc.error('Failed to update localized sprite, sprite component is invalid!');
-                return;
-            }
+            // cc.error('Failed to update localized sprite, sprite component is invalid!');
+            return;
         }
 
         let spriteFrame = this.getSpriteFrameByLang(language);

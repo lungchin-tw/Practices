@@ -6,7 +6,7 @@ cc.Class({
 
     editor: {
         executeInEditMode: true,
-        inspector: 'packages://i18n/inspector/localized-button.js',
+        inspector: 'packages://i18n/inspector/localized_button.js',
         menu: 'i18n/LocalizedButton'
     },
 
@@ -42,11 +42,8 @@ cc.Class({
 
     updateByLang (language) {
         if (!this.button) {
-            this.fetchRender();
-            if (!this.button){
-                cc.error('Failed to update localized button, button component is invalid!');
-                return;
-            }
+            // cc.error('Failed to update localized button, button component is invalid!');
+            return;
         }
 
         let buttonset = this.getButtonSetByLang(language);

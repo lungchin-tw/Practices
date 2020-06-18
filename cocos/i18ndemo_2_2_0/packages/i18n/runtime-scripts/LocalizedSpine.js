@@ -6,7 +6,7 @@ cc.Class({
 
     editor: {
         executeInEditMode: true,
-        inspector: 'packages://i18n/inspector/localized-spine.js',
+        inspector: 'packages://i18n/inspector/localized_spine.js',
         menu: 'i18n/LocalizedSpine'
     },
 
@@ -42,7 +42,7 @@ cc.Class({
 
     updateByLang (language) {
         if (!this.skeleton) {
-            cc.error('Failed to update localized skeletondata, skeleton component is invalid!');
+            // cc.warn('Failed to update localized skeletondata, skeleton component is invalid!');
             return;
         }
 
