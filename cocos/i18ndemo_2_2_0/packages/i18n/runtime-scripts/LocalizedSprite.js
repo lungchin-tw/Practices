@@ -34,7 +34,7 @@ cc.Class({
         let sprite = this.getComponent(cc.Sprite);
         if (sprite) {
             this.sprite = sprite;
-            this.updateSprite(window.i18n.curLang);
+            this.updateByLang(window.i18n.curLang);
             return;
         }
     },
@@ -47,7 +47,7 @@ cc.Class({
         }
     },
 
-    updateSprite (language) {
+    updateByLang (language) {
         if (!this.sprite) {
             // cc.error('Failed to update localized sprite, sprite component is invalid!');
             return;

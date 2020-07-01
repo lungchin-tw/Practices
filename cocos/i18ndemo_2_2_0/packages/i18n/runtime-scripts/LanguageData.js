@@ -73,64 +73,17 @@ module.exports = {
     updateSceneRenderers () { // very costly iterations
         cc.log('[LanguageData::updateSceneRenderers], window.i18n.curLang: ' + window.i18n.curLang);
         console.log('[LanguageData::updateSceneRenderers], window.i18n.curLang: ' + window.i18n.curLang);
-        let rootNodes = cc.director.getScene().children;
-        // walk all nodes with localize label and update
-        let allLocalizedLabels = [];
-        for (let i = 0; i < rootNodes.length; ++i) {
-            let labels = rootNodes[i].getComponentsInChildren('LocalizedLabel');
-            Array.prototype.push.apply(allLocalizedLabels, labels);
-        }
-        for (let i = 0; i < allLocalizedLabels.length; ++i) {
-            let label = allLocalizedLabels[i];
-             if (label.node.active) {
-                label.fetchRender();
-             } else {
-                 label.updateLabel();
-             }
-        }
 
-        // walk all nodes with localize sprite and update
-        let allLocalizedSprites = [];
-        for (let i = 0; i < rootNodes.length; ++i) {
-            let sprites = rootNodes[i].getComponentsInChildren('LocalizedSprite');
-            Array.prototype.push.apply(allLocalizedSprites, sprites);
-        }
-        for (let i = 0; i < allLocalizedSprites.length; ++i) {
-            let sprite = allLocalizedSprites[i];
-            if (sprite.node.active) {
-                sprite.fetchRender();
-            } else {
-                sprite.updateSprite(window.i18n.curLang);
-            }
-        }
-
-        // walk all nodes with localize button and update
-        let allLocalizedButton = [];
-        for (let i = 0; i < rootNodes.length; ++i) {
-            let button_arrays = rootNodes[i].getComponentsInChildren('LocalizedButton');
-            Array.prototype.push.apply(allLocalizedButton, button_arrays);
-        }
-        for (let i = 0; i < allLocalizedButton.length; ++i) {
-            let button_array = allLocalizedButton[i];
-            if (button_array.node.active) {
-                button_array.fetchRender();
-            } else {
-                button_array.updateByLang(window.i18n.curLang);
-            }
-        }
-
-        // walk all nodes with localize button and update
-        let allLocalizedSpines = [];
-        for (let i = 0; i < rootNodes.length; ++i) {
-            let spine_arrays = rootNodes[i].getComponentsInChildren('LocalizedSpine');
-            Array.prototype.push.apply(allLocalizedSpines, spine_arrays);
-        }
-        for (let i = 0; i < allLocalizedSpines.length; ++i) {
-            let spine = allLocalizedSpines[i];
-            if (spine.node.active) {
-                spine.fetchRender();
-            } else {
-                spine.updateByLang(window.i18n.curLang);
+        // walk all nodes with localize components and update
+        for ( let node of cc.director.getScene().children) {
+            for ( const comp_name of ['LocalizedSprite', 'LocalizedButton', 'LocalizedSpine', 'LocalizedLabel'] ) {
+                for ( let comp of node.getComponentsInChildren(comp_name) ) {
+                    if (comp.node.active) {
+                        comp.fetchRender();
+                    } else {
+                        comp.updateByLang(window.i18n.curLang);
+                    }
+                }
             }
         }
     }
