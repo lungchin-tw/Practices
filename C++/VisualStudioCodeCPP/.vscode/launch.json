@@ -3,9 +3,9 @@
     "configurations": [
         {
             "name": "Debug Program",
-            "type": "lldb-mi",
+            "type": "cppdbg",
             "request": "launch",
-            "target": "./helloworld",
+            "program": "${workspaceRoot}/build/helloworld",
             "cwd": "${workspaceRoot}/build",
             "showDevDebugOutput": false
         }
