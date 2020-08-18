@@ -17,15 +17,11 @@ type TModule struct {
 }
 
 func (this *TModule) OnInit() {
-	this.Skeleton = Skeleton
-
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
 
+	this.Skeleton = Skeleton
 	message.Processor.SetRouter(&message.HelloMsg{}, Skeleton.ChanRPCServer)
-
-	var m interface{} = &message.HelloMsg{}
-	var h interface{} = internal.HandleHelloMsg
-	Skeleton.RegisterChanRPC(reflect.TypeOf(m), h)
+	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloMsg{}), internal.HandleHelloMsg)
 }
 
 func (this *TModule) OnDestroy() {
