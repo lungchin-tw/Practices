@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB CLIENT</title>
+    </head>
+    <body>
+        <input id="btn-sendmsg" type="button" value="Send Message" onclick="SendMessage()">
+        <script type="text/javascript">
+            var ws = new WebSocket('ws://127.0.0.1:7766');
+            ws.onopen = function () {
+                console.log("WebSocket OnOpen.");
+            }
+
+            ws.onmessage = function (e) {
+                console.log("WebSocket OnMessage");
+                
+
+                let reader = new FileReader();
+                reader.readAsText(e.data);
+                reader.onload = function() {
+                    console.log('Reader.OnLoad:', this.result );
+                    let json_decoded = JSON.parse(this.result);
+                    console.log('JsonDecoded:', json_decoded);
+                }
+            }
+
+            function SendMessage() {
+                ws.send(JSON.stringify({
+                    HelloMsg: {
+                        Name: 'test web client'
+                    }
+                }));
+            };
+        </script>
+    </body>
+</html>

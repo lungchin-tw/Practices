@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"leaf/serverdemo/conf"
 	"leaf/serverdemo/core"
 	"leaf/serverdemo/game"
 	"leaf/serverdemo/gate"
@@ -16,6 +17,7 @@ func main() {
 
 	lconf.LogLevel = "debug"
 	lconf.LogFlag = log.LstdFlags
+	lconf.ConsolePort = conf.CONSOLE_PORT
 
 	leaf.Run(
 		game.Module,

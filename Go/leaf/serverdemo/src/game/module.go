@@ -22,6 +22,10 @@ func (this *TModule) OnInit() {
 	this.Skeleton = Skeleton
 	message.Processor.SetRouter(&message.HelloMsg{}, Skeleton.ChanRPCServer)
 	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloMsg{}), internal.HandleHelloMsg)
+
+	Skeleton.RegisterCommand("echo", "echo user inputs", func(args []interface{}) interface{} {
+		return fmt.Sprintf("%v", args)
+	})
 }
 
 func (this *TModule) OnDestroy() {

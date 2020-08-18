@@ -11,4 +11,5 @@ const (
 	HTTP_TIMEOUT      = 10 * time.Second
 	LEN_MSG_LEN       = 2
 	IS_LITTLE_ENDIAN  = false
+	CONSOLE_PORT      = 3333
 )
