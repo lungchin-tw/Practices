@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package testproto;
+
+option go_package = ".;prototest";
+
+message ProtoExample {
+    string label = 1;
+    int32 type = 2;
+    repeated int64 reps = 3;
+}

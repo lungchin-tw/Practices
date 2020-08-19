@@ -8,8 +8,8 @@ import (
 	"github.com/name5566/leaf/gate"
 )
 
-func HandleHelloMsg(args []interface{}) {
-	msg := args[0].(*message.HelloMsg)
+func HandleHelloJsonMsg(args []interface{}) {
+	msg := args[0].(*message.HelloJsonMsg)
 	agent := args[1].(gate.Agent)
 
 	fmt.Printf(
@@ -22,7 +22,7 @@ func HandleHelloMsg(args []interface{}) {
 	)
 
 	agent.WriteMsg(
-		&message.HelloMsg{
+		&message.HelloJsonMsg{
 			Name: "serverdemo",
 		},
 	)

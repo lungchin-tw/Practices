@@ -5,11 +5,11 @@ import (
 	"leaf/serverdemo/core"
 )
 
-type HelloMsg struct {
+type HelloJsonMsg struct {
 	Name string
 }
 
 func init() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
-	Processor.Register(&HelloMsg{})
+	JsonProcessor.Register(&HelloJsonMsg{})
 }

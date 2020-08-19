@@ -30,7 +30,7 @@ func (this *TModule) OnInit() {
 		TCPAddr:         conf.TCPADDR,
 		LenMsgLen:       conf.LEN_MSG_LEN,
 		LittleEndian:    conf.IS_LITTLE_ENDIAN,
-		Processor:       message.Processor,
+		Processor:       message.JsonProcessor,
 		AgentChanRPC:    game.Skeleton.ChanRPCServer,
 	}
 }
