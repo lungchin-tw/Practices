@@ -27,6 +27,11 @@ func init() {
 
 func rpcNewAgent(args []interface{}) {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName(), args)
+
+	// agent := args[0].(gate.Agent)
+	// agent.WriteMsg(&message.HelloProtoMsg{
+	// 	Name: proto.String("serverdemo"),
+	// })
 }
 
 func rpcCloseAgent(args []interface{}) {

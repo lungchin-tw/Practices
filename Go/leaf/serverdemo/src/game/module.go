@@ -23,6 +23,9 @@ func (this *TModule) OnInit() {
 	message.JsonProcessor.SetRouter(&message.HelloJsonMsg{}, Skeleton.ChanRPCServer)
 	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloJsonMsg{}), internal.HandleHelloJsonMsg)
 
+	message.ProtoProcessor.SetRouter(&message.HelloProtoMsg{}, Skeleton.ChanRPCServer)
+	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloProtoMsg{}), internal.HandleHelloProtoMsg)
+
 	Skeleton.RegisterCommand("echo", "echo user inputs", func(args []interface{}) interface{} {
 		return fmt.Sprintf("%v", args)
 	})

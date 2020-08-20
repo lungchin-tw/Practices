@@ -14,7 +14,7 @@ func main() {
 
 	data := []byte(
 		`{
-			"HelloMsg": {
+			"HelloJsonMsg": {
 				"Name": "test client"
 			}
 		}`,
@@ -27,5 +27,6 @@ func main() {
 	}
 
 	copy(msg[2:], data)
+
 	conn.Write(msg)
 }

@@ -4,15 +4,24 @@
         <title>WEB CLIENT</title>
     </head>
     <body>
-        <input id="btn-sendmsg" type="button" value="Send Message" onclick="SendMessage()">
+        <ul>
+            <li>
+                <input id="btn-sendjsonmsg" type="button" value="Send Json Message" onclick="SendJsonMessage()">
+            </li>
+            <br>
+            <li>
+                <input id="btn-sendprotomsg" type="button" value="Send Proto Message" onclick="SendProtoMessage()">
+            </li>
+        </ul>
+        
         <script type="text/javascript">
-            var ws = new WebSocket('ws://127.0.0.1:7766');
-            ws.onopen = function () {
-                console.log("WebSocket OnOpen.");
+            var ws_json = new WebSocket('ws://127.0.0.1:7766');
+            ws_json.onopen = function () {
+                console.log("Json WebSocket OnOpen.");
             }
 
-            ws.onmessage = function (e) {
-                console.log("WebSocket OnMessage");
+            ws_json.onmessage = function (e) {
+                console.log("Json WebSocket OnMessage");
                 
 
                 let reader = new FileReader();
@@ -24,12 +33,32 @@
                 }
             }
 
-            function SendMessage() {
+            function SendJsonMessage() {
                 ws.send(JSON.stringify({
-                    HelloMsg: {
+                    HelloJsonMsg: {
                         Name: 'test web client'
                     }
                 }));
+            };
+
+            var ws_proto = new WebSocket('ws://127.0.0.1:7788');
+            ws_proto.onopen = function () {
+                console.log("Proto WebSocket OnOpen.");
+            }
+
+            ws_proto.onmessage = function (e) {
+                console.log("Proto WebSocket OnMessage");
+                
+
+                let reader = new FileReader();
+                reader.readAsText(e.data);
+                reader.onload = function() {
+                    console.log('Reader.OnLoad:', this.result );
+                }
+            }
+
+            function SendProtoMessage() {
+                
             };
         </script>
     </body>

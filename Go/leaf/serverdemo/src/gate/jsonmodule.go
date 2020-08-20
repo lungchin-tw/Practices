@@ -10,24 +10,24 @@ import (
 	"github.com/name5566/leaf/gate"
 )
 
-var Module = new(TModule)
+var JsonModule = new(TJsonModule)
 
-type TModule struct {
+type TJsonModule struct {
 	*gate.Gate
 }
 
-func (this *TModule) OnInit() {
+func (this *TJsonModule) OnInit() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
 
 	this.Gate = &gate.Gate{
 		MaxConnNum:      conf.MAX_CONN_NUM,
 		PendingWriteNum: conf.PENDING_WRITE_NUM,
 		MaxMsgLen:       conf.MAX_MSG_LEN,
-		WSAddr:          conf.WSADDR,
+		WSAddr:          conf.JSON_WSADDR,
 		HTTPTimeout:     conf.HTTP_TIMEOUT,
 		CertFile:        "",
 		KeyFile:         "",
-		TCPAddr:         conf.TCPADDR,
+		TCPAddr:         conf.JSON_TCPADDR,
 		LenMsgLen:       conf.LEN_MSG_LEN,
 		LittleEndian:    conf.IS_LITTLE_ENDIAN,
 		Processor:       message.JsonProcessor,
@@ -35,12 +35,12 @@ func (this *TModule) OnInit() {
 	}
 }
 
-func (this *TModule) OnDestroy() {
+func (this *TJsonModule) OnDestroy() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
 	this.Gate.OnDestroy()
 }
 
-func (this *TModule) Run(closeSig chan bool) {
+func (this *TJsonModule) Run(closeSig chan bool) {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName(), closeSig)
 	this.Gate.Run(closeSig)
 }

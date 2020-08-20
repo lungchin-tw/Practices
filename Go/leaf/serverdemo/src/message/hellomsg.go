@@ -11,5 +11,5 @@ type HelloJsonMsg struct {
 
 func init() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
-	JsonProcessor.Register(&HelloJsonMsg{})
+
 }
