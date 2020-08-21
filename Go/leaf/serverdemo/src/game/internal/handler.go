@@ -36,12 +36,12 @@ func HandleHelloProtoMsg(args []interface{}) {
 	agent := args[1].(gate.Agent)
 
 	fmt.Printf(
-		"File=%v\nFunc=%v\nArgs=%#v\nMessage=%#v\nAgent=%#v\n",
+		"File: %v\nFunc: %v\nArgs: %#v\nMessage: %#v\nRemoteAddr: %q\n",
 		core.GetCurFile(),
 		core.GetCurFuncName(),
 		args,
 		*msg,
-		agent,
+		agent.RemoteAddr(),
 	)
 
 	agent.WriteMsg(

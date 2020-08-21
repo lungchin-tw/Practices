@@ -5,6 +5,7 @@ import (
 	"leaf/serverdemo/core"
 
 	"github.com/name5566/leaf/chanrpc"
+	"github.com/name5566/leaf/gate"
 	"github.com/name5566/leaf/module"
 )
 
@@ -28,10 +29,10 @@ func init() {
 func rpcNewAgent(args []interface{}) {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName(), args)
 
-	// agent := args[0].(gate.Agent)
-	// agent.WriteMsg(&message.HelloProtoMsg{
-	// 	Name: proto.String("serverdemo"),
-	// })
+	agent := args[0].(gate.Agent)
+	fmt.Printf("New Agent: %#v\n", agent)
+	fmt.Printf("Agent.LocalAddr: %q\n", agent.LocalAddr())
+	fmt.Printf("Agent.RemoteAddr: %q\n", agent.RemoteAddr())
 }
 
 func rpcCloseAgent(args []interface{}) {

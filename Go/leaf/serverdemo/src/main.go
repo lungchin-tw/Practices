@@ -21,7 +21,7 @@ func main() {
 
 	leaf.Run(
 		game.Module,
-		// gate.JsonModule,
+		gate.JsonModule,
 		gate.ProtoModule,
 	)
 }

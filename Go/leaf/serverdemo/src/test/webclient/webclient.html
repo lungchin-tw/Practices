@@ -13,7 +13,7 @@
                 <input id="btn-sendprotomsg" type="button" value="Send Proto Message" onclick="SendProtoMessage()">
             </li>
         </ul>
-        
+        <script src="protojs/protobuf.js"></script>
         <script type="text/javascript">
             var ws_json = new WebSocket('ws://127.0.0.1:7766');
             ws_json.onopen = function () {
@@ -22,8 +22,6 @@
 
             ws_json.onmessage = function (e) {
                 console.log("Json WebSocket OnMessage");
-                
-
                 let reader = new FileReader();
                 reader.readAsText(e.data);
                 reader.onload = function() {
@@ -34,12 +32,20 @@
             }
 
             function SendJsonMessage() {
-                ws.send(JSON.stringify({
+                ws_json.send(JSON.stringify({
                     HelloJsonMsg: {
-                        Name: 'test web client'
+                        Name: 'Web Json Client'
                     }
                 }));
             };
+
+            var HelloProtoMsgType
+            protobuf.load("helloproto.proto")
+                .then(function(root){
+                    console.log('Loaded helloproto.proto, root:', root);
+                    HelloProtoMsgType = root.lookupType("message.HelloProtoMsg");
+                    console.log('Loaded helloproto.proto, msgtype:', HelloProtoMsgType);
+                });
 
             var ws_proto = new WebSocket('ws://127.0.0.1:7788');
             ws_proto.onopen = function () {
@@ -48,17 +54,38 @@
 
             ws_proto.onmessage = function (e) {
                 console.log("Proto WebSocket OnMessage");
-                
-
                 let reader = new FileReader();
-                reader.readAsText(e.data);
+                reader.readAsArrayBuffer(e.data);
                 reader.onload = function() {
-                    console.log('Reader.OnLoad:', this.result );
+                    console.log('Reader.OnLoad, Result:', this.result );
+                    let decoded = HelloProtoMsgType.decode(new Uint8Array(this.result));
+                    console.log('Reader.OnLoad, Decoded:', decoded );
+                    console.log('Reader.OnLoad, Decoded.name:', decoded.name );
+                    let object = HelloProtoMsgType.toObject(decoded);
+                    console.log('Reader.OnLoad, Object:', object );
                 }
             }
 
             function SendProtoMessage() {
-                
+                let payload = { name: "Web Proto Socket"};
+                let err = HelloProtoMsgType.verify(payload);
+                console.log('HelloProtoMsgType.verify(payload), err:', err);
+                let msg = HelloProtoMsgType.create(payload);
+                console.log('HelloProtoMsgType.create(payload):', msg);
+                let encoded = HelloProtoMsgType.encode(msg);
+                console.log('HelloProtoMsgType.encode(msg):', encoded);
+                let msgbuffer = encoded.finish();
+                console.log('encoded.finish():', msgbuffer);
+                let id_buffer16 = new Uint16Array([0]);
+                console.log('id_buffer16:', id_buffer16);
+                let id_buffer8 = new Uint8Array(id_buffer16.buffer, id_buffer16.byteOffset, id_buffer16.byteLength);
+                console.log('id_buffer8:', id_buffer8);
+
+                let data_buffer  = new Uint8Array(id_buffer8.length + msgbuffer.length);
+                data_buffer.set(id_buffer8);
+                data_buffer.set(msgbuffer, id_buffer8.length);
+                console.log('data_buffer:', data_buffer);
+                ws_proto.send(data_buffer);
             };
         </script>
     </body>
