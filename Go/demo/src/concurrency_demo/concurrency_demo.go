@@ -1,8 +1,9 @@
 package main
 
-import "fmt"
-
-import "time"
+import (
+	"fmt"
+	"time"
+)
 
 func demo_unbuffered_channels() {
 	ch := make(chan string)
