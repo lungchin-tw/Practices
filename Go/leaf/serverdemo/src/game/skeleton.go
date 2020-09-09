@@ -14,27 +14,46 @@ var Skeleton *module.Skeleton
 func init() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
 
+	chanrpcserver := chanrpc.NewServer(10000)
 	Skeleton = &module.Skeleton{
 		GoLen:              10000,
 		TimerDispatcherLen: 10000,
 		AsynCallLen:        10000,
-		ChanRPCServer:      chanrpc.NewServer(10000),
+		ChanRPCServer:      chanrpcserver,
 	}
 
 	Skeleton.Init()
-	Skeleton.RegisterChanRPC("NewAgent", rpcNewAgent)
-	Skeleton.RegisterChanRPC("CloseAgent", rpcCloseAgent)
+
+	/*
+		Method 1:
+		Skeleton.RegisterChanRPC("NewAgent", rpcNewAgent)
+		Skeleton.RegisterChanRPC("CloseAgent", rpcCloseAgent)
+	*/
+
+	// Method 2:
+	chanrpcserver.Register("NewAgent", rpcNewAgent)
+	chanrpcserver.Register("CloseAgent", rpcCloseAgent)
 }
 
 func rpcNewAgent(args []interface{}) {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName(), args)
 
 	agent := args[0].(gate.Agent)
-	fmt.Printf("New Agent: %#v\n", agent)
-	fmt.Printf("Agent.LocalAddr: %q\n", agent.LocalAddr())
-	fmt.Printf("Agent.RemoteAddr: %q\n", agent.RemoteAddr())
+	fmt.Printf(`
+		New Agent: %#v
+		Agent.LocalAddr: %q
+		Agent.RemoteAddr: %q`+"\n",
+		agent, agent.LocalAddr(), agent.RemoteAddr(),
+	)
 }
 
 func rpcCloseAgent(args []interface{}) {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName(), args)
+
+	agent := args[0].(gate.Agent)
+	fmt.Printf(`
+		New Agent: %#v
+		Agent.LocalAddr: %q
+		Agent.RemoteAddr: %q`+"\n",
+		agent, agent.LocalAddr(), agent.RemoteAddr())
 }

@@ -20,10 +20,11 @@ func (this *TModule) OnInit() {
 	fmt.Println(core.GetCurFile(), core.GetCurFuncName())
 
 	this.Skeleton = Skeleton
-	message.JsonProcessor.SetRouter(&message.HelloJsonMsg{}, Skeleton.ChanRPCServer)
+	chanrpcserver := Skeleton.ChanRPCServer
+	message.JsonProcessor.SetRouter(&message.HelloJsonMsg{}, chanrpcserver)
 	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloJsonMsg{}), internal.HandleHelloJsonMsg)
 
-	message.ProtoProcessor.SetRouter(&message.HelloProtoMsg{}, Skeleton.ChanRPCServer)
+	message.ProtoProcessor.SetRouter(&message.HelloProtoMsg{}, chanrpcserver)
 	Skeleton.RegisterChanRPC(reflect.TypeOf(&message.HelloProtoMsg{}), internal.HandleHelloProtoMsg)
 
 	Skeleton.RegisterCommand("echo", "echo user inputs", func(args []interface{}) interface{} {
