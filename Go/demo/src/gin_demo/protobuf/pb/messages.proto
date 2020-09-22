@@ -1,0 +1,22 @@
+syntax = "proto3";
+package pb;
+
+option go_package = ".;pb";
+
+message PingPong {
+    int64 Timestamp = 1;
+    uint64 UserID = 2;
+    string Token = 3;
+}
+
+message LoginRequest {
+    int64 Timestamp = 1;
+    uint64 UserID = 2;
+    string Token = 3;
+    int32 TableType = 4; //房间類型
+    int32 Version = 5; //客户端版本，现在传0就行
+    bool IsReconnect = 6; //如果用户是点击返回游戏进来的，会将上一局游戏结果(108)推送过去，然后用户要点击继续游戏才会变成准备状态
+    string IP = 7; //客户端上传ip
+    string MerCode = 8;
+    int32  CipherID = 9;
+}
