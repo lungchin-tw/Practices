@@ -18,6 +18,7 @@ import (
 )
 
 func main() {
+	env.InitValues()
 
 	rand.Seed(time.Now().UnixNano())
 	data := &pb.LoginRequest{

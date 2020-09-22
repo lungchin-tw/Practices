@@ -15,6 +15,8 @@ import (
 )
 
 func main() {
+	env.InitValues()
+
 	router := gin.Default()
 	router.POST("/login", func(c *gin.Context) {
 		payload, err := ioutil.ReadAll(c.Request.Body)

@@ -8,23 +8,16 @@ import (
 	"time"
 
 	"demo.gin/protobuf/env"
-	_ "demo.gin/protobuf/env"
 	"demo.gin/protobuf/pb"
-	_ "demo.gin/protobuf/pb"
 	"github.com/google/uuid"
 	"google.golang.org/protobuf/proto"
 	"talent.com/server/mch-durotar.git/tools/aes"
 )
 
-func init() {
+func TestMain(m *testing.M) {
 	rand.Seed(time.Now().UnixNano())
-
-	var err error
-	if env.CipherKey, err = base64.StdEncoding.DecodeString(*env.CipherValue); err != nil {
-		panic(nil)
-	} else {
-		fmt.Printf("Value=%v, Key=%+v\n", *env.CipherValue, env.CipherKey)
-	}
+	env.InitValues()
+	m.Run()
 }
 
 func TestEncryption(t *testing.T) {
@@ -53,5 +46,21 @@ func TestEncryption(t *testing.T) {
 		panic(err)
 	} else {
 		fmt.Printf("[TestEncryption], After={%+v}\n", after)
+	}
+}
+
+func TestAesKeyGenerator(t *testing.T) {
+	bytes := make([]byte, 16)
+	if _, err := rand.Read(bytes); err != nil {
+		panic(err)
+	}
+
+	ciphervalue := base64.StdEncoding.EncodeToString(bytes)
+	fmt.Println("CipherValue,", ciphervalue)
+
+	if cipherkey, err := base64.StdEncoding.DecodeString(string(ciphervalue)); err != nil {
+		panic(nil)
+	} else {
+		fmt.Println("CipherKey,", cipherkey)
 	}
 }

@@ -13,14 +13,15 @@ var (
 	CipherKey   []byte
 )
 
-func init() {
+func InitValues() {
 	flag.Parse()
+
+	fmt.Println("CipherValue,", *CipherValue)
 
 	var err error
 	if CipherKey, err = base64.StdEncoding.DecodeString(*CipherValue); err != nil {
 		panic(nil)
 	} else {
-		fmt.Printf("Value=%v, Key=%+v\n", *CipherValue, CipherKey)
+		fmt.Println("CipherKey,", CipherKey)
 	}
-
 }
