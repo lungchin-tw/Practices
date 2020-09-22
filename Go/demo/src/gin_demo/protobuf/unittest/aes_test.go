@@ -49,7 +49,7 @@ func TestEncryption(t *testing.T) {
 	}
 }
 
-func TestAesKeyGenerator(t *testing.T) {
+func TestCipherGenerator(t *testing.T) {
 	bytes := make([]byte, 16)
 	if _, err := rand.Read(bytes); err != nil {
 		panic(err)
