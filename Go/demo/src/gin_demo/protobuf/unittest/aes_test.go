@@ -38,7 +38,7 @@ func TestEncryption(t *testing.T) {
 	encoded := aes.EcbEncrypt(payload, env.CipherKey)
 	decoded, err := aes.EcbDecrypt(encoded, env.CipherKey)
 	if err != nil {
-		panic(nil)
+		panic(err)
 	}
 
 	var after = &pb.LoginRequest{}

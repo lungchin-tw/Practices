@@ -11,7 +11,7 @@ var (
 )
 
 func main() {
-	// flag.PrintDefaults()
+	flag.PrintDefaults()
 	flag.Visit(func(flag *flag.Flag) {
 		fmt.Printf("flag.Visit, flag:%#v\n", *flag)
 	})
