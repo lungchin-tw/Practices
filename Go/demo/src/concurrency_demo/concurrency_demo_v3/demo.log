@@ -1,0 +1,1447 @@
+Total Generated Num Player: 30
+After Genereating Players, Sleep 5s
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(0/30), Scene:[{SceneType:0, TotalNumPlayer:0} {SceneType:1, TotalNumPlayer:0} {SceneType:2, TotalNumPlayer:0}]}
+After Matchmaking, Sleep 3 sec
+[MatchmakingChan], 1/30, {1 0 2}
+[SceneChan(0)], {1 0 2}
+[TeamChan(2)], {1 0 2}
+[MatchmakingChan], 2/30, {2 0 0}
+[SceneChan(0)], {2 0 0}
+[TeamChan(0)], {2 0 0}
+[MatchmakingChan], 3/30, {3 1 1}
+[SceneChan(1)], {3 1 1}
+[TeamChan(1)], {3 1 1}
+[MatchmakingChan], 4/30, {4 2 0}
+[SceneChan(2)], {4 2 0}
+[TeamChan(0)], {4 2 0}
+[MatchmakingChan], 5/30, {5 2 1}
+[SceneChan(2)], {5 2 1}
+[TeamChan(1)], {5 2 1}
+[MatchmakingChan], 6/30, {6 2 1}
+[SceneChan(2)], {6 2 1}
+[TeamChan(1)], {6 2 1}
+[MatchmakingChan], 7/30, {7 1 0}
+[SceneChan(1)], {7 1 0}
+[TeamChan(0)], {7 1 0}
+[MatchmakingChan], 8/30, {8 1 2}
+[SceneChan(1)], {8 1 2}
+[TeamChan(2)], {8 1 2}
+[MatchmakingChan], 9/30, {9 1 1}
+[SceneChan(1)], {9 1 1}
+[TeamChan(1)], {9 1 1}
+[MatchmakingChan], 10/30, {10 0 2}
+[SceneChan(0)], {10 0 2}
+[TeamChan(2)], {10 0 2}
+[MatchmakingChan], 11/30, {11 2 0}
+[SceneChan(2)], {11 2 0}
+[TeamChan(0)], {11 2 0}
+[MatchmakingChan], 12/30, {12 2 0}
+[SceneChan(2)], {12 2 0}
+[TeamChan(0)], {12 2 0}
+[MatchmakingChan], 13/30, {13 0 1}
+[SceneChan(0)], {13 0 1}
+[TeamChan(1)], {13 0 1}
+[MatchmakingChan], 14/30, {14 2 2}
+[SceneChan(2)], {14 2 2}
+[TeamChan(2)], {14 2 2}
+[MatchmakingChan], 15/30, {15 2 0}
+[SceneChan(2)], {15 2 0}
+[TeamChan(0)], {15 2 0}
+[MatchmakingChan], 16/30, {16 1 2}
+[SceneChan(1)], {16 1 2}
+[TeamChan(2)], {16 1 2}
+[MatchmakingChan], 17/30, {17 1 1}
+[SceneChan(1)], {17 1 1}
+[TeamChan(1)], {17 1 1}
+[MatchmakingChan], 18/30, {18 1 0}
+[SceneChan(1)], {18 1 0}
+[TeamChan(0)], {18 1 0}
+[MatchmakingChan], 19/30, {19 2 0}
+[SceneChan(2)], {19 2 0}
+[TeamChan(0)], {19 2 0}
+[MatchmakingChan], 20/30, {20 1 0}
+[SceneChan(1)], {20 1 0}
+[TeamChan(0)], {20 1 0}
+[MatchmakingChan], 21/30, {21 1 2}
+[SceneChan(1)], {21 1 2}
+[TeamChan(2)], {21 1 2}
+[MatchmakingChan], 22/30, {22 0 0}
+[SceneChan(0)], {22 0 0}
+[TeamChan(0)], {22 0 0}
+[MatchmakingChan], 23/30, {23 2 2}
+[SceneChan(2)], {23 2 2}
+[TeamChan(2)], {23 2 2}
+[MatchmakingChan], 24/30, {24 2 2}
+[SceneChan(2)], {24 2 2}
+[TeamChan(2)], {24 2 2}
+[MatchmakingChan], 25/30, {25 1 2}
+[SceneChan(1)], {25 1 2}
+[TeamChan(2)], {25 1 2}
+[MatchmakingChan], 26/30, {26 0 1}
+[SceneChan(0)], {26 0 1}
+[TeamChan(1)], {26 0 1}
+[MatchmakingChan], 27/30, {27 1 0}
+[SceneChan(1)], {27 1 0}
+[TeamChan(0)], {27 1 0}
+[MatchmakingChan], 28/30, {28 0 1}
+[SceneChan(0)], {28 0 1}
+[TeamChan(1)], {28 0 1}
+[MatchmakingChan], 29/30, {29 0 0}
+[SceneChan(0)], {29 0 0}
+[TeamChan(0)], {29 0 0}
+[MatchmakingChan], 30/30, {30 1 1}
+[SceneChan(1)], {30 1 1}
+[TeamChan(1)], {30 1 1}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(30/30), Scene:[{SceneType:0, TotalNumPlayer:8} {SceneType:1, TotalNumPlayer:12} {SceneType:2, TotalNumPlayer:10}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 94
+After Genereating Players, Sleep 6s
+[MatchmakingChan], 31/94, {31 0 2}
+[SceneChan(0)], {31 0 2}
+[TeamChan(2)], {31 0 2}
+[MatchmakingChan], 32/94, {32 1 1}
+[SceneChan(1)], {32 1 1}
+[TeamChan(1)], {32 1 1}
+[MatchmakingChan], 33/94, {33 1 0}
+[SceneChan(1)], {33 1 0}
+[TeamChan(0)], {33 1 0}
+[MatchmakingChan], 34/94, {34 1 1}
+[SceneChan(1)], {34 1 1}
+[TeamChan(1)], {34 1 1}
+[MatchmakingChan], 35/94, {35 2 1}
+[SceneChan(2)], {35 2 1}
+[TeamChan(1)], {35 2 1}
+[MatchmakingChan], 36/94, {36 0 1}
+[SceneChan(0)], {36 0 1}
+[TeamChan(1)], {36 0 1}
+[MatchmakingChan], 37/94, {37 2 2}
+[SceneChan(2)], {37 2 2}
+[TeamChan(2)], {37 2 2}
+[MatchmakingChan], 38/94, {38 2 0}
+[SceneChan(2)], {38 2 0}
+[TeamChan(0)], {38 2 0}
+[MatchmakingChan], 39/94, {39 0 2}
+[SceneChan(0)], {39 0 2}
+[TeamChan(2)], {39 0 2}
+[MatchmakingChan], 40/94, {40 1 1}
+[SceneChan(1)], {40 1 1}
+[TeamChan(1)], {40 1 1}
+[MatchmakingChan], 41/94, {41 1 2}
+[SceneChan(1)], {41 1 2}
+[TeamChan(2)], {41 1 2}
+[MatchmakingChan], 42/94, {42 1 1}
+[SceneChan(1)], {42 1 1}
+[TeamChan(1)], {42 1 1}
+[MatchmakingChan], 43/94, {43 0 2}
+[SceneChan(0)], {43 0 2}
+[TeamChan(2)], {43 0 2}
+[MatchmakingChan], 44/94, {44 2 1}
+[SceneChan(2)], {44 2 1}
+[TeamChan(1)], {44 2 1}
+[MatchmakingChan], 45/94, {45 1 2}
+[SceneChan(1)], {45 1 2}
+[TeamChan(2)], {45 1 2}
+[MatchmakingChan], 46/94, {46 0 0}
+[SceneChan(0)], {46 0 0}
+[TeamChan(0)], {46 0 0}
+[MatchmakingChan], 47/94, {47 0 0}
+[SceneChan(0)], {47 0 0}
+[TeamChan(0)], {47 0 0}
+[MatchmakingChan], 48/94, {48 1 0}
+[SceneChan(1)], {48 1 0}
+[TeamChan(0)], {48 1 0}
+[MatchmakingChan], 49/94, {49 2 2}
+[SceneChan(2)], {49 2 2}
+[TeamChan(2)], {49 2 2}
+[MatchmakingChan], 50/94, {50 0 2}
+[SceneChan(0)], {50 0 2}
+[TeamChan(2)], {50 0 2}
+[MatchmakingChan], 51/94, {51 1 0}
+[SceneChan(1)], {51 1 0}
+[TeamChan(0)], {51 1 0}
+[MatchmakingChan], 52/94, {52 0 2}
+[SceneChan(0)], {52 0 2}
+[TeamChan(2)], {52 0 2}
+[MatchmakingChan], 53/94, {53 2 0}
+[SceneChan(2)], {53 2 0}
+[TeamChan(0)], {53 2 0}
+[MatchmakingChan], 54/94, {54 2 2}
+[SceneChan(2)], {54 2 2}
+[TeamChan(2)], {54 2 2}
+[MatchmakingChan], 55/94, {55 1 2}
+[SceneChan(1)], {55 1 2}
+[TeamChan(2)], {55 1 2}
+[MatchmakingChan], 56/94, {56 0 1}
+[SceneChan(0)], {56 0 1}
+[TeamChan(1)], {56 0 1}
+[MatchmakingChan], 57/94, {57 2 2}
+[SceneChan(2)], {57 2 2}
+[TeamChan(2)], {57 2 2}
+[MatchmakingChan], 58/94, {58 2 2}
+[SceneChan(2)], {58 2 2}
+[TeamChan(2)], {58 2 2}
+[MatchmakingChan], 59/94, {59 1 2}
+[SceneChan(1)], {59 1 2}
+[TeamChan(2)], {59 1 2}
+[MatchmakingChan], 60/94, {60 0 2}
+[SceneChan(0)], {60 0 2}
+[TeamChan(2)], {60 0 2}
+[MatchmakingChan], 61/94, {61 0 2}
+[SceneChan(0)], {61 0 2}
+[TeamChan(2)], {61 0 2}
+[MatchmakingChan], 62/94, {62 2 2}
+[SceneChan(2)], {62 2 2}
+[TeamChan(2)], {62 2 2}
+[MatchmakingChan], 63/94, {63 0 2}
+[SceneChan(0)], {63 0 2}
+[TeamChan(2)], {63 0 2}
+[MatchmakingChan], 64/94, {64 1 2}
+[SceneChan(1)], {64 1 2}
+[TeamChan(2)], {64 1 2}
+[MatchmakingChan], 65/94, {65 0 2}
+[SceneChan(0)], {65 0 2}
+[TeamChan(2)], {65 0 2}
+[MatchmakingChan], 66/94, {66 0 1}
+[SceneChan(0)], {66 0 1}
+[TeamChan(1)], {66 0 1}
+[MatchmakingChan], 67/94, {67 0 2}
+[SceneChan(0)], {67 0 2}
+[TeamChan(2)], {67 0 2}
+[MatchmakingChan], 68/94, {68 2 0}
+[SceneChan(2)], {68 2 0}
+[TeamChan(0)], {68 2 0}
+[MatchmakingChan], 69/94, {69 2 2}
+[SceneChan(2)], {69 2 2}
+[TeamChan(2)], {69 2 2}
+[MatchmakingChan], 70/94, {70 0 1}
+[SceneChan(0)], {70 0 1}
+[TeamChan(1)], {70 0 1}
+[MatchmakingChan], 71/94, {71 1 2}
+[SceneChan(1)], {71 1 2}
+[TeamChan(2)], {71 1 2}
+[MatchmakingChan], 72/94, {72 1 2}
+[SceneChan(1)], {72 1 2}
+[TeamChan(2)], {72 1 2}
+[MatchmakingChan], 73/94, {73 0 2}
+[SceneChan(0)], {73 0 2}
+[TeamChan(2)], {73 0 2}
+[MatchmakingChan], 74/94, {74 2 2}
+[SceneChan(2)], {74 2 2}
+[TeamChan(2)], {74 2 2}
+[MatchmakingChan], 75/94, {75 1 2}
+[SceneChan(1)], {75 1 2}
+[TeamChan(2)], {75 1 2}
+[MatchmakingChan], 76/94, {76 0 1}
+[SceneChan(0)], {76 0 1}
+[TeamChan(1)], {76 0 1}
+[MatchmakingChan], 77/94, {77 0 0}
+[SceneChan(0)], {77 0 0}
+[TeamChan(0)], {77 0 0}
+[MatchmakingChan], 78/94, {78 2 2}
+[SceneChan(2)], {78 2 2}
+[TeamChan(2)], {78 2 2}
+[MatchmakingChan], 79/94, {79 2 2}
+[SceneChan(2)], {79 2 2}
+[TeamChan(2)], {79 2 2}
+[MatchmakingChan], 80/94, {80 1 2}
+[SceneChan(1)], {80 1 2}
+[TeamChan(2)], {80 1 2}
+[MatchmakingChan], 81/94, {81 1 1}
+[SceneChan(1)], {81 1 1}
+[TeamChan(1)], {81 1 1}
+[MatchmakingChan], 82/94, {82 0 1}
+[SceneChan(0)], {82 0 1}
+[TeamChan(1)], {82 0 1}
+[MatchmakingChan], 83/94, {83 1 2}
+[SceneChan(1)], {83 1 2}
+[TeamChan(2)], {83 1 2}
+[MatchmakingChan], 84/94, {84 1 0}
+[SceneChan(1)], {84 1 0}
+[TeamChan(0)], {84 1 0}
+[MatchmakingChan], 85/94, {85 2 2}
+[SceneChan(2)], {85 2 2}
+[TeamChan(2)], {85 2 2}
+[MatchmakingChan], 86/94, {86 1 1}
+[SceneChan(1)], {86 1 1}
+[TeamChan(1)], {86 1 1}
+[MatchmakingChan], 87/94, {87 1 2}
+[SceneChan(1)], {87 1 2}
+[TeamChan(2)], {87 1 2}
+[MatchmakingChan], 88/94, {88 0 0}
+[SceneChan(0)], {88 0 0}
+[TeamChan(0)], {88 0 0}
+[MatchmakingChan], 89/94, {89 0 1}
+[SceneChan(0)], {89 0 1}
+[TeamChan(1)], {89 0 1}
+[MatchmakingChan], 90/94, {90 1 2}
+[SceneChan(1)], {90 1 2}
+[TeamChan(2)], {90 1 2}
+[MatchmakingChan], 91/94, {91 1 0}
+[SceneChan(1)], {91 1 0}
+[TeamChan(0)], {91 1 0}
+[MatchmakingChan], 92/94, {92 1 2}
+[SceneChan(1)], {92 1 2}
+[TeamChan(2)], {92 1 2}
+[MatchmakingChan], 93/94, {93 1 0}
+[SceneChan(1)], {93 1 0}
+[TeamChan(0)], {93 1 0}
+[MatchmakingChan], 94/94, {94 1 1}
+[SceneChan(1)], {94 1 1}
+[TeamChan(1)], {94 1 1}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(94/94), Scene:[{SceneType:0, TotalNumPlayer:30} {SceneType:1, TotalNumPlayer:38} {SceneType:2, TotalNumPlayer:26}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(94/94), Scene:[{SceneType:0, TotalNumPlayer:30} {SceneType:1, TotalNumPlayer:38} {SceneType:2, TotalNumPlayer:26}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 157
+After Genereating Players, Sleep 8s
+[MatchmakingChan], 95/157, {95 0 1}
+[SceneChan(0)], {95 0 1}
+[TeamChan(1)], {95 0 1}
+[MatchmakingChan], 96/157, {96 0 0}
+[SceneChan(0)], {96 0 0}
+[TeamChan(0)], {96 0 0}
+[MatchmakingChan], 97/157, {97 2 1}
+[SceneChan(2)], {97 2 1}
+[TeamChan(1)], {97 2 1}
+[MatchmakingChan], 98/157, {98 1 0}
+[SceneChan(1)], {98 1 0}
+[TeamChan(0)], {98 1 0}
+[MatchmakingChan], 99/157, {99 2 1}
+[SceneChan(2)], {99 2 1}
+[TeamChan(1)], {99 2 1}
+[MatchmakingChan], 100/157, {100 1 0}
+[SceneChan(1)], {100 1 0}
+[TeamChan(0)], {100 1 0}
+[MatchmakingChan], 101/157, {101 0 0}
+[SceneChan(0)], {101 0 0}
+[TeamChan(0)], {101 0 0}
+[MatchmakingChan], 102/157, {102 1 0}
+[SceneChan(1)], {102 1 0}
+[TeamChan(0)], {102 1 0}
+[MatchmakingChan], 103/157, {103 0 0}
+[SceneChan(0)], {103 0 0}
+[TeamChan(0)], {103 0 0}
+[MatchmakingChan], 104/157, {104 1 1}
+[SceneChan(1)], {104 1 1}
+[TeamChan(1)], {104 1 1}
+[MatchmakingChan], 105/157, {105 1 1}
+[SceneChan(1)], {105 1 1}
+[TeamChan(1)], {105 1 1}
+[MatchmakingChan], 106/157, {106 1 0}
+[SceneChan(1)], {106 1 0}
+[TeamChan(0)], {106 1 0}
+[MatchmakingChan], 107/157, {107 1 0}
+[SceneChan(1)], {107 1 0}
+[TeamChan(0)], {107 1 0}
+[MatchmakingChan], 108/157, {108 0 2}
+[SceneChan(0)], {108 0 2}
+[TeamChan(2)], {108 0 2}
+[MatchmakingChan], 109/157, {109 2 1}
+[SceneChan(2)], {109 2 1}
+[TeamChan(1)], {109 2 1}
+[MatchmakingChan], 110/157, {110 2 2}
+[SceneChan(2)], {110 2 2}
+[TeamChan(2)], {110 2 2}
+[MatchmakingChan], 111/157, {111 1 1}
+[SceneChan(1)], {111 1 1}
+[TeamChan(1)], {111 1 1}
+[MatchmakingChan], 112/157, {112 0 0}
+[SceneChan(0)], {112 0 0}
+[TeamChan(0)], {112 0 0}
+[MatchmakingChan], 113/157, {113 1 0}
+[SceneChan(1)], {113 1 0}
+[TeamChan(0)], {113 1 0}
+[MatchmakingChan], 114/157, {114 0 1}
+[SceneChan(0)], {114 0 1}
+[TeamChan(1)], {114 0 1}
+[MatchmakingChan], 115/157, {115 1 1}
+[SceneChan(1)], {115 1 1}
+[TeamChan(1)], {115 1 1}
+[MatchmakingChan], 116/157, {116 2 2}
+[SceneChan(2)], {116 2 2}
+[TeamChan(2)], {116 2 2}
+[MatchmakingChan], 117/157, {117 1 1}
+[SceneChan(1)], {117 1 1}
+[TeamChan(1)], {117 1 1}
+[MatchmakingChan], 118/157, {118 2 2}
+[SceneChan(2)], {118 2 2}
+[TeamChan(2)], {118 2 2}
+[MatchmakingChan], 119/157, {119 2 1}
+[SceneChan(2)], {119 2 1}
+[TeamChan(1)], {119 2 1}
+[MatchmakingChan], 120/157, {120 2 1}
+[SceneChan(2)], {120 2 1}
+[TeamChan(1)], {120 2 1}
+[MatchmakingChan], 121/157, {121 0 2}
+[SceneChan(0)], {121 0 2}
+[TeamChan(2)], {121 0 2}
+[MatchmakingChan], 122/157, {122 0 2}
+[SceneChan(0)], {122 0 2}
+[TeamChan(2)], {122 0 2}
+[MatchmakingChan], 123/157, {123 0 0}
+[SceneChan(0)], {123 0 0}
+[TeamChan(0)], {123 0 0}
+[MatchmakingChan], 124/157, {124 0 1}
+[SceneChan(0)], {124 0 1}
+[TeamChan(1)], {124 0 1}
+[MatchmakingChan], 125/157, {125 2 1}
+[SceneChan(2)], {125 2 1}
+[TeamChan(1)], {125 2 1}
+[MatchmakingChan], 126/157, {126 2 1}
+[SceneChan(2)], {126 2 1}
+[TeamChan(1)], {126 2 1}
+[MatchmakingChan], 127/157, {127 1 0}
+[SceneChan(1)], {127 1 0}
+[TeamChan(0)], {127 1 0}
+[MatchmakingChan], 128/157, {128 2 0}
+[SceneChan(2)], {128 2 0}
+[TeamChan(0)], {128 2 0}
+[MatchmakingChan], 129/157, {129 0 2}
+[SceneChan(0)], {129 0 2}
+[TeamChan(2)], {129 0 2}
+[MatchmakingChan], 130/157, {130 0 0}
+[SceneChan(0)], {130 0 0}
+[TeamChan(0)], {130 0 0}
+[MatchmakingChan], 131/157, {131 1 1}
+[SceneChan(1)], {131 1 1}
+[TeamChan(1)], {131 1 1}
+[MatchmakingChan], 132/157, {132 2 2}
+[SceneChan(2)], {132 2 2}
+[TeamChan(2)], {132 2 2}
+[MatchmakingChan], 133/157, {133 2 1}
+[SceneChan(2)], {133 2 1}
+[TeamChan(1)], {133 2 1}
+[MatchmakingChan], 134/157, {134 0 2}
+[SceneChan(0)], {134 0 2}
+[TeamChan(2)], {134 0 2}
+[MatchmakingChan], 135/157, {135 1 2}
+[SceneChan(1)], {135 1 2}
+[TeamChan(2)], {135 1 2}
+[MatchmakingChan], 136/157, {136 0 2}
+[SceneChan(0)], {136 0 2}
+[TeamChan(2)], {136 0 2}
+[MatchmakingChan], 137/157, {137 2 0}
+[SceneChan(2)], {137 2 0}
+[TeamChan(0)], {137 2 0}
+[MatchmakingChan], 138/157, {138 0 2}
+[SceneChan(0)], {138 0 2}
+[TeamChan(2)], {138 0 2}
+[MatchmakingChan], 139/157, {139 1 1}
+[SceneChan(1)], {139 1 1}
+[TeamChan(1)], {139 1 1}
+[MatchmakingChan], 140/157, {140 1 1}
+[SceneChan(1)], {140 1 1}
+[TeamChan(1)], {140 1 1}
+[MatchmakingChan], 141/157, {141 0 0}
+[SceneChan(0)], {141 0 0}
+[TeamChan(0)], {141 0 0}
+[MatchmakingChan], 142/157, {142 1 0}
+[SceneChan(1)], {142 1 0}
+[TeamChan(0)], {142 1 0}
+[MatchmakingChan], 143/157, {143 1 1}
+[SceneChan(1)], {143 1 1}
+[TeamChan(1)], {143 1 1}
+[MatchmakingChan], 144/157, {144 1 2}
+[SceneChan(1)], {144 1 2}
+[TeamChan(2)], {144 1 2}
+[MatchmakingChan], 145/157, {145 0 2}
+[SceneChan(0)], {145 0 2}
+[TeamChan(2)], {145 0 2}
+[MatchmakingChan], 146/157, {146 0 0}
+[SceneChan(0)], {146 0 0}
+[TeamChan(0)], {146 0 0}
+[MatchmakingChan], 147/157, {147 2 1}
+[SceneChan(2)], {147 2 1}
+[TeamChan(1)], {147 2 1}
+[MatchmakingChan], 148/157, {148 1 0}
+[SceneChan(1)], {148 1 0}
+[TeamChan(0)], {148 1 0}
+[MatchmakingChan], 149/157, {149 2 0}
+[SceneChan(2)], {149 2 0}
+[TeamChan(0)], {149 2 0}
+[MatchmakingChan], 150/157, {150 1 1}
+[SceneChan(1)], {150 1 1}
+[TeamChan(1)], {150 1 1}
+[MatchmakingChan], 151/157, {151 0 0}
+[SceneChan(0)], {151 0 0}
+[TeamChan(0)], {151 0 0}
+[MatchmakingChan], 152/157, {152 0 0}
+[SceneChan(0)], {152 0 0}
+[TeamChan(0)], {152 0 0}
+[MatchmakingChan], 153/157, {153 0 0}
+[SceneChan(0)], {153 0 0}
+[TeamChan(0)], {153 0 0}
+[MatchmakingChan], 154/157, {154 1 2}
+[SceneChan(1)], {154 1 2}
+[TeamChan(2)], {154 1 2}
+[MatchmakingChan], 155/157, {155 2 2}
+[SceneChan(2)], {155 2 2}
+[TeamChan(2)], {155 2 2}
+[MatchmakingChan], 156/157, {156 0 1}
+[SceneChan(0)], {156 0 1}
+[TeamChan(1)], {156 0 1}
+[MatchmakingChan], 157/157, {157 2 0}
+[SceneChan(2)], {157 2 0}
+[TeamChan(0)], {157 2 0}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(157/157), Scene:[{SceneType:0, TotalNumPlayer:53} {SceneType:1, TotalNumPlayer:60} {SceneType:2, TotalNumPlayer:44}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(157/157), Scene:[{SceneType:0, TotalNumPlayer:53} {SceneType:1, TotalNumPlayer:60} {SceneType:2, TotalNumPlayer:44}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(157/157), Scene:[{SceneType:0, TotalNumPlayer:53} {SceneType:1, TotalNumPlayer:60} {SceneType:2, TotalNumPlayer:44}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 188
+After Genereating Players, Sleep 1s
+Total Generated Num Player: 228
+After Genereating Players, Sleep 0s
+Total Generated Num Player: 286
+[MatchmakingChan], 158/286, {158 1 1}
+[SceneChan(1)], {158 1 1}
+[TeamChan(1)], {158 1 1}
+[MatchmakingChan], 159/286, {159 0 1}
+[SceneChan(0)], {159 0 1}
+[TeamChan(1)], {159 0 1}
+[MatchmakingChan], 160/286, {160 2 2}
+[SceneChan(2)], {160 2 2}
+[TeamChan(2)], {160 2 2}
+[MatchmakingChan], 161/286, {161 2 0}
+[SceneChan(2)], {161 2 0}
+[TeamChan(0)], {161 2 0}
+[MatchmakingChan], 162/286, {162 0 2}
+[SceneChan(0)], {162 0 2}
+[TeamChan(2)], {162 0 2}
+[MatchmakingChan], 163/286, {163 1 2}
+[SceneChan(1)], {163 1 2}
+[TeamChan(2)], {163 1 2}
+[MatchmakingChan], 164/286, {164 2 0}
+[SceneChan(2)], {164 2 0}
+[TeamChan(0)], {164 2 0}
+[MatchmakingChan], 165/286, {165 0 1}
+[SceneChan(0)], {165 0 1}
+[TeamChan(1)], {165 0 1}
+[MatchmakingChan], 166/286, {166 1 1}
+[SceneChan(1)], {166 1 1}
+[TeamChan(1)], {166 1 1}
+[MatchmakingChan], 167/286, {167 2 2}
+[SceneChan(2)], {167 2 2}
+[TeamChan(2)], {167 2 2}
+[MatchmakingChan], 168/286, {168 1 2}
+[SceneChan(1)], {168 1 2}
+[TeamChan(2)], {168 1 2}
+[MatchmakingChan], 169/286, {169 2 1}
+[SceneChan(2)], {169 2 1}
+[TeamChan(1)], {169 2 1}
+[MatchmakingChan], 170/286, {170 1 1}
+[SceneChan(1)], {170 1 1}
+[TeamChan(1)], {170 1 1}
+[MatchmakingChan], 171/286, {171 0 1}
+[SceneChan(0)], {171 0 1}
+[TeamChan(1)], {171 0 1}
+[MatchmakingChan], 172/286, {172 1 1}
+[SceneChan(1)], {172 1 1}
+[TeamChan(1)], {172 1 1}
+[MatchmakingChan], 173/286, {173 0 0}
+[SceneChan(0)], {173 0 0}
+[TeamChan(0)], {173 0 0}
+[MatchmakingChan], 174/286, {174 2 1}
+[SceneChan(2)], {174 2 1}
+[TeamChan(1)], {174 2 1}
+[MatchmakingChan], 175/286, {175 1 1}
+[SceneChan(1)], {175 1 1}
+[TeamChan(1)], {175 1 1}
+[MatchmakingChan], 176/286, {176 1 2}
+[SceneChan(1)], {176 1 2}
+[TeamChan(2)], {176 1 2}
+[MatchmakingChan], 177/286, {177 2 2}
+[SceneChan(2)], {177 2 2}
+[TeamChan(2)], {177 2 2}
+[MatchmakingChan], 178/286, {178 2 1}
+[SceneChan(2)], {178 2 1}
+[TeamChan(1)], {178 2 1}
+[MatchmakingChan], 179/286, {179 1 1}
+[SceneChan(1)], {179 1 1}
+[TeamChan(1)], {179 1 1}
+[MatchmakingChan], 180/286, {180 2 0}
+[SceneChan(2)], {180 2 0}
+[TeamChan(0)], {180 2 0}
+[MatchmakingChan], 181/286, {181 0 2}
+[SceneChan(0)], {181 0 2}
+[TeamChan(2)], {181 0 2}
+[MatchmakingChan], 182/286, {182 2 2}
+[SceneChan(2)], {182 2 2}
+[TeamChan(2)], {182 2 2}
+[MatchmakingChan], 183/286, {183 2 1}
+[SceneChan(2)], {183 2 1}
+[TeamChan(1)], {183 2 1}
+[MatchmakingChan], 184/286, {184 1 1}
+[SceneChan(1)], {184 1 1}
+[TeamChan(1)], {184 1 1}
+[MatchmakingChan], 185/286, {185 1 1}
+[SceneChan(1)], {185 1 1}
+[TeamChan(1)], {185 1 1}
+[MatchmakingChan], 186/286, {186 1 0}
+[SceneChan(1)], {186 1 0}
+[TeamChan(0)], {186 1 0}
+[MatchmakingChan], 187/286, {187 0 0}
+[SceneChan(0)], {187 0 0}
+[TeamChan(0)], {187 0 0}
+[MatchmakingChan], 188/286, {188 1 1}
+[SceneChan(1)], {188 1 1}
+[TeamChan(1)], {188 1 1}
+[MatchmakingChan], 189/286, {189 1 2}
+[SceneChan(1)], {189 1 2}
+[TeamChan(2)], {189 1 2}
+[MatchmakingChan], 190/286, {190 0 0}
+[SceneChan(0)], {190 0 0}
+[TeamChan(0)], {190 0 0}
+[MatchmakingChan], 191/286, {191 2 1}
+[SceneChan(2)], {191 2 1}
+[TeamChan(1)], {191 2 1}
+After Genereating Players, Sleep 3s
+[MatchmakingChan], 192/286, {192 1 2}
+[SceneChan(1)], {192 1 2}
+[TeamChan(2)], {192 1 2}
+[MatchmakingChan], 193/286, {193 1 1}
+[SceneChan(1)], {193 1 1}
+[TeamChan(1)], {193 1 1}
+[MatchmakingChan], 194/286, {194 0 0}
+[SceneChan(0)], {194 0 0}
+[TeamChan(0)], {194 0 0}
+[MatchmakingChan], 195/286, {195 0 0}
+[SceneChan(0)], {195 0 0}
+[TeamChan(0)], {195 0 0}
+[MatchmakingChan], 196/286, {196 2 0}
+[SceneChan(2)], {196 2 0}
+[TeamChan(0)], {196 2 0}
+[MatchmakingChan], 197/286, {197 0 2}
+[SceneChan(0)], {197 0 2}
+[TeamChan(2)], {197 0 2}
+[MatchmakingChan], 198/286, {198 2 2}
+[SceneChan(2)], {198 2 2}
+[TeamChan(2)], {198 2 2}
+[MatchmakingChan], 199/286, {199 1 0}
+[SceneChan(1)], {199 1 0}
+[TeamChan(0)], {199 1 0}
+[MatchmakingChan], 200/286, {200 0 1}
+[SceneChan(0)], {200 0 1}
+[TeamChan(1)], {200 0 1}
+[MatchmakingChan], 201/286, {201 2 1}
+[SceneChan(2)], {201 2 1}
+[TeamChan(1)], {201 2 1}
+[MatchmakingChan], 202/286, {202 0 0}
+[SceneChan(0)], {202 0 0}
+[TeamChan(0)], {202 0 0}
+[MatchmakingChan], 203/286, {203 1 0}
+[SceneChan(1)], {203 1 0}
+[TeamChan(0)], {203 1 0}
+[MatchmakingChan], 204/286, {204 1 2}
+[SceneChan(1)], {204 1 2}
+[TeamChan(2)], {204 1 2}
+[MatchmakingChan], 205/286, {205 2 1}
+[SceneChan(2)], {205 2 1}
+[TeamChan(1)], {205 2 1}
+[MatchmakingChan], 206/286, {206 0 0}
+[SceneChan(0)], {206 0 0}
+[TeamChan(0)], {206 0 0}
+[MatchmakingChan], 207/286, {207 2 0}
+[SceneChan(2)], {207 2 0}
+[TeamChan(0)], {207 2 0}
+[MatchmakingChan], 208/286, {208 0 2}
+[SceneChan(0)], {208 0 2}
+[TeamChan(2)], {208 0 2}
+[MatchmakingChan], 209/286, {209 0 2}
+[SceneChan(0)], {209 0 2}
+[TeamChan(2)], {209 0 2}
+[MatchmakingChan], 210/286, {210 1 2}
+[SceneChan(1)], {210 1 2}
+[TeamChan(2)], {210 1 2}
+[MatchmakingChan], 211/286, {211 1 0}
+[SceneChan(1)], {211 1 0}
+[TeamChan(0)], {211 1 0}
+[MatchmakingChan], 212/286, {212 1 0}
+[SceneChan(1)], {212 1 0}
+[TeamChan(0)], {212 1 0}
+[MatchmakingChan], 213/286, {213 0 1}
+[SceneChan(0)], {213 0 1}
+[TeamChan(1)], {213 0 1}
+[MatchmakingChan], 214/286, {214 0 0}
+[SceneChan(0)], {214 0 0}
+[TeamChan(0)], {214 0 0}
+[MatchmakingChan], 215/286, {215 1 0}
+[SceneChan(1)], {215 1 0}
+[TeamChan(0)], {215 1 0}
+[MatchmakingChan], 216/286, {216 1 1}
+[SceneChan(1)], {216 1 1}
+[TeamChan(1)], {216 1 1}
+[MatchmakingChan], 217/286, {217 2 0}
+[SceneChan(2)], {217 2 0}
+[TeamChan(0)], {217 2 0}
+[MatchmakingChan], 218/286, {218 0 1}
+[SceneChan(0)], {218 0 1}
+[TeamChan(1)], {218 0 1}
+[MatchmakingChan], 219/286, {219 1 2}
+[SceneChan(1)], {219 1 2}
+[TeamChan(2)], {219 1 2}
+[MatchmakingChan], 220/286, {220 0 0}
+[SceneChan(0)], {220 0 0}
+[TeamChan(0)], {220 0 0}
+[MatchmakingChan], 221/286, {221 1 2}
+[SceneChan(1)], {221 1 2}
+[TeamChan(2)], {221 1 2}
+[MatchmakingChan], 222/286, {222 0 2}
+[SceneChan(0)], {222 0 2}
+[TeamChan(2)], {222 0 2}
+[MatchmakingChan], 223/286, {223 1 0}
+[SceneChan(1)], {223 1 0}
+[TeamChan(0)], {223 1 0}
+[MatchmakingChan], 224/286, {224 2 1}
+[SceneChan(2)], {224 2 1}
+[TeamChan(1)], {224 2 1}
+[MatchmakingChan], 225/286, {225 0 2}
+[SceneChan(0)], {225 0 2}
+[TeamChan(2)], {225 0 2}
+[MatchmakingChan], 226/286, {226 1 2}
+[SceneChan(1)], {226 1 2}
+[TeamChan(2)], {226 1 2}
+[MatchmakingChan], 227/286, {227 2 1}
+[SceneChan(2)], {227 2 1}
+[TeamChan(1)], {227 2 1}
+[MatchmakingChan], 228/286, {228 2 2}
+[SceneChan(2)], {228 2 2}
+[TeamChan(2)], {228 2 2}
+[MatchmakingChan], 229/286, {229 2 0}
+[SceneChan(2)], {229 2 0}
+[TeamChan(0)], {229 2 0}
+[MatchmakingChan], 230/286, {230 2 1}
+[SceneChan(2)], {230 2 1}
+[TeamChan(1)], {230 2 1}
+[MatchmakingChan], 231/286, {231 2 2}
+[SceneChan(2)], {231 2 2}
+[TeamChan(2)], {231 2 2}
+[MatchmakingChan], 232/286, {232 0 0}
+[SceneChan(0)], {232 0 0}
+[TeamChan(0)], {232 0 0}
+[MatchmakingChan], 233/286, {233 1 0}
+[SceneChan(1)], {233 1 0}
+[TeamChan(0)], {233 1 0}
+[MatchmakingChan], 234/286, {234 0 0}
+[SceneChan(0)], {234 0 0}
+[TeamChan(0)], {234 0 0}
+[MatchmakingChan], 235/286, {235 1 0}
+[SceneChan(1)], {235 1 0}
+[TeamChan(0)], {235 1 0}
+[MatchmakingChan], 236/286, {236 1 0}
+[SceneChan(1)], {236 1 0}
+[TeamChan(0)], {236 1 0}
+[MatchmakingChan], 237/286, {237 1 1}
+[SceneChan(1)], {237 1 1}
+[TeamChan(1)], {237 1 1}
+[MatchmakingChan], 238/286, {238 1 2}
+[SceneChan(1)], {238 1 2}
+[TeamChan(2)], {238 1 2}
+[MatchmakingChan], 239/286, {239 1 1}
+[SceneChan(1)], {239 1 1}
+[TeamChan(1)], {239 1 1}
+[MatchmakingChan], 240/286, {240 2 1}
+[SceneChan(2)], {240 2 1}
+[TeamChan(1)], {240 2 1}
+[MatchmakingChan], 241/286, {241 2 2}
+[SceneChan(2)], {241 2 2}
+[TeamChan(2)], {241 2 2}
+[MatchmakingChan], 242/286, {242 1 1}
+[SceneChan(1)], {242 1 1}
+[TeamChan(1)], {242 1 1}
+[MatchmakingChan], 243/286, {243 1 2}
+[SceneChan(1)], {243 1 2}
+[TeamChan(2)], {243 1 2}
+[MatchmakingChan], 244/286, {244 2 0}
+[SceneChan(2)], {244 2 0}
+[TeamChan(0)], {244 2 0}
+[MatchmakingChan], 245/286, {245 0 2}
+[SceneChan(0)], {245 0 2}
+[TeamChan(2)], {245 0 2}
+[MatchmakingChan], 246/286, {246 2 1}
+[SceneChan(2)], {246 2 1}
+[TeamChan(1)], {246 2 1}
+[MatchmakingChan], 247/286, {247 1 2}
+[SceneChan(1)], {247 1 2}
+[TeamChan(2)], {247 1 2}
+[MatchmakingChan], 248/286, {248 0 2}
+[SceneChan(0)], {248 0 2}
+[TeamChan(2)], {248 0 2}
+[MatchmakingChan], 249/286, {249 1 1}
+[SceneChan(1)], {249 1 1}
+[TeamChan(1)], {249 1 1}
+[MatchmakingChan], 250/286, {250 1 1}
+[SceneChan(1)], {250 1 1}
+[TeamChan(1)], {250 1 1}
+[MatchmakingChan], 251/286, {251 1 0}
+[SceneChan(1)], {251 1 0}
+[TeamChan(0)], {251 1 0}
+[MatchmakingChan], 252/286, {252 1 1}
+[SceneChan(1)], {252 1 1}
+[TeamChan(1)], {252 1 1}
+[MatchmakingChan], 253/286, {253 1 2}
+[SceneChan(1)], {253 1 2}
+[TeamChan(2)], {253 1 2}
+[MatchmakingChan], 254/286, {254 0 2}
+[SceneChan(0)], {254 0 2}
+[TeamChan(2)], {254 0 2}
+[MatchmakingChan], 255/286, {255 0 2}
+[SceneChan(0)], {255 0 2}
+[TeamChan(2)], {255 0 2}
+[MatchmakingChan], 256/286, {256 2 1}
+[SceneChan(2)], {256 2 1}
+[TeamChan(1)], {256 2 1}
+[MatchmakingChan], 257/286, {257 1 0}
+[SceneChan(1)], {257 1 0}
+[TeamChan(0)], {257 1 0}
+[MatchmakingChan], 258/286, {258 2 0}
+[SceneChan(2)], {258 2 0}
+[TeamChan(0)], {258 2 0}
+[MatchmakingChan], 259/286, {259 2 1}
+[SceneChan(2)], {259 2 1}
+[TeamChan(1)], {259 2 1}
+[MatchmakingChan], 260/286, {260 1 0}
+[SceneChan(1)], {260 1 0}
+[TeamChan(0)], {260 1 0}
+[MatchmakingChan], 261/286, {261 1 0}
+[SceneChan(1)], {261 1 0}
+[TeamChan(0)], {261 1 0}
+[MatchmakingChan], 262/286, {262 0 1}
+[SceneChan(0)], {262 0 1}
+[TeamChan(1)], {262 0 1}
+[MatchmakingChan], 263/286, {263 2 2}
+[SceneChan(2)], {263 2 2}
+[TeamChan(2)], {263 2 2}
+[MatchmakingChan], 264/286, {264 0 2}
+[SceneChan(0)], {264 0 2}
+[TeamChan(2)], {264 0 2}
+[MatchmakingChan], 265/286, {265 0 1}
+[SceneChan(0)], {265 0 1}
+[TeamChan(1)], {265 0 1}
+[MatchmakingChan], 266/286, {266 1 2}
+[SceneChan(1)], {266 1 2}
+[TeamChan(2)], {266 1 2}
+[MatchmakingChan], 267/286, {267 2 2}
+[SceneChan(2)], {267 2 2}
+[TeamChan(2)], {267 2 2}
+[MatchmakingChan], 268/286, {268 2 0}
+[SceneChan(2)], {268 2 0}
+[TeamChan(0)], {268 2 0}
+[MatchmakingChan], 269/286, {269 0 0}
+[SceneChan(0)], {269 0 0}
+[TeamChan(0)], {269 0 0}
+[MatchmakingChan], 270/286, {270 2 2}
+[SceneChan(2)], {270 2 2}
+[TeamChan(2)], {270 2 2}
+[MatchmakingChan], 271/286, {271 0 2}
+[SceneChan(0)], {271 0 2}
+[TeamChan(2)], {271 0 2}
+[MatchmakingChan], 272/286, {272 2 2}
+[SceneChan(2)], {272 2 2}
+[TeamChan(2)], {272 2 2}
+[MatchmakingChan], 273/286, {273 0 1}
+[SceneChan(0)], {273 0 1}
+[TeamChan(1)], {273 0 1}
+[MatchmakingChan], 274/286, {274 2 1}
+[SceneChan(2)], {274 2 1}
+[TeamChan(1)], {274 2 1}
+[MatchmakingChan], 275/286, {275 2 1}
+[SceneChan(2)], {275 2 1}
+[TeamChan(1)], {275 2 1}
+[MatchmakingChan], 276/286, {276 1 1}
+[SceneChan(1)], {276 1 1}
+[TeamChan(1)], {276 1 1}
+[MatchmakingChan], 277/286, {277 0 0}
+[SceneChan(0)], {277 0 0}
+[TeamChan(0)], {277 0 0}
+[MatchmakingChan], 278/286, {278 1 1}
+[SceneChan(1)], {278 1 1}
+[TeamChan(1)], {278 1 1}
+[MatchmakingChan], 279/286, {279 2 0}
+[SceneChan(2)], {279 2 0}
+[TeamChan(0)], {279 2 0}
+[MatchmakingChan], 280/286, {280 0 0}
+[SceneChan(0)], {280 0 0}
+[TeamChan(0)], {280 0 0}
+[MatchmakingChan], 281/286, {281 2 2}
+[SceneChan(2)], {281 2 2}
+[TeamChan(2)], {281 2 2}
+[MatchmakingChan], 282/286, {282 2 0}
+[SceneChan(2)], {282 2 0}
+[TeamChan(0)], {282 2 0}
+[MatchmakingChan], 283/286, {283 2 2}
+[SceneChan(2)], {283 2 2}
+[TeamChan(2)], {283 2 2}
+[MatchmakingChan], 284/286, {284 0 0}
+[SceneChan(0)], {284 0 0}
+[TeamChan(0)], {284 0 0}
+[MatchmakingChan], 285/286, {285 0 2}
+[SceneChan(0)], {285 0 2}
+[TeamChan(2)], {285 0 2}
+[MatchmakingChan], 286/286, {286 2 0}
+[SceneChan(2)], {286 2 0}
+[TeamChan(0)], {286 2 0}
+After Matchmaking, Elapse:5 ms, Result={NumPlayer:(286/286), Scene:[{SceneType:0, TotalNumPlayer:91} {SceneType:1, TotalNumPlayer:108} {SceneType:2, TotalNumPlayer:87}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 347
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(286/347), Scene:[{SceneType:0, TotalNumPlayer:91} {SceneType:1, TotalNumPlayer:108} {SceneType:2, TotalNumPlayer:87}]}
+After Matchmaking, Sleep 3 sec
+After Genereating Players, Sleep 7s
+[MatchmakingChan], 287/347, {287 1 0}
+[SceneChan(1)], {287 1 0}
+[TeamChan(0)], {287 1 0}
+[MatchmakingChan], 288/347, {288 1 2}
+[SceneChan(1)], {288 1 2}
+[TeamChan(2)], {288 1 2}
+[MatchmakingChan], 289/347, {289 2 2}
+[SceneChan(2)], {289 2 2}
+[TeamChan(2)], {289 2 2}
+[MatchmakingChan], 290/347, {290 0 2}
+[SceneChan(0)], {290 0 2}
+[TeamChan(2)], {290 0 2}
+[MatchmakingChan], 291/347, {291 2 2}
+[SceneChan(2)], {291 2 2}
+[TeamChan(2)], {291 2 2}
+[MatchmakingChan], 292/347, {292 0 2}
+[SceneChan(0)], {292 0 2}
+[TeamChan(2)], {292 0 2}
+[MatchmakingChan], 293/347, {293 1 2}
+[SceneChan(1)], {293 1 2}
+[TeamChan(2)], {293 1 2}
+[MatchmakingChan], 294/347, {294 2 1}
+[SceneChan(2)], {294 2 1}
+[TeamChan(1)], {294 2 1}
+[MatchmakingChan], 295/347, {295 0 2}
+[SceneChan(0)], {295 0 2}
+[TeamChan(2)], {295 0 2}
+[MatchmakingChan], 296/347, {296 0 0}
+[SceneChan(0)], {296 0 0}
+[TeamChan(0)], {296 0 0}
+[MatchmakingChan], 297/347, {297 0 0}
+[SceneChan(0)], {297 0 0}
+[TeamChan(0)], {297 0 0}
+[MatchmakingChan], 298/347, {298 1 1}
+[SceneChan(1)], {298 1 1}
+[TeamChan(1)], {298 1 1}
+[MatchmakingChan], 299/347, {299 2 2}
+[SceneChan(2)], {299 2 2}
+[TeamChan(2)], {299 2 2}
+[MatchmakingChan], 300/347, {300 2 0}
+[SceneChan(2)], {300 2 0}
+[TeamChan(0)], {300 2 0}
+[MatchmakingChan], 301/347, {301 0 0}
+[SceneChan(0)], {301 0 0}
+[TeamChan(0)], {301 0 0}
+[MatchmakingChan], 302/347, {302 2 0}
+[SceneChan(2)], {302 2 0}
+[TeamChan(0)], {302 2 0}
+[MatchmakingChan], 303/347, {303 1 2}
+[SceneChan(1)], {303 1 2}
+[TeamChan(2)], {303 1 2}
+[MatchmakingChan], 304/347, {304 2 0}
+[SceneChan(2)], {304 2 0}
+[TeamChan(0)], {304 2 0}
+[MatchmakingChan], 305/347, {305 2 0}
+[SceneChan(2)], {305 2 0}
+[TeamChan(0)], {305 2 0}
+[MatchmakingChan], 306/347, {306 1 1}
+[SceneChan(1)], {306 1 1}
+[TeamChan(1)], {306 1 1}
+[MatchmakingChan], 307/347, {307 0 2}
+[SceneChan(0)], {307 0 2}
+[TeamChan(2)], {307 0 2}
+[MatchmakingChan], 308/347, {308 0 1}
+[SceneChan(0)], {308 0 1}
+[TeamChan(1)], {308 0 1}
+[MatchmakingChan], 309/347, {309 2 2}
+[SceneChan(2)], {309 2 2}
+[TeamChan(2)], {309 2 2}
+[MatchmakingChan], 310/347, {310 0 1}
+[SceneChan(0)], {310 0 1}
+[TeamChan(1)], {310 0 1}
+[MatchmakingChan], 311/347, {311 1 0}
+[SceneChan(1)], {311 1 0}
+[TeamChan(0)], {311 1 0}
+[MatchmakingChan], 312/347, {312 0 2}
+[SceneChan(0)], {312 0 2}
+[TeamChan(2)], {312 0 2}
+[MatchmakingChan], 313/347, {313 1 1}
+[SceneChan(1)], {313 1 1}
+[TeamChan(1)], {313 1 1}
+[MatchmakingChan], 314/347, {314 2 0}
+[SceneChan(2)], {314 2 0}
+[TeamChan(0)], {314 2 0}
+[MatchmakingChan], 315/347, {315 2 1}
+[SceneChan(2)], {315 2 1}
+[TeamChan(1)], {315 2 1}
+[MatchmakingChan], 316/347, {316 1 1}
+[SceneChan(1)], {316 1 1}
+[TeamChan(1)], {316 1 1}
+[MatchmakingChan], 317/347, {317 2 1}
+[SceneChan(2)], {317 2 1}
+[TeamChan(1)], {317 2 1}
+[MatchmakingChan], 318/347, {318 1 0}
+[SceneChan(1)], {318 1 0}
+[TeamChan(0)], {318 1 0}
+[MatchmakingChan], 319/347, {319 0 0}
+[SceneChan(0)], {319 0 0}
+[TeamChan(0)], {319 0 0}
+[MatchmakingChan], 320/347, {320 1 2}
+[SceneChan(1)], {320 1 2}
+[TeamChan(2)], {320 1 2}
+[MatchmakingChan], 321/347, {321 1 1}
+[SceneChan(1)], {321 1 1}
+[TeamChan(1)], {321 1 1}
+[MatchmakingChan], 322/347, {322 0 2}
+[SceneChan(0)], {322 0 2}
+[TeamChan(2)], {322 0 2}
+[MatchmakingChan], 323/347, {323 2 0}
+[SceneChan(2)], {323 2 0}
+[TeamChan(0)], {323 2 0}
+[MatchmakingChan], 324/347, {324 2 2}
+[SceneChan(2)], {324 2 2}
+[TeamChan(2)], {324 2 2}
+[MatchmakingChan], 325/347, {325 0 1}
+[SceneChan(0)], {325 0 1}
+[TeamChan(1)], {325 0 1}
+[MatchmakingChan], 326/347, {326 2 1}
+[SceneChan(2)], {326 2 1}
+[TeamChan(1)], {326 2 1}
+[MatchmakingChan], 327/347, {327 2 0}
+[SceneChan(2)], {327 2 0}
+[TeamChan(0)], {327 2 0}
+[MatchmakingChan], 328/347, {328 0 1}
+[SceneChan(0)], {328 0 1}
+[TeamChan(1)], {328 0 1}
+[MatchmakingChan], 329/347, {329 2 0}
+[SceneChan(2)], {329 2 0}
+[TeamChan(0)], {329 2 0}
+[MatchmakingChan], 330/347, {330 0 1}
+[SceneChan(0)], {330 0 1}
+[TeamChan(1)], {330 0 1}
+[MatchmakingChan], 331/347, {331 1 1}
+[SceneChan(1)], {331 1 1}
+[TeamChan(1)], {331 1 1}
+[MatchmakingChan], 332/347, {332 0 0}
+[SceneChan(0)], {332 0 0}
+[TeamChan(0)], {332 0 0}
+[MatchmakingChan], 333/347, {333 0 0}
+[SceneChan(0)], {333 0 0}
+[TeamChan(0)], {333 0 0}
+[MatchmakingChan], 334/347, {334 1 0}
+[SceneChan(1)], {334 1 0}
+[TeamChan(0)], {334 1 0}
+[MatchmakingChan], 335/347, {335 1 2}
+[SceneChan(1)], {335 1 2}
+[TeamChan(2)], {335 1 2}
+[MatchmakingChan], 336/347, {336 2 0}
+[SceneChan(2)], {336 2 0}
+[TeamChan(0)], {336 2 0}
+[MatchmakingChan], 337/347, {337 0 1}
+[SceneChan(0)], {337 0 1}
+[TeamChan(1)], {337 0 1}
+[MatchmakingChan], 338/347, {338 1 1}
+[SceneChan(1)], {338 1 1}
+[TeamChan(1)], {338 1 1}
+[MatchmakingChan], 339/347, {339 1 0}
+[SceneChan(1)], {339 1 0}
+[TeamChan(0)], {339 1 0}
+[MatchmakingChan], 340/347, {340 2 2}
+[SceneChan(2)], {340 2 2}
+[TeamChan(2)], {340 2 2}
+[MatchmakingChan], 341/347, {341 2 0}
+[SceneChan(2)], {341 2 0}
+[TeamChan(0)], {341 2 0}
+[MatchmakingChan], 342/347, {342 0 1}
+[SceneChan(0)], {342 0 1}
+[TeamChan(1)], {342 0 1}
+[MatchmakingChan], 343/347, {343 0 2}
+[SceneChan(0)], {343 0 2}
+[TeamChan(2)], {343 0 2}
+[MatchmakingChan], 344/347, {344 1 2}
+[SceneChan(1)], {344 1 2}
+[TeamChan(2)], {344 1 2}
+[MatchmakingChan], 345/347, {345 0 1}
+[SceneChan(0)], {345 0 1}
+[TeamChan(1)], {345 0 1}
+[MatchmakingChan], 346/347, {346 1 2}
+[SceneChan(1)], {346 1 2}
+[TeamChan(2)], {346 1 2}
+[MatchmakingChan], 347/347, {347 0 2}
+[SceneChan(0)], {347 0 2}
+[TeamChan(2)], {347 0 2}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(347/347), Scene:[{SceneType:0, TotalNumPlayer:113} {SceneType:1, TotalNumPlayer:127} {SceneType:2, TotalNumPlayer:107}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(347/347), Scene:[{SceneType:0, TotalNumPlayer:113} {SceneType:1, TotalNumPlayer:127} {SceneType:2, TotalNumPlayer:107}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 394
+After Genereating Players, Sleep 8s
+[MatchmakingChan], 348/394, {348 2 2}
+[SceneChan(2)], {348 2 2}
+[TeamChan(2)], {348 2 2}
+[MatchmakingChan], 349/394, {349 1 2}
+[SceneChan(1)], {349 1 2}
+[TeamChan(2)], {349 1 2}
+[MatchmakingChan], 350/394, {350 2 1}
+[SceneChan(2)], {350 2 1}
+[TeamChan(1)], {350 2 1}
+[MatchmakingChan], 351/394, {351 2 1}
+[SceneChan(2)], {351 2 1}
+[TeamChan(1)], {351 2 1}
+[MatchmakingChan], 352/394, {352 0 1}
+[SceneChan(0)], {352 0 1}
+[TeamChan(1)], {352 0 1}
+[MatchmakingChan], 353/394, {353 2 1}
+[SceneChan(2)], {353 2 1}
+[TeamChan(1)], {353 2 1}
+[MatchmakingChan], 354/394, {354 0 0}
+[SceneChan(0)], {354 0 0}
+[TeamChan(0)], {354 0 0}
+[MatchmakingChan], 355/394, {355 1 1}
+[SceneChan(1)], {355 1 1}
+[TeamChan(1)], {355 1 1}
+[MatchmakingChan], 356/394, {356 1 1}
+[SceneChan(1)], {356 1 1}
+[TeamChan(1)], {356 1 1}
+[MatchmakingChan], 357/394, {357 2 0}
+[SceneChan(2)], {357 2 0}
+[TeamChan(0)], {357 2 0}
+[MatchmakingChan], 358/394, {358 1 2}
+[SceneChan(1)], {358 1 2}
+[TeamChan(2)], {358 1 2}
+[MatchmakingChan], 359/394, {359 2 0}
+[SceneChan(2)], {359 2 0}
+[TeamChan(0)], {359 2 0}
+[MatchmakingChan], 360/394, {360 2 2}
+[SceneChan(2)], {360 2 2}
+[TeamChan(2)], {360 2 2}
+[MatchmakingChan], 361/394, {361 2 0}
+[SceneChan(2)], {361 2 0}
+[TeamChan(0)], {361 2 0}
+[MatchmakingChan], 362/394, {362 0 2}
+[SceneChan(0)], {362 0 2}
+[TeamChan(2)], {362 0 2}
+[MatchmakingChan], 363/394, {363 1 1}
+[SceneChan(1)], {363 1 1}
+[TeamChan(1)], {363 1 1}
+[MatchmakingChan], 364/394, {364 1 0}
+[SceneChan(1)], {364 1 0}
+[TeamChan(0)], {364 1 0}
+[MatchmakingChan], 365/394, {365 1 2}
+[SceneChan(1)], {365 1 2}
+[TeamChan(2)], {365 1 2}
+[MatchmakingChan], 366/394, {366 0 2}
+[SceneChan(0)], {366 0 2}
+[TeamChan(2)], {366 0 2}
+[MatchmakingChan], 367/394, {367 1 1}
+[SceneChan(1)], {367 1 1}
+[TeamChan(1)], {367 1 1}
+[MatchmakingChan], 368/394, {368 1 1}
+[SceneChan(1)], {368 1 1}
+[TeamChan(1)], {368 1 1}
+[MatchmakingChan], 369/394, {369 1 0}
+[SceneChan(1)], {369 1 0}
+[TeamChan(0)], {369 1 0}
+[MatchmakingChan], 370/394, {370 0 2}
+[SceneChan(0)], {370 0 2}
+[TeamChan(2)], {370 0 2}
+[MatchmakingChan], 371/394, {371 0 2}
+[SceneChan(0)], {371 0 2}
+[TeamChan(2)], {371 0 2}
+[MatchmakingChan], 372/394, {372 0 1}
+[SceneChan(0)], {372 0 1}
+[TeamChan(1)], {372 0 1}
+[MatchmakingChan], 373/394, {373 1 2}
+[SceneChan(1)], {373 1 2}
+[TeamChan(2)], {373 1 2}
+[MatchmakingChan], 374/394, {374 1 1}
+[SceneChan(1)], {374 1 1}
+[TeamChan(1)], {374 1 1}
+[MatchmakingChan], 375/394, {375 2 0}
+[SceneChan(2)], {375 2 0}
+[TeamChan(0)], {375 2 0}
+[MatchmakingChan], 376/394, {376 0 2}
+[SceneChan(0)], {376 0 2}
+[TeamChan(2)], {376 0 2}
+[MatchmakingChan], 377/394, {377 0 2}
+[SceneChan(0)], {377 0 2}
+[TeamChan(2)], {377 0 2}
+[MatchmakingChan], 378/394, {378 0 2}
+[SceneChan(0)], {378 0 2}
+[TeamChan(2)], {378 0 2}
+[MatchmakingChan], 379/394, {379 0 2}
+[SceneChan(0)], {379 0 2}
+[TeamChan(2)], {379 0 2}
+[MatchmakingChan], 380/394, {380 1 0}
+[SceneChan(1)], {380 1 0}
+[TeamChan(0)], {380 1 0}
+[MatchmakingChan], 381/394, {381 2 0}
+[SceneChan(2)], {381 2 0}
+[TeamChan(0)], {381 2 0}
+[MatchmakingChan], 382/394, {382 1 1}
+[SceneChan(1)], {382 1 1}
+[TeamChan(1)], {382 1 1}
+[MatchmakingChan], 383/394, {383 1 2}
+[SceneChan(1)], {383 1 2}
+[TeamChan(2)], {383 1 2}
+[MatchmakingChan], 384/394, {384 0 1}
+[SceneChan(0)], {384 0 1}
+[TeamChan(1)], {384 0 1}
+[MatchmakingChan], 385/394, {385 1 0}
+[SceneChan(1)], {385 1 0}
+[TeamChan(0)], {385 1 0}
+[MatchmakingChan], 386/394, {386 0 2}
+[SceneChan(0)], {386 0 2}
+[TeamChan(2)], {386 0 2}
+[MatchmakingChan], 387/394, {387 2 1}
+[SceneChan(2)], {387 2 1}
+[TeamChan(1)], {387 2 1}
+[MatchmakingChan], 388/394, {388 1 2}
+[SceneChan(1)], {388 1 2}
+[TeamChan(2)], {388 1 2}
+[MatchmakingChan], 389/394, {389 1 1}
+[SceneChan(1)], {389 1 1}
+[TeamChan(1)], {389 1 1}
+[MatchmakingChan], 390/394, {390 2 0}
+[SceneChan(2)], {390 2 0}
+[TeamChan(0)], {390 2 0}
+[MatchmakingChan], 391/394, {391 1 2}
+[SceneChan(1)], {391 1 2}
+[TeamChan(2)], {391 1 2}
+[MatchmakingChan], 392/394, {392 0 0}
+[SceneChan(0)], {392 0 0}
+[TeamChan(0)], {392 0 0}
+[MatchmakingChan], 393/394, {393 2 2}
+[SceneChan(2)], {393 2 2}
+[TeamChan(2)], {393 2 2}
+[MatchmakingChan], 394/394, {394 2 2}
+[SceneChan(2)], {394 2 2}
+[TeamChan(2)], {394 2 2}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(394/394), Scene:[{SceneType:0, TotalNumPlayer:127} {SceneType:1, TotalNumPlayer:146} {SceneType:2, TotalNumPlayer:121}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(394/394), Scene:[{SceneType:0, TotalNumPlayer:127} {SceneType:1, TotalNumPlayer:146} {SceneType:2, TotalNumPlayer:121}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 427
+After Genereating Players, Sleep 1s
+[MatchmakingChan], 395/427, {395 1 2}
+[SceneChan(1)], {395 1 2}
+[TeamChan(2)], {395 1 2}
+[MatchmakingChan], 396/427, {396 1 0}
+[SceneChan(1)], {396 1 0}
+[TeamChan(0)], {396 1 0}
+[MatchmakingChan], 397/427, {397 1 2}
+[SceneChan(1)], {397 1 2}
+[TeamChan(2)], {397 1 2}
+[MatchmakingChan], 398/427, {398 2 1}
+[SceneChan(2)], {398 2 1}
+[TeamChan(1)], {398 2 1}
+[MatchmakingChan], 399/427, {399 0 1}
+[SceneChan(0)], {399 0 1}
+[TeamChan(1)], {399 0 1}
+[MatchmakingChan], 400/427, {400 1 2}
+[SceneChan(1)], {400 1 2}
+[TeamChan(2)], {400 1 2}
+[MatchmakingChan], 401/427, {401 0 1}
+[SceneChan(0)], {401 0 1}
+[TeamChan(1)], {401 0 1}
+[MatchmakingChan], 402/427, {402 0 0}
+[SceneChan(0)], {402 0 0}
+[TeamChan(0)], {402 0 0}
+[MatchmakingChan], 403/427, {403 0 0}
+[SceneChan(0)], {403 0 0}
+[TeamChan(0)], {403 0 0}
+[MatchmakingChan], 404/427, {404 0 2}
+[SceneChan(0)], {404 0 2}
+[TeamChan(2)], {404 0 2}
+[MatchmakingChan], 405/427, {405 0 0}
+[SceneChan(0)], {405 0 0}
+[TeamChan(0)], {405 0 0}
+[MatchmakingChan], 406/427, {406 0 0}
+[SceneChan(0)], {406 0 0}
+[TeamChan(0)], {406 0 0}
+[MatchmakingChan], 407/427, {407 0 0}
+[SceneChan(0)], {407 0 0}
+[TeamChan(0)], {407 0 0}
+[MatchmakingChan], 408/427, {408 2 2}
+[SceneChan(2)], {408 2 2}
+[TeamChan(2)], {408 2 2}
+[MatchmakingChan], 409/427, {409 0 2}
+[SceneChan(0)], {409 0 2}
+[TeamChan(2)], {409 0 2}
+[MatchmakingChan], 410/427, {410 1 1}
+[SceneChan(1)], {410 1 1}
+[TeamChan(1)], {410 1 1}
+[MatchmakingChan], 411/427, {411 2 1}
+[SceneChan(2)], {411 2 1}
+[TeamChan(1)], {411 2 1}
+[MatchmakingChan], 412/427, {412 2 1}
+[SceneChan(2)], {412 2 1}
+[TeamChan(1)], {412 2 1}
+[MatchmakingChan], 413/427, {413 1 1}
+[SceneChan(1)], {413 1 1}
+[TeamChan(1)], {413 1 1}
+[MatchmakingChan], 414/427, {414 1 2}
+[SceneChan(1)], {414 1 2}
+[TeamChan(2)], {414 1 2}
+[MatchmakingChan], 415/427, {415 1 0}
+[SceneChan(1)], {415 1 0}
+[TeamChan(0)], {415 1 0}
+[MatchmakingChan], 416/427, {416 0 2}
+[SceneChan(0)], {416 0 2}
+[TeamChan(2)], {416 0 2}
+[MatchmakingChan], 417/427, {417 2 1}
+[SceneChan(2)], {417 2 1}
+[TeamChan(1)], {417 2 1}
+[MatchmakingChan], 418/427, {418 0 1}
+[SceneChan(0)], {418 0 1}
+[TeamChan(1)], {418 0 1}
+[MatchmakingChan], 419/427, {419 2 1}
+[SceneChan(2)], {419 2 1}
+[TeamChan(1)], {419 2 1}
+[MatchmakingChan], 420/427, {420 2 1}
+[SceneChan(2)], {420 2 1}
+[TeamChan(1)], {420 2 1}
+[MatchmakingChan], 421/427, {421 2 2}
+[SceneChan(2)], {421 2 2}
+[TeamChan(2)], {421 2 2}
+[MatchmakingChan], 422/427, {422 0 2}
+[SceneChan(0)], {422 0 2}
+[TeamChan(2)], {422 0 2}
+[MatchmakingChan], 423/427, {423 0 1}
+[SceneChan(0)], {423 0 1}
+[TeamChan(1)], {423 0 1}
+[MatchmakingChan], 424/427, {424 2 0}
+[SceneChan(2)], {424 2 0}
+[TeamChan(0)], {424 2 0}
+[MatchmakingChan], 425/427, {425 1 0}
+[SceneChan(1)], {425 1 0}
+[TeamChan(0)], {425 1 0}
+[MatchmakingChan], 426/427, {426 0 1}
+[SceneChan(0)], {426 0 1}
+[TeamChan(1)], {426 0 1}
+[MatchmakingChan], 427/427, {427 1 0}
+[SceneChan(1)], {427 1 0}
+[TeamChan(0)], {427 1 0}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(427/427), Scene:[{SceneType:0, TotalNumPlayer:141} {SceneType:1, TotalNumPlayer:156} {SceneType:2, TotalNumPlayer:130}]}
+After Matchmaking, Sleep 3 sec
+Total Generated Num Player: 465
+After Genereating Players, Sleep 8s
+[MatchmakingChan], 428/465, {428 2 1}
+[SceneChan(2)], {428 2 1}
+[TeamChan(1)], {428 2 1}
+[MatchmakingChan], 429/465, {429 1 0}
+[SceneChan(1)], {429 1 0}
+[TeamChan(0)], {429 1 0}
+[MatchmakingChan], 430/465, {430 0 2}
+[SceneChan(0)], {430 0 2}
+[TeamChan(2)], {430 0 2}
+[MatchmakingChan], 431/465, {431 1 2}
+[SceneChan(1)], {431 1 2}
+[TeamChan(2)], {431 1 2}
+[MatchmakingChan], 432/465, {432 2 1}
+[SceneChan(2)], {432 2 1}
+[TeamChan(1)], {432 2 1}
+[MatchmakingChan], 433/465, {433 2 1}
+[SceneChan(2)], {433 2 1}
+[TeamChan(1)], {433 2 1}
+[MatchmakingChan], 434/465, {434 2 1}
+[SceneChan(2)], {434 2 1}
+[TeamChan(1)], {434 2 1}
+[MatchmakingChan], 435/465, {435 1 0}
+[SceneChan(1)], {435 1 0}
+[TeamChan(0)], {435 1 0}
+[MatchmakingChan], 436/465, {436 1 1}
+[SceneChan(1)], {436 1 1}
+[TeamChan(1)], {436 1 1}
+[MatchmakingChan], 437/465, {437 2 1}
+[SceneChan(2)], {437 2 1}
+[TeamChan(1)], {437 2 1}
+[MatchmakingChan], 438/465, {438 2 0}
+[SceneChan(2)], {438 2 0}
+[TeamChan(0)], {438 2 0}
+[MatchmakingChan], 439/465, {439 1 0}
+[SceneChan(1)], {439 1 0}
+[TeamChan(0)], {439 1 0}
+[MatchmakingChan], 440/465, {440 1 1}
+[SceneChan(1)], {440 1 1}
+[TeamChan(1)], {440 1 1}
+[MatchmakingChan], 441/465, {441 1 0}
+[SceneChan(1)], {441 1 0}
+[TeamChan(0)], {441 1 0}
+[MatchmakingChan], 442/465, {442 1 1}
+[SceneChan(1)], {442 1 1}
+[TeamChan(1)], {442 1 1}
+[MatchmakingChan], 443/465, {443 2 2}
+[SceneChan(2)], {443 2 2}
+[TeamChan(2)], {443 2 2}
+[MatchmakingChan], 444/465, {444 1 2}
+[SceneChan(1)], {444 1 2}
+[TeamChan(2)], {444 1 2}
+[MatchmakingChan], 445/465, {445 1 0}
+[SceneChan(1)], {445 1 0}
+[TeamChan(0)], {445 1 0}
+[MatchmakingChan], 446/465, {446 0 2}
+[SceneChan(0)], {446 0 2}
+[TeamChan(2)], {446 0 2}
+[MatchmakingChan], 447/465, {447 1 0}
+[SceneChan(1)], {447 1 0}
+[TeamChan(0)], {447 1 0}
+[MatchmakingChan], 448/465, {448 1 1}
+[SceneChan(1)], {448 1 1}
+[TeamChan(1)], {448 1 1}
+[MatchmakingChan], 449/465, {449 2 0}
+[SceneChan(2)], {449 2 0}
+[TeamChan(0)], {449 2 0}
+[MatchmakingChan], 450/465, {450 2 0}
+[SceneChan(2)], {450 2 0}
+[TeamChan(0)], {450 2 0}
+[MatchmakingChan], 451/465, {451 1 2}
+[SceneChan(1)], {451 1 2}
+[TeamChan(2)], {451 1 2}
+[MatchmakingChan], 452/465, {452 2 2}
+[SceneChan(2)], {452 2 2}
+[TeamChan(2)], {452 2 2}
+[MatchmakingChan], 453/465, {453 1 0}
+[SceneChan(1)], {453 1 0}
+[TeamChan(0)], {453 1 0}
+[MatchmakingChan], 454/465, {454 0 0}
+[SceneChan(0)], {454 0 0}
+[TeamChan(0)], {454 0 0}
+[MatchmakingChan], 455/465, {455 1 1}
+[SceneChan(1)], {455 1 1}
+[TeamChan(1)], {455 1 1}
+[MatchmakingChan], 456/465, {456 0 0}
+[SceneChan(0)], {456 0 0}
+[TeamChan(0)], {456 0 0}
+[MatchmakingChan], 457/465, {457 2 1}
+[SceneChan(2)], {457 2 1}
+[TeamChan(1)], {457 2 1}
+[MatchmakingChan], 458/465, {458 1 2}
+[SceneChan(1)], {458 1 2}
+[TeamChan(2)], {458 1 2}
+[MatchmakingChan], 459/465, {459 2 1}
+[SceneChan(2)], {459 2 1}
+[TeamChan(1)], {459 2 1}
+[MatchmakingChan], 460/465, {460 0 0}
+[SceneChan(0)], {460 0 0}
+[TeamChan(0)], {460 0 0}
+[MatchmakingChan], 461/465, {461 1 0}
+[SceneChan(1)], {461 1 0}
+[TeamChan(0)], {461 1 0}
+[MatchmakingChan], 462/465, {462 1 1}
+[SceneChan(1)], {462 1 1}
+[TeamChan(1)], {462 1 1}
+[MatchmakingChan], 463/465, {463 1 0}
+[SceneChan(1)], {463 1 0}
+[TeamChan(0)], {463 1 0}
+[MatchmakingChan], 464/465, {464 0 2}
+[SceneChan(0)], {464 0 2}
+[TeamChan(2)], {464 0 2}
+[MatchmakingChan], 465/465, {465 0 1}
+[SceneChan(0)], {465 0 1}
+[TeamChan(1)], {465 0 1}
+After Matchmaking, Elapse:1 ms, Result={NumPlayer:(465/465), Scene:[{SceneType:0, TotalNumPlayer:148} {SceneType:1, TotalNumPlayer:175} {SceneType:2, TotalNumPlayer:142}]}
+After Matchmaking, Sleep 3 sec
+After Matchmaking, Elapse:0 ms, Result={NumPlayer:(465/465), Scene:[{SceneType:0, TotalNumPlayer:148} {SceneType:1, TotalNumPlayer:175} {SceneType:2, TotalNumPlayer:142}]}
+After Matchmaking, Sleep 3 sec
