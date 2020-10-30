@@ -1,9 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
-	a := 0.1e-3
-	fmt.Println("a=", a)
-
+	rand.Seed(time.Now().UnixNano())
+	fmt.Println(rand.Intn(3))
+	fmt.Println(rand.Intn(3))
+	fmt.Println(rand.Intn(3))
 }
