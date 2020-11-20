@@ -33,6 +33,7 @@ func variadic_interface_subroutine(args ...interface{}) {
 
 func main() {
 	variadic_primitives("Hi", "Jacky", "Good", "Morning")
+	variadic_interfaces([]string{"Hi", "Jacky", "Good", "Morning"}...)
 
 	fmt.Println("")
 
