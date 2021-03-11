@@ -13,7 +13,7 @@ import (
 ** Nest Task
  */
 
-func case3() {
+func main() {
 	fmt.Println("Running Case 3...")
 	ctx, cancel := context.WithCancel(context.Background())
 	for i := 0; i < 3; i++ {

@@ -9,8 +9,7 @@ import (
 /*
 ** Task with timer
  */
-
-func case4() {
+func main() {
 	fmt.Println("Running Case 4...")
 	ctx, _ := context.WithTimeout(context.Background(), time.Second*3)
 	for i := 0; i < 3; i++ {
