@@ -2,8 +2,11 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"net/http"
 	"os"
+	"time"
+	_ "web/session"
 )
 
 func sayhelloName(w http.ResponseWriter, r *http.Request) {
@@ -22,6 +25,8 @@ func handleUser(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
+
 	panicerr := make(chan error)
 	path, _ := os.Getwd()
 	fmt.Println(path)
@@ -30,6 +35,7 @@ func main() {
 	http.HandleFunc("/login", handleLogin)
 	http.HandleFunc("/xss", handleXSS)
 	http.HandleFunc("/upload", handleUpload)
+	http.HandleFunc("/cookie/", handleCookie)
 	go func() {
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			panicerr <- err
