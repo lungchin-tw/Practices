@@ -2,6 +2,7 @@ package internal
 
 import (
 	"container/list"
+	"fmt"
 	"sync"
 	"time"
 )
@@ -106,6 +107,7 @@ func (this *SessionProvider) SessionGC(maxLifeTime int64) {
 		if session.Expired(maxLifeTime) {
 			this.list.Remove(elem)
 			delete(this.sessions, session.SessionID())
+			fmt.Println("[SessionGC], Deleted:", session.SessionID())
 		} else {
 			break
 		}

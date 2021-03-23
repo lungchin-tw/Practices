@@ -10,7 +10,7 @@ import (
 func HandleXSS(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	if r.Method == "GET" {
-		t, _ := template.ParseFiles("xss.gtpl")
+		t, _ := template.ParseFiles("template/xss.gtpl")
 		t.Execute(w, nil)
 	} else {
 		r.ParseForm()

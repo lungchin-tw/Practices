@@ -38,6 +38,7 @@ func main() {
 	http.HandleFunc("/xss", api.HandleXSS)
 	http.HandleFunc("/upload", api.HandleUpload)
 	http.HandleFunc("/cookie/", api.HandleCookie)
+	http.HandleFunc("/count", api.HandleCount)
 	go func() {
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			panicerr <- err

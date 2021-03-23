@@ -12,7 +12,7 @@ import (
 
 func HandleUpload(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
-		t, err := template.ParseFiles("upload.gtpl")
+		t, err := template.ParseFiles("template/upload.gtpl")
 		if err != nil {
 			utils.ProcessRequestException(err, w, r)
 		} else if err := t.Execute(w, utils.GenToken()); err != nil {
