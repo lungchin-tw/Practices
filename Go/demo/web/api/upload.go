@@ -1,4 +1,4 @@
-package main
+package api
 
 import (
 	"fmt"
@@ -7,21 +7,22 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"web/utils"
 )
 
-func handleUpload(w http.ResponseWriter, r *http.Request) {
+func HandleUpload(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "GET" {
 		t, err := template.ParseFiles("upload.gtpl")
 		if err != nil {
-			processRequestException(err, w, r)
-		} else if err := t.Execute(w, genToken()); err != nil {
-			processRequestException(err, w, r)
+			utils.ProcessRequestException(err, w, r)
+		} else if err := t.Execute(w, utils.GenToken()); err != nil {
+			utils.ProcessRequestException(err, w, r)
 		}
 	} else if r.Method == "POST" {
 		r.ParseMultipartForm(32 << 20)
 		uf, fh, err := r.FormFile("uploadfile")
 		if err != nil {
-			processRequestException(err, w, r)
+			utils.ProcessRequestException(err, w, r)
 			return
 		}
 
@@ -34,7 +35,7 @@ func handleUpload(w http.ResponseWriter, r *http.Request) {
 
 		f, err := os.OpenFile(filepath.Join("./upload", fh.Filename), os.O_WRONLY|os.O_CREATE, 0666)
 		if err != nil {
-			processRequestException(err, w, r)
+			utils.ProcessRequestException(err, w, r)
 			return
 		}
 

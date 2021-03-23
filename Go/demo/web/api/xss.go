@@ -1,4 +1,4 @@
-package main
+package api
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func handleXSS(w http.ResponseWriter, r *http.Request) {
+func HandleXSS(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	if r.Method == "GET" {
 		t, _ := template.ParseFiles("xss.gtpl")

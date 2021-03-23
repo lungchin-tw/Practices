@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"crypto/md5"
@@ -11,14 +11,14 @@ import (
 	"time"
 )
 
-func processRequestException(err error, w http.ResponseWriter, r *http.Request) {
+func ProcessRequestException(err error, w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	w.WriteHeader(http.StatusBadRequest)
-	writeReq(w, r)
+	WriteReq(w, r)
 	fmt.Fprintln(w, "Error:", template.HTMLEscapeString(err.Error()))
 }
 
-func writeReq(w http.ResponseWriter, r *http.Request) {
+func WriteReq(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Request: %#v\n", r)
 	fmt.Fprintf(w, "URL: %#v\n", r.URL)
 	fmt.Fprintln(w, "Method:", r.Method)
@@ -29,7 +29,7 @@ func writeReq(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func genToken() string {
+func GenToken() string {
 	curtime := time.Now().UnixNano()
 	h := md5.New()
 	io.WriteString(h, strconv.FormatInt(curtime, 10))

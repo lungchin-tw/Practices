@@ -6,12 +6,14 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"web/api"
 	_ "web/session"
+	"web/utils"
 )
 
 func sayhelloName(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() // parse arguments, you have to call this by yourself
-	writeReq(w, r)
+	utils.WriteReq(w, r)
 	fmt.Fprintln(w, "URLLong:", r.Form["url_long"])
 	fmt.Fprintln(w, "URLLong:", r.FormValue("url_long"))
 	fmt.Fprintln(w, "Hello astaxie!") // send data to client side
@@ -19,7 +21,7 @@ func sayhelloName(w http.ResponseWriter, r *http.Request) {
 
 func handleUser(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm() // parse arguments, you have to call this by yourself
-	writeReq(w, r)
+	utils.WriteReq(w, r)
 	fmt.Fprintln(w, "ID:", r.URL.Path[len("/user/"):])
 	fmt.Fprintln(w, "handleUser") // send data to client side
 }
@@ -32,10 +34,10 @@ func main() {
 	fmt.Println(path)
 	http.HandleFunc("/sayhelloName", sayhelloName)
 	http.HandleFunc("/user/", handleUser)
-	http.HandleFunc("/login", handleLogin)
-	http.HandleFunc("/xss", handleXSS)
-	http.HandleFunc("/upload", handleUpload)
-	http.HandleFunc("/cookie/", handleCookie)
+	http.HandleFunc("/login", api.HandleLogin)
+	http.HandleFunc("/xss", api.HandleXSS)
+	http.HandleFunc("/upload", api.HandleUpload)
+	http.HandleFunc("/cookie/", api.HandleCookie)
 	go func() {
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			panicerr <- err

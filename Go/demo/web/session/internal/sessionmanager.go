@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"net/url"
 	"sync"
+	"time"
 )
 
 /*
@@ -14,7 +15,7 @@ import (
  */
 func NewSessionManager(providerName, cookieName string, maxlifetime int64) (*TSessionManager, error) {
 	if provider, ok := SessionProviders[providerName]; !ok {
-		return nil, fmt.Errorf("[NewSessionManager], Provider %v Not Exists", providerName)
+		return nil, fmt.Errorf("[NewSessionManager], Provider [%v] Not Exists", providerName)
 	} else {
 		return &TSessionManager{cookieName: cookieName, provider: provider, maxLifeTime: maxlifetime}, nil
 	}
@@ -55,4 +56,32 @@ func (this *TSessionManager) SessionStart(w http.ResponseWriter, r *http.Request
 		session, _ := this.provider.SessionRead(sid)
 		return session
 	}
+}
+
+func (this *TSessionManager) SessionDestroy(w http.ResponseWriter, r *http.Request) {
+	this.mu.Lock()
+	defer this.mu.Unlock()
+
+	cookie, err := r.Cookie(this.cookieName)
+	if (err != nil) || (len(cookie.Value) < 1) {
+		return
+	}
+
+	this.provider.SessionDestroy(cookie.Value)
+	http.SetCookie(w, &http.Cookie{
+		Name:     this.cookieName,
+		Path:     "/",
+		HttpOnly: true,
+		Expires:  time.Now(),
+		MaxAge:   -1,
+	})
+}
+
+func (this *TSessionManager) GC() {
+	fmt.Println("TSessionManager:GC,", time.Now().String())
+	this.mu.Lock()
+	defer this.mu.Unlock()
+
+	this.provider.SessionGC(this.maxLifeTime)
+	time.AfterFunc(time.Duration(this.maxLifeTime*int64(time.Second)), func() { this.GC() })
 }

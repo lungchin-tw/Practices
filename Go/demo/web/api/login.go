@@ -1,22 +1,23 @@
-package main
+package api
 
 import (
 	"fmt"
 	"html/template"
 	"net/http"
+	"web/utils"
 )
 
-func handleLogin(w http.ResponseWriter, r *http.Request) {
+func HandleLogin(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	if r.Method == "GET" {
 		t, err := template.ParseFiles("login.gtpl")
 		if err != nil {
-			writeReq(w, r)
+			utils.WriteReq(w, r)
 			fmt.Fprintln(w, template.HTMLEscapeString(err.Error()))
 			return
 		}
 
-		t.Execute(w, genToken())
+		t.Execute(w, utils.GenToken())
 	} else {
 		r.ParseForm()
 		fmt.Fprintln(w, "username:", template.HTMLEscapeString(r.Form.Get("username")))
@@ -24,6 +25,6 @@ func handleLogin(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "token:", template.HTMLEscapeString(r.Form.Get("token")))
 	}
 
-	writeReq(w, r)
+	utils.WriteReq(w, r)
 	fmt.Fprintln(w, "handleLogin") // send data to client side
 }

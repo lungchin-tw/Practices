@@ -1,16 +1,17 @@
-package main
+package api
 
 import (
 	"fmt"
 	"net/http"
 	"strings"
 	"time"
+	"web/utils"
 )
 
-func handleCookie(w http.ResponseWriter, r *http.Request) {
+func HandleCookie(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("handleCookie, Cookies:", r.Cookies())
 	if err := r.ParseForm(); err != nil {
-		processRequestException(err, w, r)
+		utils.ProcessRequestException(err, w, r)
 		return
 	}
 

@@ -8,9 +8,13 @@ import (
 var GSessionManager *internal.TSessionManager
 
 func init() {
+	RegisterProvider("memory", internal.NewSessionProvider())
+
 	var err error
-	if GSessionManager, err = internal.NewSessionManager("memory", "gosessionid", 3600); err != nil {
+	if GSessionManager, err = internal.NewSessionManager("memory", "gosessionid", 60); err != nil {
 		panic(err)
+	} else {
+		go GSessionManager.GC()
 	}
 }
 

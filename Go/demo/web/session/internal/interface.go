@@ -5,6 +5,8 @@ type ISession interface {
 	Get(key interface{}) interface{}
 	Delete(key interface{}) error
 	SessionID() string
+	Expired(maxLifeTime int64) bool
+	RenewAccessTime()
 }
 
 // ISessionProvider
@@ -13,4 +15,5 @@ type ISessionProvider interface {
 	SessionRead(sid string) (ISession, error)
 	SessionDestroy(sid string) error
 	SessionGC(maxLifeTime int64)
+	SessionUpdate(sid string)
 }
