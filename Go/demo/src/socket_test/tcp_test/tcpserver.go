@@ -34,9 +34,9 @@ func handleConnection(conn net.Conn) {
 	conn.SetReadDeadline(time.Now().Add(time.Minute))
 	defer conn.Close()
 
-	payload := make([]byte, 1024)
+	var payload [1024]byte
 	for {
-		if numread, err := conn.Read(payload); err != nil {
+		if numread, err := conn.Read(payload[0:]); err != nil {
 			fmt.Println("[handleConnection], Error:", err)
 			break
 		} else if numread == 0 {
