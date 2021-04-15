@@ -1,0 +1,44 @@
+<html>
+    <head></head>
+    <body>
+        <script type="text/javascript">
+            var socket = null;
+            var wsuri = "ws://127.0.0.1:1234";
+
+            function send() {
+                console.log("send, socket=", socket)
+                let msg = document.getElementById('message').value;
+                if ((socket != null) && (socket.readyState === WebSocket.OPEN)) {
+                    socket.send(msg)
+                }
+            }
+
+            window.onload = function() {
+                console.log("onload");
+                socket = new WebSocket(wsuri);
+
+                socket.onopen = function() {
+                    console.log("connected to " + wsuri);
+                }
+
+                socket.onclose = function(e) {
+                    console.log("connected closed " + e.code);
+                }
+
+                socket.onmessage = function(e) {
+                    console.log("message received: " + e.data);
+                }
+            };
+        </script>
+
+        <h1>WebSocket Echo Demo</h1>
+
+        <form>
+            <p>
+                Message: <input id="message" type="text" value="Hello, World.">
+            </p>
+        </form>
+
+        <button onclick="send();">Summit</button>
+    </body>
+</html>
