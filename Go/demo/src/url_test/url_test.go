@@ -33,5 +33,4 @@ func TestURLParseChinese(t *testing.T) {
 	t.Log("url.QueryEscape:", query)
 	query, err = url.QueryUnescape(query)
 	t.Log("url.QueryUnescape:", query, err)
-
 }
