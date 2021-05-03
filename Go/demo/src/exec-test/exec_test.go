@@ -1,4 +1,4 @@
-package exec_test
+package test
 
 import (
 	"os"

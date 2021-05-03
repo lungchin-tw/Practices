@@ -1,4 +1,4 @@
-package copy_test
+package test
 
 import (
 	"math/rand"
