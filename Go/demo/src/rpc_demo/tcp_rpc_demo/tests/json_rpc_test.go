@@ -6,13 +6,13 @@ import (
 	"testing"
 )
 
-func dial() (*rpc.Client, error) {
+func jsondial() (*rpc.Client, error) {
 	const addr = "localhost:12345"
-	return rpc.DialHTTP("tcp", addr)
+	return rpc.Dial("tcp", addr)
 }
 
-func TestHTTP_RPC_Multiply(t *testing.T) {
-	client, err := dial()
+func TestJSON_RPC_Multiply(t *testing.T) {
+	client, err := tcpdial()
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -29,8 +29,8 @@ func TestHTTP_RPC_Multiply(t *testing.T) {
 	t.Logf("%v, Args: %v, Reply: %v", method, args, reply)
 }
 
-func TestHTTP_RPC_DivideCase01(t *testing.T) {
-	client, err := dial()
+func TestJSON_RPC_DivideCase01(t *testing.T) {
+	client, err := tcpdial()
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -47,8 +47,8 @@ func TestHTTP_RPC_DivideCase01(t *testing.T) {
 	}
 }
 
-func TestHTTP_RPC_DivideCase02(t *testing.T) {
-	client, err := dial()
+func TestJSON_RPC_DivideCase02(t *testing.T) {
+	client, err := tcpdial()
 	if err != nil {
 		t.Fatal(err)
 	}

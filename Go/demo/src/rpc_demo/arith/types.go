@@ -1,11 +1,6 @@
-package main
+package arith
 
-import (
-	"fmt"
-	"log"
-	"net/http"
-	"net/rpc"
-)
+import "fmt"
 
 type Args struct {
 	A, B int
@@ -32,12 +27,4 @@ func (this *Arith) Divide(args *Args, reply *Quotient) error {
 	reply.Quo = args.A / args.B
 	reply.Rem = args.A % args.B
 	return nil
-}
-
-func main() {
-	fmt.Println("Startup Server.")
-	rpc.Register(new(Arith))
-	rpc.HandleHTTP()
-
-	log.Fatal(http.ListenAndServe(":12345", nil))
 }
