@@ -12,7 +12,10 @@ import (
 const address = "localhost:12345"
 
 func TestGRPC_SayHello(t *testing.T) {
-	conn, err := grpc.Dial(address, grpc.WithInsecure(), grpc.WithBlock())
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second*3)
+	defer cancel()
+
+	conn, err := grpc.DialContext(ctx, address, grpc.WithInsecure(), grpc.WithBlock())
 	if err != nil {
 		t.Fatal("Dial...", address, err)
 	}
@@ -20,8 +23,8 @@ func TestGRPC_SayHello(t *testing.T) {
 	defer conn.Close()
 
 	client := pb.NewExchangeServiceClient(conn)
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
-	defer cancel()
+
+	t.Log("Got Context With Timeout.")
 
 	msg, err := client.SayHello(ctx, &pb.Message{Body: "A Greeting From Client."})
 	t.Logf("Message:%v, Error:%v", msg, err)
