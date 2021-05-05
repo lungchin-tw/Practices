@@ -1,8 +1,7 @@
-package url_test
+package test
 
 import (
 	"encoding/json"
-	"net/http"
 	"net/url"
 	"testing"
 )
@@ -16,7 +15,6 @@ func TestURLParse(t *testing.T) {
 }
 
 func TestURLParseChinese(t *testing.T) {
-	http.StatusAccepted
 	const rawurl = "http://localhost:8080/cookie/客戶端?user=陳龍進&token=123"
 	result, _ := url.Parse(rawurl)
 	t.Log("EscapedPath:", result.EscapedPath())

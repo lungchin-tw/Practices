@@ -1,8 +1,9 @@
-package main
+package test
 
 import (
 	"errors"
 	"fmt"
+	"testing"
 )
 
 func variadic_primitives(args ...string) {
@@ -31,9 +32,9 @@ func variadic_interface_subroutine(args ...interface{}) {
 	}
 }
 
-func main() {
+func TestVariadicFunc(t *testing.T) {
 	variadic_primitives("Hi", "Jacky", "Good", "Morning")
-	variadic_interfaces([]string{"Hi", "Jacky", "Good", "Morning"}...)
+	variadic_interfaces([]interface{}{"Hi", "Jacky", "Good", "Morning"}...)
 
 	fmt.Println("")
 
