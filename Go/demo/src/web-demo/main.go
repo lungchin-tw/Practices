@@ -36,6 +36,7 @@ func main() {
 	http.HandleFunc("/user/", handleUser)
 	http.HandleFunc("/login", api.HandleLogin)
 	http.HandleFunc("/xss", api.HandleXSS)
+	http.HandleFunc("/woxss", api.WithoutHandleXSS)
 	http.HandleFunc("/upload", api.HandleUpload)
 	http.HandleFunc("/cookie/", api.HandleCookie)
 	http.HandleFunc("/count", api.HandleCount)
