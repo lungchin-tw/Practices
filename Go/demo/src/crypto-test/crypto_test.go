@@ -1,7 +1,11 @@
 package test
 
 import (
+	"crypto/aes"
+	"crypto/cipher"
 	"crypto/md5"
+	"crypto/rand"
+
 	"crypto/sha1"
 	"crypto/sha256"
 	"hash"
@@ -48,4 +52,76 @@ func RunBCryptCase02(value string, t *testing.T) {
 	if err := bcrypt.CompareHashAndPassword(hash, []byte(value)); err != nil {
 		t.Fatal(err)
 	}
+}
+
+func TestAES(t *testing.T) {
+	value := []byte("My name is 傑克.")
+	key := make([]byte, 32) // the key has to be 32 bytes long
+	if n, err := rand.Read(key); err != nil {
+		t.Fatal(err)
+	} else {
+		t.Log("rand.Read()", n, err)
+	}
+
+	encvalue, nonce, err := aesEncryption(t, value, key)
+	if err != nil {
+		t.Fatal(err)
+	} else {
+		t.Log("Encrypted Value:", encvalue)
+		t.Log("Nonce:", nonce)
+	}
+
+	decvalue, err := aesDecryption(t, encvalue, key, nonce)
+	if err != nil {
+		t.Fatal(err)
+	} else {
+		t.Log("Decrypted Value:", decvalue)
+		t.Log("Decrypted Value:", string(decvalue))
+	}
+}
+
+func aesEncryption(t *testing.T, value, key []byte) (rtnEncValue, rtnNonce []byte, rtnErr error) {
+	t.Log("aesEncryption, value:", value)
+	t.Log("aesEncryption, value:", string(value))
+	t.Log("aesEncryption, key:", key)
+
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	gcm, err := cipher.NewGCM(block)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	t.Log("gcm.NonceSize():", gcm.NonceSize())
+
+	nonce := make([]byte, gcm.NonceSize())
+	if n, err := rand.Read(nonce); err != nil {
+		t.Fatal(err)
+	} else {
+		t.Log("rand.Read()", n, err)
+	}
+
+	return gcm.Seal(nil, nonce, value, nil), nonce, nil
+}
+
+func aesDecryption(t *testing.T, encvalue, key, nonce []byte) ([]byte, error) {
+	t.Log("aesDecryption, value:", encvalue)
+	t.Log("aesDecryption, key:", key)
+
+	block, err := aes.NewCipher(key)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	gcm, err := cipher.NewGCM(block)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	noncesize := gcm.NonceSize()
+	t.Log("NonceSize:", noncesize)
+	return gcm.Open(nil, nonce, encvalue, nil)
 }
