@@ -2,10 +2,15 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"runtime"
+	"testing"
 )
 
-func main() {
+func TestEnv(t *testing.T) {
+	dir, err := os.Getwd()
+	fmt.Printf("os.Getwd(): %v, Error: %v\n ", dir, err)
+	fmt.Println("os.Args: ", os.Args)
 	fmt.Println("runtime.GOOS: ", runtime.GOOS)
 	fmt.Println("runtime.GOARCH: ", runtime.GOARCH)
 	fmt.Println("runtime.GOROOT: ", runtime.GOROOT())
