@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"strconv"
 	"strings"
 	"testing"
@@ -91,4 +92,22 @@ func TestStringCase06(t *testing.T) {
 	t.Log(strconv.ParseFloat("123.23", 64))
 	t.Log(strconv.ParseInt("1234", 10, 64))
 	t.Log(strconv.ParseUint("12345", 10, 64))
+}
+
+func TestSliceStringFormat(t *testing.T) {
+	v := []int{30, 10, 10, 0, 0}
+	t.Logf("%%v: %v", v)
+	t.Logf("%%+v: %+v", v)
+	t.Logf("%%#v: %#v", v)
+	t.Logf("%%q: %q", v)
+	t.Logf("%%p: %p", v)
+
+	t.Log("Jsonized:")
+	bytes, _ := json.Marshal(v)
+	t.Logf("%%v: %v", bytes)
+	t.Logf("%%+v: %+v", bytes)
+	t.Logf("%%#v: %#v", bytes)
+	t.Logf("%%s: %s", bytes)
+	t.Logf("%%q: %q", bytes)
+	t.Logf("%%p: %p", bytes)
 }
