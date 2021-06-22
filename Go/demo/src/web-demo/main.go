@@ -2,6 +2,7 @@ package main
 
 import (
 	"examples/web-demo/api"
+	"examples/web-demo/i18n"
 	_ "examples/web-demo/session"
 	"examples/web-demo/utils"
 	"fmt"
@@ -40,6 +41,7 @@ func main() {
 	http.HandleFunc("/upload", api.HandleUpload)
 	http.HandleFunc("/cookie/", api.HandleCookie)
 	http.HandleFunc("/count", api.HandleCount)
+	http.HandleFunc("/i18n/", i18n.HandleI18N)
 	go func() {
 		if err := http.ListenAndServe(":8080", nil); err != nil {
 			panicerr <- err
