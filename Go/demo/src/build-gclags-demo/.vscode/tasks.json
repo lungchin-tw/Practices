@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build app",
+            "command": "go",
+            "options": {"cwd": "${workspaceRoot}"},
+            "args": ["build", "-o", "app"]
+        },
+        {
+            "label": "build nl app",
+            "command": "go",
+            "options": {"cwd": "${workspaceRoot}"},
+            "args": ["build", "-gcflags=all=\"-N -l\""]
+        }
+    ]
+}
