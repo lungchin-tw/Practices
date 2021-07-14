@@ -27,6 +27,10 @@ func handleUser(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintln(w, "handleUser") // send data to client side
 }
 
+func redirect(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "https://www.google.com", http.StatusMovedPermanently)
+}
+
 func main() {
 	rand.Seed(time.Now().UnixNano())
 
@@ -35,6 +39,7 @@ func main() {
 	fmt.Println(path)
 	http.HandleFunc("/sayhelloName", sayhelloName)
 	http.HandleFunc("/user/", handleUser)
+	http.HandleFunc("/redirect", redirect)
 	http.HandleFunc("/login", api.HandleLogin)
 	http.HandleFunc("/xss", api.HandleXSS)
 	http.HandleFunc("/woxss", api.WithoutHandleXSS)
