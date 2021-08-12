@@ -30,3 +30,5 @@ Go/demo/pkg/mod/
 
 **/creator.d.ts
 pkg/
+Go/demo/src/diagnostics_test/*.prof
+Go/demo/src/diagnostics_test/*.trace

@@ -2,6 +2,7 @@ package reflect_test
 
 import (
 	"reflect"
+	"runtime"
 	"testing"
 )
 
@@ -81,4 +82,24 @@ func (this *TFreeGameOption) ProtoBuf() (interface{}, error) {
 func TestReflectStructCase02(t *testing.T) {
 	var src interface{} = &TFreeGameOption{}
 	t.Logf("Type:%+v, Value:%+v", reflect.TypeOf(src), reflect.ValueOf(src))
+}
+
+func TestReflectFuncCase01(t *testing.T) {
+	src := &TFreeGameOption{}
+
+	{
+		v := reflect.ValueOf(src.ProtoBuf)
+		t.Logf("reflect.ValueOf(src.ProtoBuf): %#v", v)
+		pc := runtime.FuncForPC(v.Pointer())
+		t.Logf("runtime.FuncForPC(v.Pointer()): %#v", pc)
+		t.Logf("pc.Name(): %#v", pc.Name())
+	}
+
+	{
+		v := reflect.ValueOf(src)
+		t.Logf("reflect.ValueOf(src): %#v", v)
+		pc := runtime.FuncForPC(v.Pointer())
+		t.Logf("runtime.FuncForPC(v.Pointer()): %#v", pc)
+		t.Logf("pc.Name(): %#v", pc.Name())
+	}
 }

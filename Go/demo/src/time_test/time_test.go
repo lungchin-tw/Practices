@@ -51,3 +51,15 @@ func TestTime(t *testing.T) {
 
 	t.Log("time.Unix(1578633001, 0).Local():", time.Unix(1578633001, 0).Local())
 }
+
+func TestTime02(t *testing.T) {
+	nano := time.Now().UnixNano()
+	utcnano := time.Now().UTC().UnixNano()
+	t.Log("time.Now().UnixNano():", nano)
+	t.Log("time.Now().UTC().UnixNano():", utcnano)
+	t.Log("diff", nano-utcnano)
+
+	t.Log("Unix:", time.Unix(0, 1627356276863375600))
+	t.Log("Unix:", time.Unix(0, 1627356276863375600).UTC())
+	time.Parse()
+}

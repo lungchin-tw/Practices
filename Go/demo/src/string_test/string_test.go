@@ -19,6 +19,7 @@ func TestStringCase02(t *testing.T) {
 		filename := "123.456"
 		index := strings.LastIndex(filename, ".")
 		t.Logf("strings.LastIndex(%v, \".\"): %v\n", filename, index)
+		t.Logf("len:%v, strings.LastIndex(%v, \"56\"): %v\n", len(filename), filename, strings.LastIndex(filename, "56"))
 		slice := filename[:index]
 		t.Log("slice:", slice)
 	}
@@ -110,4 +111,18 @@ func TestSliceStringFormat(t *testing.T) {
 	t.Logf("%%s: %s", bytes)
 	t.Logf("%%q: %q", bytes)
 	t.Logf("%%p: %p", bytes)
+}
+
+func TestPrintFormatter(t *testing.T) {
+	{
+		var value float64 = 10000000000.123456
+		t.Logf("%%v=%v", value)
+		t.Logf("%%f=%f", value)
+	}
+
+	{
+		var value int64 = 1000000000000
+		t.Logf("%%v=%v", value)
+		t.Logf("%%d=%d", value)
+	}
 }
