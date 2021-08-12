@@ -61,5 +61,35 @@ func TestTime02(t *testing.T) {
 
 	t.Log("Unix:", time.Unix(0, 1627356276863375600))
 	t.Log("Unix:", time.Unix(0, 1627356276863375600).UTC())
-	time.Parse()
+}
+
+func TestTimeFormatting(t *testing.T) {
+	now := time.Now()
+	t.Logf("[%v:%v], %v", "time.ANSIC", time.ANSIC, now.Format(time.ANSIC))
+	t.Logf("[%v:%v], %v", "time.UnixDate", time.UnixDate, now.Format(time.UnixDate))
+	t.Logf("[%v:%v], %v", "UTC time.UnixDate", time.UnixDate, now.UTC().Format(time.UnixDate))
+	t.Logf("[%v:%v], %v", "time.RubyDate", time.RubyDate, now.Format(time.RubyDate))
+	t.Logf("[%v:%v], %v", "UTC time.RubyDate", time.RubyDate, now.UTC().Format(time.RubyDate))
+	t.Logf("[%v:%v], %v", "time.RFC822", time.RFC822, now.Format(time.RFC822))
+	t.Logf("[%v:%v], %v", "time.RFC822Z", time.RFC822Z, now.Format(time.RFC822Z))
+	t.Logf("[%v:%v], %v", "time.RFC850", time.RFC850, now.Format(time.RFC850))
+	t.Logf("[%v:%v], %v", "time.RFC1123", time.RFC1123, now.Format(time.RFC1123))
+	t.Logf("[%v:%v], %v", "time.RFC1123Z", time.RFC1123Z, now.Format(time.RFC1123Z))
+	t.Logf("[%v:%v], %v", "time.RFC3339", time.RFC3339, now.Format(time.RFC3339))
+	t.Logf("[%v:%v], %v", "time.RFC3339Nano", time.RFC3339Nano, now.Format(time.RFC3339Nano))
+	t.Logf("[%v:%v], %v", "time.Kitchen", time.Kitchen, now.Format(time.Kitchen))
+	t.Logf("[%v:%v], %v", "time.Stamp", time.Stamp, now.Format(time.Stamp))
+	t.Logf("[%v:%v], %v", "time.StampMilli", time.StampMilli, now.Format(time.StampMilli))
+	t.Logf("[%v:%v], %v", "time.StampMicro", time.StampMicro, now.Format(time.StampMicro))
+	t.Logf("[%v:%v], %v", "time.StampNano", time.StampNano, now.Format(time.StampNano))
+
+	{
+		const custom = "Monday January 2 15:04:05.000 2006"
+		t.Logf("[%v:%v], %v", "CUSTOM", custom, now.Format(custom))
+	}
+
+	{
+		const custom = "2006-Jan-02 15:04:05 -07:00"
+		t.Logf("[%v:%v], %v", "CUSTOM", custom, now.Format(custom))
+	}
 }
