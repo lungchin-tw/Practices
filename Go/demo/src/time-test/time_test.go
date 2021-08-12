@@ -89,7 +89,7 @@ func TestTimeFormatting(t *testing.T) {
 	}
 
 	{
-		const custom = "2006-Jan-02 15:04:05 -07:00"
+		const custom = "2006-Jan-02 __2 15:04:05 -07:00"
 		t.Logf("[%v:%v], %v", "CUSTOM", custom, now.Format(custom))
 	}
 }
