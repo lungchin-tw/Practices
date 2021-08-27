@@ -23,12 +23,11 @@ package-lock.json
 *.exe
 __debug_bin
 **/bookmarks.json
-**/go.sum
 
 .DS_Store
-Go/demo/pkg/mod/
 
 **/creator.d.ts
 pkg/
-Go/demo/src/diagnostics_test/*.prof
-Go/demo/src/diagnostics_test/*.trace
+*.prof
+*.trace
+*.test

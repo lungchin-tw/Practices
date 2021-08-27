@@ -1,4 +1,3 @@
 {
-    "go.gotoSymbol.includeGoroot": true,
     "go.inferGopath": false
 }
