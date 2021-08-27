@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"sync"
+	"time"
 )
 
 const NUM = 10
@@ -26,6 +27,7 @@ func testNormalMap() {
 	}
 
 	for len(normal_map) < NUM {
+		time.Sleep(1)
 	}
 
 	fmt.Println("Normal Map Done")

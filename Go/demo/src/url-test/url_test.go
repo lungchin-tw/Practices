@@ -7,15 +7,18 @@ import (
 )
 
 func TestURLParse(t *testing.T) {
-	const rawurl = "http://localhost:8080/cookie?user=apitests&token=123"
+	const rawurl = "http://localhost:8080/cookie?user=apitests&token=123#profile"
 	result, _ := url.Parse(rawurl)
 	bytes, _ := json.MarshalIndent(result, "", "")
 	t.Log(string(bytes))
+	t.Log("result.EscapedPath():", result.EscapedPath())
 	t.Log("url.QueryEscape:", url.QueryEscape(result.RawQuery))
 }
 
 func TestURLParseChinese(t *testing.T) {
-	const rawurl = "http://localhost:8080/cookie/客戶端?user=陳龍進&token=123"
+	const rawurl = "http://localhost:8080/cookie/客戶端?user=陳龍進&token=123#profile"
+	t.Log("url.PathEscape:", url.PathEscape(rawurl))
+
 	result, _ := url.Parse(rawurl)
 	t.Log("EscapedPath:", result.EscapedPath())
 	t.Log("Hostname:", result.Hostname())
@@ -28,6 +31,9 @@ func TestURLParseChinese(t *testing.T) {
 	bytes, _ := json.MarshalIndent(result, "", "")
 	t.Log(string(bytes))
 	query := url.QueryEscape(result.RawQuery)
+	t.Log("result.EscapedPath():", result.EscapedPath())
+	t.Log("result.Query().Encode():", result.Query().Encode())
+
 	t.Log("url.QueryEscape:", query)
 	query, err = url.QueryUnescape(query)
 	t.Log("url.QueryUnescape:", query, err)

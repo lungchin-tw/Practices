@@ -77,6 +77,7 @@ func TestTimeFormatting(t *testing.T) {
 	t.Logf("[%v:%v], %v", "time.RFC1123Z", time.RFC1123Z, now.Format(time.RFC1123Z))
 	t.Logf("[%v:%v], %v", "time.RFC3339", time.RFC3339, now.Format(time.RFC3339))
 	t.Logf("[%v:%v], %v", "time.RFC3339Nano", time.RFC3339Nano, now.Format(time.RFC3339Nano))
+	t.Logf("[%v:%v], %v", "time.RFC3339Nano UTC", time.RFC3339Nano, now.UTC().Format(time.RFC3339Nano))
 	t.Logf("[%v:%v], %v", "time.Kitchen", time.Kitchen, now.Format(time.Kitchen))
 	t.Logf("[%v:%v], %v", "time.Stamp", time.Stamp, now.Format(time.Stamp))
 	t.Logf("[%v:%v], %v", "time.StampMilli", time.StampMilli, now.Format(time.StampMilli))
@@ -92,4 +93,18 @@ func TestTimeFormatting(t *testing.T) {
 		const custom = "2006-Jan-02 __2 15:04:05 -07:00"
 		t.Logf("[%v:%v], %v", "CUSTOM", custom, now.Format(custom))
 	}
+}
+
+func TestTimeParse(t *testing.T) {
+	{
+		value := "2021-08-24T08:27:46.703766"
+		layout := "2006-01-02T15:04:05.999999"
+		t.Log("Value:", value)
+		t.Log("Layout:", layout)
+		result, err := time.Parse(layout, value)
+		t.Log(result, err)
+	}
+
+	//
+	// 2021-08-24T08:27:49.983708
 }
