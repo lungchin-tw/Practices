@@ -15,9 +15,9 @@ func TestSelect03(t *testing.T) {
 		counter := 0
 		for {
 			counter++
-			t.Log("cb <-:", counter)
+			t.Log("cb <-:", counter, len(cb))
 			cb <- rand.Int()
-			t.Log("ca <-:", counter)
+			t.Log("ca <-:", counter, len(ca))
 			ca <- rand.Int()
 
 		}
