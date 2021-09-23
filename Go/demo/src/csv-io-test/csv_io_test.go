@@ -45,10 +45,10 @@ func TestWritingCsv(t *testing.T) {
 		}
 	}
 
-	defer t.Log("file.Close():", file.Close())
-
 	writer.Flush()
 	if err := writer.Error(); err != nil {
 		t.Fatal(err)
 	}
+
+	t.Log("file.Close():", file.Close())
 }

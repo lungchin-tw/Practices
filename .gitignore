@@ -31,4 +31,5 @@ pkg/
 *.prof
 *.trace
 *.test
-Go/demo/src/csv-io-test/*.csv
+Go/demo/src/csv-io-test/output.csv
+
