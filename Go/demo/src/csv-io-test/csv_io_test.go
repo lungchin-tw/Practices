@@ -38,16 +38,17 @@ func TestWritingCsv(t *testing.T) {
 	}
 
 	writer := csv.NewWriter(file)
+	// file.Close() // uncomment this line could cause errors
 	for _, record := range record_list {
 		if err := writer.Write(record); err != nil {
 			t.Fatalf("Writing a record=%#v FAILED!!!:%+v", record, err)
 		}
 	}
 
+	defer t.Log("file.Close():", file.Close())
+
 	writer.Flush()
 	if err := writer.Error(); err != nil {
 		t.Fatal(err)
 	}
-
-	defer file.Close()
 }

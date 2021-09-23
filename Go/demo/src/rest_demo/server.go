@@ -46,6 +46,7 @@ func main() {
 	router.DELETE("/user/:uid", delUser)
 	router.PUT("/user/:uid", modifyUser)
 
-	fmt.Println("Server Startup")
-	log.Fatal(http.ListenAndServe(":8080", router))
+	const addr = "demo.jacky.tw:8080"
+	fmt.Println("Server Startup", addr)
+	log.Fatal(http.ListenAndServe(addr, router))
 }
