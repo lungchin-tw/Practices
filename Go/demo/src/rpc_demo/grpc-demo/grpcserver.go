@@ -2,7 +2,8 @@ package main
 
 import (
 	"context"
-	"examples/rpc_demo/grpc-demo/pb"
+	"demo/rpc_demo/grpc-demo/pb"
+
 	"fmt"
 	"net"
 

@@ -1,7 +1,7 @@
 package tests
 
 import (
-	"examples/rpc_demo/arith"
+	"demo/rpc_demo/arith"
 	"net/rpc"
 	"testing"
 )

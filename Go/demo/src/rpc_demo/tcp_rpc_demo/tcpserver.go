@@ -1,7 +1,7 @@
 package main
 
 import (
-	"examples/rpc_demo/arith"
+	"demo/rpc_demo/arith"
 	"fmt"
 	"net"
 	"net/rpc"
