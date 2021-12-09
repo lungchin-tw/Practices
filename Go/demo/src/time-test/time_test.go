@@ -61,6 +61,12 @@ func TestTime02(t *testing.T) {
 
 	t.Log("Unix:", time.Unix(0, 1627356276863375600))
 	t.Log("Unix:", time.Unix(0, 1627356276863375600).UTC())
+
+	before := time.Now()
+	t.Log("before:", before.Format(time.RFC3339Nano), before.UnixNano())
+	after := time.Unix(0, before.UnixNano())
+	t.Log("after:", after.Add(100*time.Millisecond).Format(time.RFC3339Nano))
+
 }
 
 func TestTimeFormatting(t *testing.T) {

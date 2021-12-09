@@ -31,6 +31,20 @@ func TestRandRead(t *testing.T) {
 }
 
 func TestRandPerm(t *testing.T) {
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(time.Now().UnixMicro())
 	t.Log("rand.Perm:", rand.Perm(10))
+}
+
+func BenchmarkRandByTimestamp(b *testing.B) {
+	for i := 1; i <= b.N; i++ {
+		seed := time.Now().UnixMilli()
+		_ = seed % int64(i)
+	}
+}
+
+func BenchmarkRandByDefaultRand(b *testing.B) {
+	rand.Seed(time.Now().UnixMicro())
+	for i := 1; i <= b.N; i++ {
+		_ = rand.Intn(i)
+	}
 }
