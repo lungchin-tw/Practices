@@ -1,6 +1,6 @@
 // Try: tsc ./union-type/union-type.ts --outDir ./build/union-type
 
-function testUnionType() {
+function testUnionType(): void {
     enum Role { ADMIN, DEVELOPER, GUEST, GOD='GOD' };
     const person: {
         name: string;
@@ -20,7 +20,7 @@ function testUnionType() {
     }
 }
 
-function buildParagraphElement( value: string | number ) {
+function buildParagraphElement( value: string | number ): HTMLParagraphElement {
     const p = document.createElement("p") as HTMLParagraphElement
     p.textContent = `Role: ${value}, Type: ${typeof value}`;
     return p
