@@ -1,6 +1,6 @@
 // Try: tsc ./using-ts/using-ts.ts --outDir ./build/using-ts
 
-const tsbutton = document.querySelector("button")
+const tsbutton = document.querySelector("button")!
 const tsinput1 = document.getElementById("num1")! as HTMLInputElement
 const tsinput2 = document.getElementById("num2")! as HTMLInputElement
 

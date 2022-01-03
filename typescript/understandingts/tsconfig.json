@@ -1,13 +1,22 @@
 {
-    "compileOnSave": true,
+    // "compileOnSave": true,
     "compilerOptions": {
-        "watch": true,
+        // "watch": true,
         "module": "commonjs",
         "target": "es2020",
         "jsx": "preserve",
-        "strictFunctionTypes": true,
+        
         "sourceMap": true,
         "outDir": "./build",
+        "rootDir": "./src",
+        "removeComments": true,
+        "noEmitOnError": true,
+
+        "strict": true,
+
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true
     },
     "exclude": [
         "node_modules",
