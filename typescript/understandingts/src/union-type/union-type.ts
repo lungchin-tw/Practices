@@ -14,14 +14,14 @@ function testUnionType(): void {
        role:[Role.DEVELOPER, "Mom"]
     }
 
-    const container = document.getElementById("container")
+    const app = document.getElementById("app")!
     for (const role of person.role) {
-        container?.appendChild(buildParagraphElement(role))
+        app.appendChild(buildParagraphElement(role))
     }
 }
 
 function buildParagraphElement( value: string | number ): HTMLParagraphElement {
-    const p = document.createElement("p") as HTMLParagraphElement
+    const p = document.createElement("p")
     p.textContent = `Role: ${value}, Type: ${typeof value}`;
     return p
 }
