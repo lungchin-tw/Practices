@@ -2,7 +2,7 @@
     // "compileOnSave": true,
     "compilerOptions": {
         // "watch": true,
-        "module": "commonjs",
+        "module": "ES2020",
         "target": "es2020",
         "jsx": "preserve",
         
@@ -16,7 +16,9 @@
 
         "noUnusedLocals": true,
         "noUnusedParameters": true,
-        "noImplicitReturns": true
+        "noImplicitReturns": true,
+        "moduleResolution": "Classic",
+        "traceResolution": false
     },
     "exclude": [
         "node_modules",
