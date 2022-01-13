@@ -1,4 +1,5 @@
-// Try: tsc ./dom-basics/dom-basics.ts --outDir ./build/dom-basics
+// Try: tsc ./src/dom-basics/dom-basics.ts --outDir ./build/dom-basics
+
 
 function testDOMBasics(): void {
     const p = document.createElement("p");
@@ -14,3 +15,14 @@ function testDOMBasics(): void {
 }
 
 testDOMBasics();
+
+function setDocumentBodyAttr(attr: string, value: string) {
+    console.log(`setDocumentBodyAttr(Attr:${attr}, Value:${value})`);
+    if (document.body) {
+        document.body.setAttribute(attr, value);
+    } else {
+        throw new Error("No Support!!!");
+        
+    }
+    
+}
