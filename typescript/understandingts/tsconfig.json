@@ -17,11 +17,13 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
-        "moduleResolution": "Classic",
+        "moduleResolution": "classic",
         "traceResolution": false
     },
     "exclude": [
         "node_modules",
-        "**/node_modules/*"
+        "**/node_modules/*",
+        "src/jest",
+
     ]
 }
