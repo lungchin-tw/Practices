@@ -1,4 +1,5 @@
 // Try: tsc .src/regular-vs-arrow/regular-vs-arrow.ts --outDir ./build/regular-vs-arrow
+// Try: npx ts-node .src/regular-vs-arrow/regular-vs-arrow.ts
 
 function testRegularVsArrow() {
     class Hero {

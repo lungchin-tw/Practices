@@ -6,3 +6,13 @@ function env() {
 }
 
 test('env', env);
+
+describe('working suite', () => {
+    it('should work', () => {
+        expect(true).toBeTruthy();
+    })
+
+    it('not work', () => {
+        expect(false).toBeFalsy();
+    })
+})

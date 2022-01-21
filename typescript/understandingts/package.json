@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "jest declare-function"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,8 @@
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^27.4.0",
     "babel-jest": "^27.4.6",
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
   }
 }
