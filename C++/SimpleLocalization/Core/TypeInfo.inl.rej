@@ -1,0 +1,10 @@
+diff a/include/Core/TypeInfo.inl b/include/Core/TypeInfo.inl	(rejected hunks)
+@@ -124,7 +124,7 @@
+ 	, _offset( (int)(&(((CLASS*)0)->*field) ) )
+ 	, _isPointer( false )
+ 	, _typeInfo( hive::GetTypeInfo<TYPE, LENGTH>() )
+-	, _contanerFieldPtr( new FixedArrayField<TYPE, LENGTH>() )
++	, _contanerFieldPtr( new FixedArrayField( &_typeInfo, _isPointer, LENGTH ) )
+ 	, _getSubTypeNameFunctor( nullptr )
+ {}
+ 
