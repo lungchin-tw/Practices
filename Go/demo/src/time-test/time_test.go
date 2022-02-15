@@ -114,3 +114,13 @@ func TestTimeParse(t *testing.T) {
 	//
 	// 2021-08-24T08:27:49.983708
 }
+
+func TestTimeLocation(t *testing.T) {
+	const city = "Asia/Ho_Chi_Minh"
+	t.Log("Load Location:", city)
+	loc, _ := time.LoadLocation(city)
+	now := time.Now()
+	t.Log("time.Now():", now)
+	t.Log("time.Now().UTC():", now.UTC())
+	t.Logf("time.Now().UTC().In(%v): %v", city, now.UTC().In(loc))
+}
