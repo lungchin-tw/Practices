@@ -31,3 +31,5 @@ pkg/
 *.trace
 *.test
 Go/demo/src/csv-io-test/output.csv
+venv/
+.env/
