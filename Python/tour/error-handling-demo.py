@@ -10,16 +10,16 @@ def stringify_days_to_seconds(num_of_days):
 
 
 def validate_and_execute(val):
-    if val.isdigit():
+    try:
         num_of_days = int(val)
         print(f'Type of days: {type(num_of_days)}')
-        if num_of_days == 0:
+        if num_of_days <= 0:
             print(f'Invalid num_of_days: {num_of_days}')
         else:
             print(stringify_days_to_seconds(num_of_days))
-    else:
-        print(f'Invalid num_of_days: {val}')
-    
+    except Exception as e:
+        print(f'Invalid input: {val}, Error: {e}')
+
 
 validate_and_execute(input("Enter a number of days:\n"))
 
