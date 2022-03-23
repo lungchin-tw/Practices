@@ -25,11 +25,21 @@ def validate(val):
 
 def execute(val):
     print(stringify_days_to_seconds(int(val)))
-    
+
+
+def is_quit_command(val):
+    cmds = ['q', 'quit', 'exit']
+    for elem in cmds:
+        if val == elem:
+            return True
+    return False
+
 
 while True:
     val = input("Enter a number of days:\n")
-    if (val == 'q') or (val == 'quit') or (val == 'exit'):
+    is_quit = is_quit_command(val)
+    print(f'Type(is_quit): {type(is_quit)}; Value: {is_quit}')
+    if is_quit:
         break
     elif validate(val) == True:
         execute(val)
