@@ -11,8 +11,8 @@ mysql -v -u root -p123456 -h $HOST -P $PORT -e \
 '
 USE lucky-mch-0; \
 SHOW TABLES;
+DESCRIBE batch_tcg_user;
 DESCRIBE account;
 DESCRIBE account_asset;
-DESCRIBE asset_record;
 '
 
