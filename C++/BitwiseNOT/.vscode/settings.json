@@ -1,5 +1,6 @@
 {
 	"files.associations": {
+		"*.gtpl": "html",
 		"__bit_reference": "cpp",
 		"__config": "cpp",
 		"__debug": "cpp",
@@ -48,6 +49,17 @@
 		"type_traits": "cpp",
 		"typeinfo": "cpp",
 		"utility": "cpp",
-		"sstream": "cpp"
+		"sstream": "cpp",
+		"__errc": "cpp",
+		"__hash_table": "cpp",
+		"__node_handle": "cpp",
+		"__split_buffer": "cpp",
+		"array": "cpp",
+		"bit": "cpp",
+		"cmath": "cpp",
+		"complex": "cpp",
+		"optional": "cpp",
+		"unordered_map": "cpp",
+		"vector": "cpp"
 	}
 }
