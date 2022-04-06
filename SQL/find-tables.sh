@@ -12,5 +12,5 @@ CONNECT="mysql -u root -p123456 -h $HOST -P $PORT -e"
 
 eval "$CONNECT '
 SELECT TABLE_SCHEMA, TABLE_NAME, TABLE_ROWS, DATA_LENGTH 
-FROM information_schema.TABLES WHERE TABLE_NAME LIKE \"%batch_dg%\";
+FROM information_schema.TABLES WHERE TABLE_NAME LIKE \"%imesb%\";
 '"
