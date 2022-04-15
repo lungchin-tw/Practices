@@ -7,6 +7,7 @@ print( '\n{}\n'.format( sys.version ) )
 import datetime
 
 now = datetime.datetime.now()
+print( f'Now: {now}')
 print( 'Now: {}'.format( now ) )
 print( 'now.strftime( \'%A\' ): {}'.format( now.strftime( '%A' ) ) )
 print( 'now.strftime( \'%B\' ): {}'.format( now.strftime( '%B' ) ) )

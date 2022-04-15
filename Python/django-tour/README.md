@@ -1,0 +1,2 @@
+Try: uwsgi --master --enable-threads --socket djangotour.sock --http :8000 --wsgi-file ./djangotour/wsgi.py
+Try: uwsgi --master --enable-threads --socket djangotour.sock --http :8000 --module djangotour.wsgi
