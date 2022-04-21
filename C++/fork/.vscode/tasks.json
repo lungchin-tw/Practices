@@ -8,6 +8,8 @@
 			"args": [
 				"-std=c++17",
 				"-stdlib=libc++",
+				"-Wall",
+				"-Werror",
 				"-g",
 				"${file}",
 				"-o",
