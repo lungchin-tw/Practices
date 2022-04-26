@@ -22,6 +22,11 @@
                 "run", "uwsgi", 
                 "--ini", "./djangotour/wsgi.ini"
             ]
+        },
+        {
+            "label": "killall uwsgi",
+            "command": "killall",
+            "args": [ "uwsgi" ]
         }
     ]
 }
