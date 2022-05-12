@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "*.gtpl": "html",
+        "istream": "cpp",
+        "limits": "cpp",
+        "ios": "cpp",
+        "iterator": "cpp"
+    }
+}
