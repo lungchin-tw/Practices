@@ -1,37 +1,39 @@
-[
-	{
-		"path": "$ROOTPATH$\\Django\\hello\\hello\\polls\\views.py",
-		"bookmarks": [
-			{
-				"line": 105,
-				"column": 36,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\Go\\src\\flowcontrol\\flow_control.go",
-		"bookmarks": [
-			{
-				"line": 49,
-				"column": 23,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\Go\\src\\moretypes\\moretypes.go",
-		"bookmarks": [
-			{
-				"line": 7,
-				"column": 0,
-				"label": ""
-			},
-			{
-				"line": 89,
-				"column": 9,
-				"label": ""
-			}
-		]
-	}
-]
+{
+	"files": [
+		{
+			"path": "$ROOTPATH$\\Django\\hello\\hello\\polls\\views.py",
+			"bookmarks": [
+				{
+					"line": 105,
+					"column": 36,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "$ROOTPATH$\\Go\\src\\flowcontrol\\flow_control.go",
+			"bookmarks": [
+				{
+					"line": 49,
+					"column": 23,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "$ROOTPATH$\\Go\\src\\moretypes\\moretypes.go",
+			"bookmarks": [
+				{
+					"line": 7,
+					"column": 0,
+					"label": ""
+				},
+				{
+					"line": 89,
+					"column": 9,
+					"label": ""
+				}
+			]
+		}
+	]
+}

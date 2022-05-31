@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"strconv"
+	"strings"
 	"time"
 )
 
@@ -34,24 +35,32 @@ func handleConnection(conn net.Conn) {
 	conn.SetReadDeadline(time.Now().Add(time.Minute))
 	defer conn.Close()
 
-	var payload [1024]byte
+	var readbuffer [1024]byte
 	for {
-		if numread, err := conn.Read(payload[0:]); err != nil {
+		numread, err := conn.Read(readbuffer[0:])
+		if err != nil {
 			fmt.Println("[handleConnection], Error:", err)
 			break
 		} else if numread == 0 {
 			fmt.Println("[handleConnection], Connection Closed By Client")
 			break
-		} else if string(payload[:numread]) == "timestamp" {
+		}
+
+		payload := readbuffer[:numread]
+		payloadstr := strings.TrimRight(string(payload), "\n")
+		fmt.Printf("Payload: %v", payload)
+		if payloadstr == "timestamp" {
 			fmt.Println("[handleConnection], Timestamp")
 			daytime := strconv.FormatInt(time.Now().Unix(), 10)
 			conn.Write([]byte(daytime))
 			fmt.Println("[handleConnection], Write:", daytime)
 		} else {
-			fmt.Println("[handleConnection], Payload:", string(payload[:numread]))
-			daytime := time.Now().String()
-			conn.Write([]byte(daytime))
-			fmt.Println("[handleConnection], Write:", daytime)
+			fmt.Println("[handleConnection], Payload:", payloadstr)
+			response := fmt.Sprintf("Payload:%v, Timestamp:%v", payloadstr, time.Now().String())
+			conn.Write([]byte(response))
+			fmt.Println("[handleConnection], Write:", response)
 		}
+
+		conn.Write([]byte{10})
 	}
 }
