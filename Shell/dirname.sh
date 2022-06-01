@@ -1,11 +1,14 @@
 #!/bin/bash
 
-set -x
+set +x
 
-echo 'dirname $0': $(dirname $0)
-echo 'pwd': $(pwd)
+echo '[dirname $0]:' $(dirname $0)
+echo '[pwd]:' $(pwd)
 
-cd $(dirname $0)
+echo '[pushd $(dirname $0)]:'
+pushd $(dirname $0)
+echo '[pwd]:' $(pwd)
 
-ROOT_FOLDER=$(pwd)
-BASE=$(basename $(pwd))
+echo '[popd]:'
+popd
+echo '[pwd]:' $(pwd)
