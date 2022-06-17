@@ -1,4 +1,5 @@
 #!/bin/sh
+##
 
 ## CUR_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 

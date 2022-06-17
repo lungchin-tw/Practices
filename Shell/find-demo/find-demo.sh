@@ -21,6 +21,5 @@ echo "[find .. -type f -iname -exec]:"
 find .. -type f -iname '*.command' -exec ls -l {} \;
 sleep 3
 
-
 popd
 echo '[pwd]:' $(pwd)
