@@ -6,6 +6,10 @@ import (
 	"path/filepath"
 )
 
+/*
+** NOTICE: Before running "Debug: Remote",
+** execute the following commmand "dlv dap --listen=:2345" or task "launch dlv server" first.
+ */
 func main() {
 	file_path := GetCurFile()
 	fmt.Println("Frame.File:", file_path)
