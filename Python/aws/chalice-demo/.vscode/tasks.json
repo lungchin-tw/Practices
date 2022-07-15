@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "chalice deploy",
+      "type": "shell",
+      "command": "pipenv",
+      "args": ["run", "chalice", "deploy"]
+    },
+    {
+      "label": "chalice delete",
+      "type": "shell",
+      "command": "pipenv",
+      "args": ["run", "chalice", "delete"]
+    },
+    {
+      "label": "run chalice local",
+      "type": "shell",
+      "command": "pipenv",
+      "args": ["run", "chalice", "local"]
+    }
+  ]
+}

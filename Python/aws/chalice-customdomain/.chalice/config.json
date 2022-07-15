@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "app_name": "jacky-chen-chalice-customdomain",
+  "api_gateway_endpoint_type": "REGIONAL",
+  "stages": {
+    "dev": {
+      "api_gateway_custom_domain":{
+        "domain_name": "api.jacky-chen-chalice-demo.amber.tw",
+        "certificate_arn": "arn:aws:acm:eu-central-1:422686820116:certificate/ec5df977-58dd-43ad-b708-72742c5cc5e1"
+      },
+      "api_gateway_stage": "api"
+    }
+  }
+}

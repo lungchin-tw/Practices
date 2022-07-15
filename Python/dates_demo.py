@@ -19,4 +19,3 @@ print( 'now.strftime( \'%j\' ): {}'.format( now.strftime( '%j' ) ) )
 print( 'now.strftime( \'%U\' ): {}'.format( now.strftime( '%U' ) ) )
 print( 'now.strftime( \'%W\' ): {}'.format( now.strftime( '%W' ) ) )
 print( 'now.strftime( \'%c\' ): {}'.format( now.strftime( '%c' ) ) )
-

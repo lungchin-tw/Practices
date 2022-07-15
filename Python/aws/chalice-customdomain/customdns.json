@@ -1,0 +1,36 @@
+{
+    "Location": "https://route53.amazonaws.com/2013-04-01/hostedzone/Z06618633TQOWFB1F6FN",
+    "HostedZone": {
+        "Id": "/hostedzone/Z06618633TQOWFB1F6FN",
+        "Name": "jacky-chen-chalice-demo.amber.tw.",
+        "CallerReference": "12345",
+        "Config": {
+            "PrivateZone": false
+        },
+        "ResourceRecordSetCount": 2
+    },
+    "DelegationSet": {
+        "NameServers": [
+            "ns-592.awsdns-10.net",
+            "ns-1340.awsdns-39.org",
+            "ns-1640.awsdns-13.co.uk",
+            "ns-263.awsdns-32.com"
+        ]
+    }
+}
+
+{
+    "CertificateArn": "arn:aws:acm:eu-central-1:422686820116:certificate/ec5df977-58dd-43ad-b708-72742c5cc5e1"
+}
+
+{
+    "DomainName": "*.jacky-chen-chalice-demo.amber.tw",
+    "ValidationDomain": "*.jacky-chen-chalice-demo.amber.tw",
+    "ValidationStatus": "PENDING_VALIDATION",
+    "ResourceRecord": {
+        "Name": "_7ff4807290b819bd322604fd3fd3d957.jacky-chen-chalice-demo.amber.tw.",
+        "Type": "CNAME",
+        "Value": "_7e98400474bcbaf01bedaa2204bdb410.bwfqbhlrkg.acm-validations.aws."
+    },
+    "ValidationMethod": "DNS"
+}
