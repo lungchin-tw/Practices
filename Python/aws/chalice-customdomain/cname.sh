@@ -6,22 +6,19 @@ echo '[dirname $0]:' $(dirname $0)
 echo '[pwd]:' $(pwd)
 pushd $(dirname $0)
 
-aws route53 change-resource-record-sets \
---hosted-zone-id Z06618633TQOWFB1F6FN \
+pipenv run aws route53 change-resource-record-sets \
+--hosted-zone-id Z1008064K841EQ94S3NG \
 --change-batch \
 '{
 	"Changes": [{
 		"Action": "CREATE",
 		"ResourceRecordSet": {
-			"Name": "_7ff4807290b819bd322604fd3fd3d957.jacky-chen-chalice-demo.amber.tw.",
+			"Name": "_a8c76fc82ed66bf49ce335c81a574c93.jacky-chen-chalice-demo.com.",
 			"Type": "CNAME",
 			"TTL": 300,
 			"ResourceRecords": [{
-				"Value": "_7e98400474bcbaf01bedaa2204bdb410.bwfqbhlrkg.acm-validations.aws."
+				"Value": "_bedfc3e7d64d8761532b8e1716d16cb6.bwfqbhlrkg.acm-validations.aws."
 			}]
 		}
 	}]
-}'
-
-aws acm wait certificate-validated \
---certificate-arn arn:aws:acm:eu-central-1:422686820116:certificate/ec5df977-58dd-43ad-b708-72742c5cc5e1
+}' | tee cname.log

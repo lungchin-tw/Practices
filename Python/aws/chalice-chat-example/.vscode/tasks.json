@@ -19,7 +19,7 @@
       "label": "run chalice local",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "local", "|", "tee", "-ia", "chalice.log"]
+      "args": ["run", "chalice", "local"]
     }
   ]
 }

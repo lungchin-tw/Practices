@@ -1,9 +1,9 @@
 {
-    "Location": "https://route53.amazonaws.com/2013-04-01/hostedzone/Z06618633TQOWFB1F6FN",
+    "Location": "https://route53.amazonaws.com/2013-04-01/hostedzone/Z1008064K841EQ94S3NG",
     "HostedZone": {
-        "Id": "/hostedzone/Z06618633TQOWFB1F6FN",
-        "Name": "jacky-chen-chalice-demo.amber.tw.",
-        "CallerReference": "12345",
+        "Id": "/hostedzone/Z1008064K841EQ94S3NG",
+        "Name": "jacky-chen-chalice-demo.com.",
+        "CallerReference": "1234",
         "Config": {
             "PrivateZone": false
         },
@@ -11,26 +11,15 @@
     },
     "DelegationSet": {
         "NameServers": [
-            "ns-592.awsdns-10.net",
-            "ns-1340.awsdns-39.org",
-            "ns-1640.awsdns-13.co.uk",
-            "ns-263.awsdns-32.com"
+            "ns-1637.awsdns-12.co.uk",
+            "ns-162.awsdns-20.com",
+            "ns-1020.awsdns-63.net",
+            "ns-1518.awsdns-61.org"
         ]
     }
 }
 
-{
-    "CertificateArn": "arn:aws:acm:eu-central-1:422686820116:certificate/ec5df977-58dd-43ad-b708-72742c5cc5e1"
-}
 
 {
-    "DomainName": "*.jacky-chen-chalice-demo.amber.tw",
-    "ValidationDomain": "*.jacky-chen-chalice-demo.amber.tw",
-    "ValidationStatus": "PENDING_VALIDATION",
-    "ResourceRecord": {
-        "Name": "_7ff4807290b819bd322604fd3fd3d957.jacky-chen-chalice-demo.amber.tw.",
-        "Type": "CNAME",
-        "Value": "_7e98400474bcbaf01bedaa2204bdb410.bwfqbhlrkg.acm-validations.aws."
-    },
-    "ValidationMethod": "DNS"
+    "CertificateArn": "arn:aws:acm:eu-central-1:422686820116:certificate/77fc8cc2-a922-4b49-be3b-2d46ae3dcdde"
 }

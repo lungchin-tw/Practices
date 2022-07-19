@@ -14,12 +14,6 @@
       "type": "shell",
       "command": "pipenv",
       "args": ["run", "chalice", "delete"]
-    },
-    {
-      "label": "run chalice local",
-      "type": "shell",
-      "command": "pipenv",
-      "args": ["run", "chalice", "local", "|", "tee", "-ia", "chalice.log"]
     }
   ]
 }
