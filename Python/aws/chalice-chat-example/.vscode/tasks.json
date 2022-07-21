@@ -16,6 +16,19 @@
       "args": ["run", "chalice", "delete"]
     },
     {
+      "label": "cloudformation delete",
+      "type": "shell",
+      "command": "pipenv",
+      "args": [
+        "run",
+        "aws",
+        "cloudformation",
+        "delete-stack",
+        "--stack-name",
+        "JackyChenDemo"
+      ]
+    },
+    {
       "label": "run chalice local",
       "type": "shell",
       "command": "pipenv",

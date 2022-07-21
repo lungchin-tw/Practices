@@ -7,19 +7,19 @@
       "label": "chalice deploy",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "deploy", "--profile", "jacky"]
-    },
-    {
-      "label": "chalice delete",
-      "type": "shell",
-      "command": "pipenv",
-      "args": ["run", "chalice", "delete", "--profile", "jacky"]
+      "args": ["run", "chalice", "deploy"]
     },
     {
       "label": "run chalice local",
       "type": "shell",
       "command": "pipenv",
       "args": ["run", "chalice", "local"]
+    },
+    {
+      "label": "create sns topic",
+      "type": "shell",
+      "command": "pipenv",
+      "args": ["run", "aws", "sns", "create-topic", "--name", "Jacky-Chen-Demo"]
     }
   ]
 }

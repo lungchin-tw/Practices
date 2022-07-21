@@ -1,19 +1,36 @@
+from curses.ascii import NUL
+import sys
+
 from chalice import Chalice, NotFoundError, Response
 from urllib.parse import urlparse, parse_qs
 
-app = Chalice(app_name='jacky-chalice-demo')
-app.debug = True
+app = Chalice(app_name='jacky-chalice-demo', debug=True)
+
+def _func_desc(cls) -> str:
+    frame = sys._getframe(1)
+    if cls is None:
+        return f'{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
+    else:
+        return f'{cls}:{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
+    
 
 @app.route('/', methods=['GET'])
 def index_get():
     req = app.current_request
-    print('index_get')
+
+    env = {
+        'desc': _func_desc(None),
+        'name': __name__,
+        'package': __package__,
+        'spec': f'{__spec__}',
+    }
     return Response(
             status_code = 200,
             headers={'Content-Type': 'text/plain'},
             body={
                 'method': req.method,
                 'app': 'jacky-chalice-demo',
+                'env': env,
                 'introspect':req.to_dict(),
             }
         )

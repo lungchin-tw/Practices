@@ -1,5 +1,5 @@
 
-import json
+import json, sys
 from typing import *
 
 class User:
@@ -19,7 +19,9 @@ class User:
         return json.dumps(self.json(), indent=4)
 
     def json(self) -> dict:
+        frame = sys._getframe()
         return {
+                'method_desc': f'{__class__}:{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}',
                 'name': self.name,
                 'email': self.email,
                 'password': self.password,

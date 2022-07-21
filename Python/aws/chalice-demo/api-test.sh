@@ -17,4 +17,4 @@ pipenv run http $ENDPOINT/
 # echo '{"level": 10}' | pipenv run http PUT $ENDPOINT/kv/jacky --debug
 # pipenv run http GET $ENDPOINT/kv/jacky --debug
 # pipenv run http $ENDPOINT/compress --debug
-pipenv run http $ENDPOINT/cors
+# pipenv run http $ENDPOINT/cors

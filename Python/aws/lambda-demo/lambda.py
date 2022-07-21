@@ -1,4 +1,4 @@
-import json
+import json, os
 
 def handler(event, context):
     action = event.get('action')
@@ -7,6 +7,7 @@ def handler(event, context):
         'eventType': f'{type(event)}',
         'contextType': f'{type(context)}',
         'event': f'{event}',
+        'env': f'{os.environ.copy()}'
     }
 
     return {
