@@ -1,0 +1,265 @@
+{
+    "Reservations": [
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0c960b947cbb2dd16",
+                    "InstanceId": "i-0908f93ac8b40e376",
+                    "InstanceType": "c5.large",
+                    "KeyName": "gomuku",
+                    "LaunchTime": "2021-04-06T13:36:37+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "eu-central-1a",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-31-21-255.eu-central-1.compute.internal",
+                    "PrivateIpAddress": "172.31.21.255",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2022-06-09 06:58:35 GMT)",
+                    "SubnetId": "subnet-a167bccb",
+                    "VpcId": "vpc-8907f4e3",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "AttachTime": "2020-10-01T18:21:55+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-0597f2dfcbbe72132"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": true,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2020-10-01T18:21:54+00:00",
+                                "AttachmentId": "eni-attach-098b0695d66b63c56",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "security-group-gameserver",
+                                    "GroupId": "sg-0468749a74de6d8d3"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "02:cd:0c:da:ee:d4",
+                            "NetworkInterfaceId": "eni-0575f24812c1a86dc",
+                            "OwnerId": "422686820116",
+                            "PrivateDnsName": "ip-172-31-21-255.eu-central-1.compute.internal",
+                            "PrivateIpAddress": "172.31.21.255",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-31-21-255.eu-central-1.compute.internal",
+                                    "PrivateIpAddress": "172.31.21.255"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-a167bccb",
+                            "VpcId": "vpc-8907f4e3",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/sda1",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "security-group-gameserver",
+                            "GroupId": "sg-0468749a74de6d8d3"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 2
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2020-10-01T18:21:54+00:00",
+                    "PrivateDnsNameOptions": {},
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    }
+                }
+            ],
+            "OwnerId": "422686820116",
+            "ReservationId": "r-026d5910b085c364e"
+        },
+        {
+            "Groups": [],
+            "Instances": [
+                {
+                    "AmiLaunchIndex": 0,
+                    "ImageId": "ami-0dcc0ebde7b2e00db",
+                    "InstanceId": "i-02c3e91e43c8a5999",
+                    "InstanceType": "t2.micro",
+                    "KeyName": "gcms-wizard-test-rsa",
+                    "LaunchTime": "2022-03-28T16:00:20+00:00",
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "Placement": {
+                        "AvailabilityZone": "eu-central-1b",
+                        "GroupName": "",
+                        "Tenancy": "default"
+                    },
+                    "PrivateDnsName": "ip-172-31-41-55.eu-central-1.compute.internal",
+                    "PrivateIpAddress": "172.31.41.55",
+                    "ProductCodes": [],
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 80,
+                        "Name": "stopped"
+                    },
+                    "StateTransitionReason": "User initiated (2022-03-30 08:42:32 GMT)",
+                    "SubnetId": "subnet-713b2a0c",
+                    "VpcId": "vpc-8907f4e3",
+                    "Architecture": "x86_64",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/xvda",
+                            "Ebs": {
+                                "AttachTime": "2022-03-25T09:26:22+00:00",
+                                "DeleteOnTermination": true,
+                                "Status": "attached",
+                                "VolumeId": "vol-027887d1a5a953d80"
+                            }
+                        }
+                    ],
+                    "ClientToken": "",
+                    "EbsOptimized": false,
+                    "EnaSupport": true,
+                    "Hypervisor": "xen",
+                    "NetworkInterfaces": [
+                        {
+                            "Attachment": {
+                                "AttachTime": "2022-03-25T09:26:21+00:00",
+                                "AttachmentId": "eni-attach-0bf69f7f877442e56",
+                                "DeleteOnTermination": true,
+                                "DeviceIndex": 0,
+                                "Status": "attached",
+                                "NetworkCardIndex": 0
+                            },
+                            "Description": "",
+                            "Groups": [
+                                {
+                                    "GroupName": "gcms-wizard-to-amber",
+                                    "GroupId": "sg-05c1458610300d873"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "MacAddress": "06:bf:3d:b9:35:12",
+                            "NetworkInterfaceId": "eni-04fd6db7111808b9f",
+                            "OwnerId": "422686820116",
+                            "PrivateDnsName": "ip-172-31-41-55.eu-central-1.compute.internal",
+                            "PrivateIpAddress": "172.31.41.55",
+                            "PrivateIpAddresses": [
+                                {
+                                    "Primary": true,
+                                    "PrivateDnsName": "ip-172-31-41-55.eu-central-1.compute.internal",
+                                    "PrivateIpAddress": "172.31.41.55"
+                                }
+                            ],
+                            "SourceDestCheck": true,
+                            "Status": "in-use",
+                            "SubnetId": "subnet-713b2a0c",
+                            "VpcId": "vpc-8907f4e3",
+                            "InterfaceType": "interface"
+                        }
+                    ],
+                    "RootDeviceName": "/dev/xvda",
+                    "RootDeviceType": "ebs",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "gcms-wizard-to-amber",
+                            "GroupId": "sg-05c1458610300d873"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "StateReason": {
+                        "Code": "Client.UserInitiatedShutdown",
+                        "Message": "Client.UserInitiatedShutdown: User initiated shutdown"
+                    },
+                    "VirtualizationType": "hvm",
+                    "CpuOptions": {
+                        "CoreCount": 1,
+                        "ThreadsPerCore": 1
+                    },
+                    "CapacityReservationSpecification": {
+                        "CapacityReservationPreference": "open"
+                    },
+                    "HibernationOptions": {
+                        "Configured": false
+                    },
+                    "MetadataOptions": {
+                        "State": "applied",
+                        "HttpTokens": "optional",
+                        "HttpPutResponseHopLimit": 1,
+                        "HttpEndpoint": "enabled",
+                        "HttpProtocolIpv6": "disabled",
+                        "InstanceMetadataTags": "disabled"
+                    },
+                    "EnclaveOptions": {
+                        "Enabled": false
+                    },
+                    "PlatformDetails": "Linux/UNIX",
+                    "UsageOperation": "RunInstances",
+                    "UsageOperationUpdateTime": "2022-03-25T09:26:21+00:00",
+                    "PrivateDnsNameOptions": {
+                        "HostnameType": "ip-name",
+                        "EnableResourceNameDnsARecord": true,
+                        "EnableResourceNameDnsAAAARecord": false
+                    },
+                    "MaintenanceOptions": {
+                        "AutoRecovery": "default"
+                    }
+                }
+            ],
+            "OwnerId": "422686820116",
+            "ReservationId": "r-08a86165d64b32d21"
+        }
+    ]
+}

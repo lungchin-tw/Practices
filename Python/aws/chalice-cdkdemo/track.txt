@@ -1,0 +1,8 @@
+Outputs:
+chalice-cdkdemo.APIHandlerArn = arn:aws:lambda:eu-central-1:422686820116:function:chalice-cdkdemo-APIHandler-K5uAEslIn5F1
+chalice-cdkdemo.APIHandlerName = chalice-cdkdemo-APIHandler-K5uAEslIn5F1
+chalice-cdkdemo.AppTableName = chalice-cdkdemo-AppTable815C50BC-14EE9329IO1MW
+chalice-cdkdemo.EndpointURL = https://7b5eaznqwc.execute-api.eu-central-1.amazonaws.com/api/
+chalice-cdkdemo.RestAPIId = 7b5eaznqwc
+Stack ARN:
+arn:aws:cloudformation:eu-central-1:422686820116:stack/chalice-cdkdemo/d2659050-0746-11ed-b1bf-0a4928646bc8

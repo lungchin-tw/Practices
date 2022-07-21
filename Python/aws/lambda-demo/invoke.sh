@@ -9,10 +9,15 @@ pushd $(dirname $0)
 # METHOD 1:
 # which awscurl
 
-awscurl -v --region eu-central-1 --service lambda https://g6oypxkzesa5z5m7bznvgmbjti0krksb.lambda-url.eu-central-1.on.aws/
+# awscurl -v --region eu-central-1 --service lambda https://g6oypxkzesa5z5m7bznvgmbjti0krksb.lambda-url.eu-central-1.on.aws/
 
 # METHOD 2:
-# aws lambda invoke --function-name jacky-chen-url-function-exercise out
+# aws --profile jacky lambda invoke --function-name jacky-chen-hello-lambda out --log-type Tail \
+# --query 'LogResult' --output text | base64 -d | tee track.json
+
+aws --profile jacky lambda invoke --function-name jacky-chen-hello-lambda \
+--payload '{"action": "greeting"}' \
+response.json
 
 # aws lambda invoke --function-name jacky-chen-url-function-exercise --cli-binary-format raw-in-base64-out --payload '{"key": "value"}' out
 # sed -i'' -e 's/"//g' out
