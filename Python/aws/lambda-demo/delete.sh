@@ -14,3 +14,4 @@ aws --profile jacky iam detach-role-policy --role-name $ROLE_NAME \
 
 aws --profile jacky iam delete-role --role-name $ROLE_NAME
 aws --profile jacky lambda delete-function --function-name $FUNC_NAME
+aws --profile jacky apigatewayv2 delete-api --api-id 4r1ucm8pi3

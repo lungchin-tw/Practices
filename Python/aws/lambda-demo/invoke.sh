@@ -6,8 +6,8 @@ echo '[dirname $0]:' $(dirname $0)
 echo '[pwd]:' $(pwd)
 pushd $(dirname $0)
 
-ENDPOINT=https://zg55h5s7y9.execute-api.eu-central-1.amazonaws.com/jacky-chen-hello-lambda
-
+ENDPOINT=https://4r1ucm8pi3.execute-api.eu-central-1.amazonaws.com/jacky-chen-hello-lambda
+         
 # METHOD 1:
 # which awscurl
 
