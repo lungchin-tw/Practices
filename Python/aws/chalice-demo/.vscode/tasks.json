@@ -7,19 +7,39 @@
       "label": "chalice deploy",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "deploy", "--profile", "jacky"]
+      "args": [
+        "run",
+        "chalice",
+        "--debug",
+        "deploy",
+        "--profile",
+        "jacky",
+        "|",
+        "tee",
+        "deploy.log"
+      ]
     },
     {
       "label": "chalice delete",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "delete", "--profile", "jacky"]
+      "args": [
+        "run",
+        "chalice",
+        "--debug",
+        "delete",
+        "--profile",
+        "jacky",
+        "|",
+        "tee",
+        "delete.log"
+      ]
     },
     {
       "label": "run chalice local",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "local"]
+      "args": ["run", "chalice", "--debug", "local", "|", "tee", "local.log"]
     }
   ]
 }

@@ -6,6 +6,9 @@ echo '[dirname $0]:' $(dirname $0)
 echo '[pwd]:' $(pwd)
 pushd $(dirname $0)
 
+rm ./hello_lambda.zip
+zip ./hello_lambda.zip ./lambda.py
+
 TRACK=track.json
 echo "" >> $TRACK
 

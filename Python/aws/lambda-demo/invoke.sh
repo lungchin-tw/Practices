@@ -6,20 +6,30 @@ echo '[dirname $0]:' $(dirname $0)
 echo '[pwd]:' $(pwd)
 pushd $(dirname $0)
 
+ENDPOINT=https://zg55h5s7y9.execute-api.eu-central-1.amazonaws.com/jacky-chen-hello-lambda
+
 # METHOD 1:
 # which awscurl
 
-# awscurl -v --region eu-central-1 --service lambda https://g6oypxkzesa5z5m7bznvgmbjti0krksb.lambda-url.eu-central-1.on.aws/
+# awscurl -v --profile jacky --service execute-api -X POST -d '{"action": "greetings"}' \
+# https://gge57faqd3.execute-api.eu-central-1.amazonaws.com/default/jacky-chen-hello-lambda/
+
 
 # METHOD 2:
-# aws --profile jacky lambda invoke --function-name jacky-chen-hello-lambda out --log-type Tail \
-# --query 'LogResult' --output text | base64 -d | tee track.json
+# aws --debug --profile jacky lambda invoke --function-name jacky-chen-hello-lambda \
+# --payload '{"action": "greeting"}' \
+# response.json
 
-aws --profile jacky lambda invoke --function-name jacky-chen-hello-lambda \
---payload '{"action": "greeting"}' \
-response.json
+# aws --profile jacky lambda invoke --function-name jacky-chen-hello-lambda \
+# --payload '{"action": "greeting"}' \
+# response.json \
+# --log-type Tail \
+# --query 'LogResult' --output text | base64 -d
 
-# aws lambda invoke --function-name jacky-chen-url-function-exercise --cli-binary-format raw-in-base64-out --payload '{"key": "value"}' out
-# sed -i'' -e 's/"//g' out
-# sleep 15
-# aws logs get-log-events --log-group-name /aws/lambda/jacky-chen-url-function-exercise --log-stream-name $(cat out) --limit 5
+
+# METHOD: 3, use API Gateway
+echo '{"action":"greeting"}' | pipenv run http --debug \
+POST $ENDPOINT
+
+# curl -v -X POST -H 'content-type: application/json' \
+# --data '{"action":"greeting"}' $ENDPOINT
