@@ -1,25 +1,19 @@
 from curses.ascii import NUL
-import sys
+import chalicelib
+from urllib import response
 
 from chalice import Chalice, NotFoundError, Response
 from urllib.parse import urlparse, parse_qs
 
-app = Chalice(app_name='jacky-chalice-demo', debug=True)
-
-def _func_desc(cls) -> str:
-    frame = sys._getframe(1)
-    if cls is None:
-        return f'{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
-    else:
-        return f'{cls}:{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
-    
+app = Chalice(app_name=chalicelib.APP_NAME, debug=True)
+app.log.info(f'Loading {__file__}')
 
 @app.route('/', methods=['GET'])
 def index_get():
     req = app.current_request
 
     env = {
-        'desc': _func_desc(None),
+        'desc': chalicelib.func_desc(None),
         'name': __name__,
         'package': __package__,
         'spec': f'{__spec__}',
@@ -29,7 +23,7 @@ def index_get():
             headers={'Content-Type': 'text/plain'},
             body={
                 'method': req.method,
-                'app': 'jacky-chalice-demo',
+                'app': chalicelib.APP_NAME,
                 'env': env,
                 'introspect':req.to_dict(),
             }
@@ -41,7 +35,7 @@ def index_post():
     parsed = parse_qs(req.raw_body.decode())
     return {
         'method': req.method,
-        'app': 'jacky-chalice-demo',
+        'app': chalicelib.APP_NAME,
         'items': parsed.get('item', []),
     }
 
@@ -86,15 +80,15 @@ def data_of_user(id):
 import json, gzip
 
 app.api.binary_types.append('application/json')
-print(f'typeof(app.api.binary_types):{type(app.api.binary_types)}')
-print(f'app.api.binary_types:{app.api.binary_types}')
+app.log.info(f'typeof(app.api.binary_types):{type(app.api.binary_types)}')
+app.log.info(f'app.api.binary_types:{app.api.binary_types}')
 
 @app.route('/compress')
 def compress():
     req = app.current_request
     obj={
         'method': req.method,
-        'app': 'jacky-chalice-demo',
+        'app': chalicelib.APP_NAME,
         'introspect':req.to_dict(),
     }
 
@@ -120,3 +114,14 @@ def cors():
                     'cors': True
                 },
             )
+
+import requests
+
+@app.route('/deps')
+def dep():
+    resp = requests.get("https://google.com")
+    app.log.info(f'Response:{resp}')
+    return Response(
+        status_code=200,
+        body=resp.content
+    )
