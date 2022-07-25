@@ -7,17 +7,7 @@
       "label": "chalice deploy",
       "type": "shell",
       "command": "pipenv",
-      "args": [
-        "run",
-        "chalice",
-        "--debug",
-        "deploy",
-        "--profile",
-        "jacky",
-        "|",
-        "tee",
-        "deploy.log"
-      ]
+      "args": ["run", "chalice", "deploy", "--profile", "jacky"]
     },
     {
       "label": "chalice delete",
@@ -39,7 +29,7 @@
       "label": "run chalice local",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "--debug", "local", "|", "tee", "local.log"]
+      "args": ["run", "chalice", "--debug", "local"]
     }
   ]
 }
