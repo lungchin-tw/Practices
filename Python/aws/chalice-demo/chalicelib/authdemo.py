@@ -10,15 +10,19 @@ from chalice import (
 )
 
 from . import func_desc
+import logging
 
-print(f'Loading {__file__}, __name__:{__name__}')
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+logger.info(f'Loading {__file__}, __name__:{__name__}')
 
 BpAuth = Blueprint(__name__)
 
 auth_iam=IAMAuthorizer()
 @BpAuth.route('/auth/iam', methods=['GET'], authorizer=auth_iam)
 def auth_iam():
-    print(func_desc())
+    logger.info(func_desc())
     return Response(
         status_code=200,
         body={
@@ -34,7 +38,7 @@ auth_cognito=CognitoUserPoolAuthorizer(
 )
 @BpAuth.route('/auth/cognito', methods=['GET'], authorizer=auth_cognito)
 def auth_cognito():
-    print(func_desc())
+    logger.info(func_desc())
     return Response(
         status_code=200,
         body={
@@ -42,37 +46,10 @@ def auth_cognito():
         }
     )
 
-# auth_custom=CustomAuthorizer(
-#     'CustomAuth',
-#     header='Authorization',
-#     authorizer_uri=('arn:aws:apigateway:region:lambda:path/2015-03-31'
-#                     '/functions/arn:aws:lambda:eu-central-1:422686820116:function:jacky-chen-chalice-demo-dev/invocations'))
-# @BpAuth.route('auth/custom', methods=['GET'], authorizer=auth_custom)
-# def auth_custom():
-#     print(func_desc())
-#     return Response(
-#         status_code=200,
-#         body={
-#             'desc': func_desc()
-#         }
-#     )
-
-
-# @BpAuth.lambda_function()
-# def auth_lambda_func(event, context):
-#     print(func_desc())
-#     return Response(
-#         status_code=200,
-#         body={
-#             'desc': func_desc(),
-#             'event': f'{event}',
-#         }
-#     )
-
 
 @BpAuth.authorizer()
 def demo_authorizer(auth_request) -> AuthResponse:
-    print(func_desc())
+    logger.info(func_desc())
     token = auth_request.token
     if token == 'allow':
         return AuthResponse(
@@ -85,7 +62,7 @@ def demo_authorizer(auth_request) -> AuthResponse:
 
 @BpAuth.route('/auth/authorizer', authorizer=demo_authorizer)
 def auth_authorizer() -> Response:
-    print(func_desc())
+    logger.info(func_desc())
     return Response(
         status_code=200,
         body={
