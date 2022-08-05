@@ -12,8 +12,13 @@
       "label": "chalice deploy",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "deploy", "--profile", "jacky"],
-      "dependsOn": ["create resources"]
+      "args": ["run", "chalice", "deploy", "--profile", "jacky"]
+    },
+    {
+      "label": "deploy",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": ["create resources", "chalice deploy"]
     },
     {
       "label": "delete resources",
@@ -28,7 +33,7 @@
     },
     {
       "label": "delete",
-      "type": "process",
+      "type": "shell",
       "dependsOrder": "sequence",
       "dependsOn": ["chalice delete", "delete resources"]
     },

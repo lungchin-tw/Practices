@@ -10,7 +10,7 @@ pushd $(dirname $0)
 ENDPOINT=$(./get-rest-api-url.sh jacky jacky-chen-chalice-demo)
 # ENDPOINT=http://127.0.0.1:8000
 
-pipenv run http $ENDPOINT/env
+# pipenv run http $ENDPOINT/env
 # pipenv run http $ENDPOINT/
 # pipenv run http --form POST $ENDPOINT/ item=sword item=shield item=potion --debug
 # pipenv run http GET $ENDPOINT/users/jacky --debug
@@ -23,6 +23,5 @@ pipenv run http $ENDPOINT/env
 # pipenv run http $ENDPOINT/deps
 # pipenv run http $ENDPOINT/auth/coginto
 # pipenv run http $ENDPOINT/auth/iam
-# pipenv run http $ENDPOINT/auth/custom
 # pipenv run http $ENDPOINT/auth/authorizer
-pipenv run http -v $ENDPOINT/auth/authorizer 'Authorization: allow'
+# pipenv run http -v $ENDPOINT/auth/authorizer 'Authorization: allow'
