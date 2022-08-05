@@ -1,30 +1,49 @@
-from curses.ascii import NUL
-import chalicelib
-from urllib import response
+
+import os, json
+from chalicelib import func_desc
+from chalicelib.authdemo import BpAuth
+from chalicelib.eventdemo import BpEvent
+from chalicelib.lambda_demo import BpLambda
 
 from chalice import Chalice, NotFoundError, Response
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import parse_qs
 
-app = Chalice(app_name=chalicelib.APP_NAME, debug=True)
-app.log.info(f'Loading {__file__}')
+print(f'Loading {__file__}, __name__:{__name__}')
+
+app = Chalice(app_name='jacky-chen-chalice-demo', debug=True)
+app.register_blueprint(BpAuth)
+app.register_blueprint(BpEvent)
+app.register_blueprint(BpLambda)
+
+
+@app.route('/env', methods=['GET'])
+def env_get():
+    environ_str = json.dumps(os.environ.copy(), indent=4)
+    app.log.info(f'{func_desc()}, os.environ:{environ_str}')
+    req = app.current_request
+    return Response(
+        status_code=200,
+        body={
+            'desc': func_desc(),
+            'method': req.method,
+            'app': app.app_name,
+            'package': __package__,
+            'spec': f'{__spec__}',
+            'os.environ': environ_str,
+            'context': req.context
+        },
+    )
 
 @app.route('/', methods=['GET'])
 def index_get():
+    app.log.info(func_desc())
     req = app.current_request
-
-    env = {
-        'desc': chalicelib.func_desc(None),
-        'name': __name__,
-        'package': __package__,
-        'spec': f'{__spec__}',
-    }
     return Response(
             status_code = 200,
             headers={'Content-Type': 'text/plain'},
             body={
                 'method': req.method,
-                'app': chalicelib.APP_NAME,
-                'env': env,
+                'app': app.app_name,
                 'introspect':req.to_dict(),
             }
         )
@@ -35,7 +54,7 @@ def index_post():
     parsed = parse_qs(req.raw_body.decode())
     return {
         'method': req.method,
-        'app': chalicelib.APP_NAME,
+        'app': app.app_name,
         'items': parsed.get('item', []),
     }
 
@@ -88,7 +107,7 @@ def compress():
     req = app.current_request
     obj={
         'method': req.method,
-        'app': chalicelib.APP_NAME,
+        'app': app.app_name,
         'introspect':req.to_dict(),
     }
 

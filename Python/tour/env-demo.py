@@ -1,7 +1,8 @@
 
-from dis import code_info
+import sys
 from pathlib import Path
 
+print(f'sys.version_info:{sys.version_info}')
 print(f'__file__: {__file__}')
 print(f'Path(__file__): {Path(__file__)}')
 print(f'Path(__file__).resolve(): {Path(__file__).resolve()}')

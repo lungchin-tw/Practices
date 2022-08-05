@@ -35,3 +35,4 @@ Go/demo/src/csv-io-test/output.csv
 venv/
 .env/
 *.log
+Python/aws/chalice-demo/sdkdemo/

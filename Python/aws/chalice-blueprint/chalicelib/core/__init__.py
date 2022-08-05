@@ -1,7 +1,7 @@
 
 import sys
 
-print(f'Loading {__file__}, __name__:{__name__}')
+print(f'Loading {__file__}')
 
 def func_desc(cls=None) -> str:
     frame = sys._getframe(1)

@@ -4,26 +4,33 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "create resources",
+      "type": "shell",
+      "command": "./create-resources.sh"
+    },
+    {
       "label": "chalice deploy",
       "type": "shell",
       "command": "pipenv",
-      "args": ["run", "chalice", "deploy", "--profile", "jacky"]
+      "args": ["run", "chalice", "deploy", "--profile", "jacky"],
+      "dependsOn": ["create resources"]
+    },
+    {
+      "label": "delete resources",
+      "type": "shell",
+      "command": "./delete-resources.sh"
     },
     {
       "label": "chalice delete",
       "type": "shell",
       "command": "pipenv",
-      "args": [
-        "run",
-        "chalice",
-        "--debug",
-        "delete",
-        "--profile",
-        "jacky",
-        "|",
-        "tee",
-        "delete.log"
-      ]
+      "args": ["run", "chalice", "delete", "--profile", "jacky"]
+    },
+    {
+      "label": "delete",
+      "type": "process",
+      "dependsOrder": "sequence",
+      "dependsOn": ["chalice delete", "delete resources"]
     },
     {
       "label": "run chalice local",
