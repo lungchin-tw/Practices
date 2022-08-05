@@ -1,0 +1,45 @@
+{
+    "Resources": {
+        "MusicTable": {
+            "Type": "AWS::DynamoDB::Table",
+            "Properties": {
+                "TableName": "JackyChenMusicData",
+                "AttributeDefinitions": [
+                    {
+                        "AttributeName": "Album",
+                        "AttributeType": "S"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "AttributeType": "S"
+                    }
+                ],
+                "KeySchema": [
+                    {
+                        "AttributeName": "Album",
+                        "KeyType": "HASH"
+                    },
+                    {
+                        "AttributeName": "Artist",
+                        "KeyType": "RANGE"
+                    }
+                ],
+                "ProvisionedThroughput": {
+                    "ReadCapacityUnits": "5",
+                    "WriteCapacityUnits": "5"
+                }
+            }
+        },
+        "APIHandler": {
+            "Properties": {
+                "Environment": {
+                    "Variables": {
+                        "MUSIC_TABLE": {
+                            "Ref": "MusicTable"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
