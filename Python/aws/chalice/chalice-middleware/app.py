@@ -8,7 +8,6 @@ from chalice import (
     Chalice,
     Response,
     ChaliceUnhandledError,
-    ConvertToMiddleware,
 )
 
 from chalicelib.core import func_desc
@@ -16,7 +15,7 @@ from chalicelib.core import func_desc
 
 app = Chalice(app_name='jacky-chen-chalice-middleware')
 
-@app.middleware('')
+@app.middleware('all')
 def demo_middleware(event, get_response):
     try:
         logger.info({
