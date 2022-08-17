@@ -9,6 +9,7 @@ chalice = "*"
 "chalice[cdkv2]" = "*"
 httpie = "*"
 pytest = "*"
+aws_lambda_powertools = "*"
 
 [dev-packages]
 pytest = "*"
