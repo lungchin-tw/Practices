@@ -7,6 +7,7 @@ import  random, datetime
 
 
 logger = getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 logger.info(f'Loading {__file__}, __name__:{__name__}')
 
 def wraplog(func):
