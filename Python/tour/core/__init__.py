@@ -11,14 +11,13 @@ def getLogger(name: str):
     return logger
 
 
-def func_desc(cls=None) -> str:
+def func_desc(instance=None) -> str:
     frame = sys._getframe(1)
-    if cls is None:
-        return f'{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
+    info = f'{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
+    if instance is None:
+        return info
     else:
-        return f'{cls}:{frame.f_code.co_name}, {frame.f_code.co_filename}:{frame.f_lineno}'
-
-
+        return f'{instance.__class__.__name__}:{info}'
 
 
 logger = getLogger(__name__)
