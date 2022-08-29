@@ -4,9 +4,10 @@ import sys
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
-logger.info(f'Loading {__file__}, \
-            __name__:{__name__}, \
-            sys.version: {sys.version}')
+logger.info(f'\n\
+Loading {__file__}\n\
+__name__:{__name__}\n\
+sys.version: {sys.version}')
 
 def test_dict():
     kv = {}
