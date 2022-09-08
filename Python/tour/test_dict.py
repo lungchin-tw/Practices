@@ -14,9 +14,6 @@ def test_dict():
     code = 100
     key = f'{code}'
     logger.info(f'Before: Dict={kv}')
-    if key not in kv:
-        kv[key] = 1
-
-    kv[key] = kv[key] + 1
+    kv[key] = kv.get(key, 0) + 1
     logger.info(f'After: Dict={kv}')
     
