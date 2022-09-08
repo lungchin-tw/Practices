@@ -1,22 +1,31 @@
 
 
-# class declaration
+# class declaration, (object) could be omitted
 class DemoClass(object):
-    # static method
-    def static_method() -> str:
-        return 'this is a static method'
 
     _counter = 0 # class variable
+
+    # instance method
+    def instance_method(self):
+        print('instance method')
+
+    # static method
+    def static_method() -> str:
+        return f'this is a static method:{ DemoClass._counter = }'
 
     @classmethod # class method
     def getCounter(cls):
         print(f'getCounter, cls:{cls}')
         return cls._counter
-        
 
-    # instance method
-    def instance_method(self):
-        print('instance method')
+
+    @property # instance property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
 
 
     # dunder/magic methods
@@ -30,17 +39,10 @@ class DemoClass(object):
         self._name = name # instance variable
         self.__class__._counter += 1 # class variable
 
-    @property
-    def counter(cls):
-        return cls._counter
 
-    @property # instance property
-    def name(self):
-        return self._name
+    
 
-    @name.setter
-    def name(self, value):
-        self._name = value
+    
 
 
 

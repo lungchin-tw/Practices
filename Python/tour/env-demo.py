@@ -11,6 +11,7 @@ print(f'platform.python_version():{platform.python_version()}')
 print(f'platform.python_branch():{platform.python_branch()}')
 print(f'platform.python_revision():{platform.python_revision()}')
 
+print(f'sys.path:{sys.path}')
 print(f'sys.version_info:{sys.version_info}')
 print(f'__file__: {__file__}')
 print(f'Path(__file__): {Path(__file__)}')
