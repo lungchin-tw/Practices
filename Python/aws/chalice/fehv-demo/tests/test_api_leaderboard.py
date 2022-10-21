@@ -1,5 +1,5 @@
 
-from app import app
+from pytest import mark
 from chalicelib import func_desc
 import http
 import logging
@@ -10,6 +10,7 @@ logger.setLevel(logging.DEBUG)
 logger.info(f'Loading {__file__}, __name__:{__name__}')
 
 
+@mark.leaderboard
 def test_api_driver_leaderboard(test_client):
     logger.info(func_desc())
     rsp = test_client.http.get(
@@ -20,6 +21,7 @@ def test_api_driver_leaderboard(test_client):
     assert rsp.status_code == http.HTTPStatus.OK
 
 
+@mark.leaderboard
 def test_api_team_leaderboard(test_client):
     logger.info(func_desc())
     rsp = test_client.http.get(
