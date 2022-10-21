@@ -30,3 +30,10 @@ class DemoModel(object):
 
         logger.info(f'All Bucket:{s3.list_buckets()}')
         s3.put_object(Bucket=bucket_name, Key=self.name, Body=self.value)
+
+    def fetch_from_s3(self, bucket_name: str, region: str):
+        s3 = boto3.client('s3', region_name=region)
+        rsp = s3.get_object(Bucket=bucket_name, Key=self.name)
+        logger.info(f'GetObject:{rsp}')
+        self._value = rsp['Body'].read().decode('utf-8')
+        logger.info(f'FetchedValue:{self.value}')
