@@ -1,5 +1,4 @@
 
-import os
 import boto3
 import logging
 logger = logging.getLogger(__name__)
@@ -28,7 +27,7 @@ class DemoModel(object):
             CreateBucketConfiguration=constraint,
         )
 
-        logger.info(f'All Bucket:{s3.list_buckets()}')
+        logger.info(f'Region:{region}, All Bucket:{s3.list_buckets()}')
         s3.put_object(Bucket=bucket_name, Key=self.name, Body=self.value)
 
     def fetch_from_s3(self, bucket_name: str, region: str):
