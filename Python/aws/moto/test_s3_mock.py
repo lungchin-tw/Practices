@@ -13,9 +13,9 @@ def impl_test_s3_mock():
         'Senior Online Engineer',
     )
 
-    model_input.new_to_s3(env.BUCKET_NAME, env.REGION)
+    model_input.new_to_s3(env.bucket_name(), env.region())
     model_fetch = DemoModel(key)
-    model_fetch.fetch_from_s3(env.BUCKET_NAME, env.REGION)
+    model_fetch.fetch_from_s3(env.bucket_name(), env.region())
     assert model_fetch.value == model_input.value
 
 
