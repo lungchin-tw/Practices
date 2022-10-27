@@ -1,10 +1,10 @@
 
-import http, logging
+from chalicelib import func_desc
+import http
+import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-from chalicelib import func_desc
-from .fixture import *
 
 logger.info(f'Loading {__file__}, __name__:{__name__}')
 
@@ -15,7 +15,7 @@ def test_auth_allow(test_client):
         '/auth/authorizer',
         headers={
             'Accept': '*/*',
-            'Authorization':'allow',
+            'Authorization': 'allow',
         },
     )
     logger.info(f'Status:{rsp.status_code}, Body:{rsp.json_body}')
@@ -28,11 +28,12 @@ def test_auth_forbidden(test_client):
         '/auth/authorizer',
         headers={
             'Accept': '*/*',
-            'Authorization':'deny',
+            'Authorization': 'deny',
         },
     )
     logger.info(f'Status:{rsp.status_code}, Body:{rsp.json_body}')
     assert rsp.status_code == http.HTTPStatus.FORBIDDEN
+
 
 def test_auth_unauthorized(test_client):
     logger.info(func_desc())
@@ -44,4 +45,3 @@ def test_auth_unauthorized(test_client):
     )
     logger.info(f'Status:{rsp.status_code}, Body:{rsp.json_body}')
     assert rsp.status_code == http.HTTPStatus.UNAUTHORIZED
-        
