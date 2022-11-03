@@ -13,6 +13,7 @@ aws_lambda_powertools = "*"
 
 [dev-packages]
 pytest = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"

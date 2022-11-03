@@ -37,3 +37,4 @@ venv/
 .env/
 *.log
 
+Python/aws/chalice/chalice-auth-demo/tests/pytest.ini

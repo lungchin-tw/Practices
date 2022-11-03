@@ -1,0 +1,7 @@
+[pytest]
+log_cli = 1
+log_cli_level = INFO
+env=
+    AWS_ACCESS_KEY=
+    AWS_SECRET_KEY=
+    AWS_REGION=
