@@ -41,14 +41,25 @@ class DemoUser(Model):
 
 
 
-def test_create_table():
+from moto import mock_dynamodb
+
+
+@mock_dynamodb
+def test_mock_dynamodb(aws_credentials):
+    impl_test_create_table()
+    impl_test_create_item()
+    impl_test_get_item()
+    impl_test_delete_table()
+    
+
+def impl_test_create_table():
     if not DemoUser.exists():
         DemoUser.create_table(wait=True)
 
     logger.info(f'DemoUser.describe_table():{DemoUser.describe_table()}')
 
 
-def test_create_item():
+def impl_test_create_item():
     assert DemoUser.exists() == True
 
     DemoUser(
@@ -63,10 +74,8 @@ def test_create_item():
         age=53,
     ).save()
 
-    
 
-
-def test_get_item():
+def impl_test_get_item():
     assert DemoUser.exists() == True
     item = DemoUser.get('1000')
     logger.info(f'item:{item.attribute_values}')
@@ -75,6 +84,6 @@ def test_get_item():
         logger.info(f'item:{item.attribute_values}')
 
 
-def test_delete_table():
+def impl_test_delete_table():
     if DemoUser.exists():
         DemoUser.delete_table()
