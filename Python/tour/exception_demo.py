@@ -6,13 +6,14 @@ print( '\n{}\n'.format( sys.version ) )
 
 
 try:
+    a = 1
     print(x)
 except NameError as e:
     print( 'Exception: NameError, {}'.format(e) )
 except Exception as e:
     print( 'An exception occurred!!!' )
 finally:
-    print( 'Finally block.' )
+    print( f'Finally block. a={a}' )
 
 
 print( '' )

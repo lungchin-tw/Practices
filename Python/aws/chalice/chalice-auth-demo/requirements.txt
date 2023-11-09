@@ -3,3 +3,4 @@ httpie
 pytest
 pytest-env
 aws-requests-auth
+pytest-env

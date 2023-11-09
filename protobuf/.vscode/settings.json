@@ -1,0 +1,10 @@
+{
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.vetOnSave": "off",
+  "go.inferGopath": false,
+  "protoc": {
+    "path": "/usr/bin/protoc",
+    "compile_on_save": false,
+    "options": ["--proto_path=${workspaceRoot}", "--go_out=${workspaceRoot}"]
+  }
+}

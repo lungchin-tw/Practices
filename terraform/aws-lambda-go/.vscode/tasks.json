@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "go: build",
+      "type": "shell",
+      "command": "go",
+      "args": ["build", "-o", "target/golambdabin", "src/main.go"],
+      "options": {
+        "env": {
+          "GOOS": "linux",
+          "GOARCH": "amd64"
+        }
+      }
+    },
+    {
+      "label": "zip: bin",
+      "type": "shell",
+      "command": "zip",
+      "args": ["target/golambdabin.zip", "target/golambdabin"]
+    }
+  ]
+}

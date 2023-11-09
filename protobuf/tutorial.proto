@@ -1,0 +1,60 @@
+
+syntax = "proto3";
+
+package tutorial;
+
+option go_package = "./tutorialpb";
+
+
+message Int32Position {
+    int32 x = 1;
+    int32 y = 2;
+    int32 z = 3;
+}
+
+
+message Int32Range {
+    Int32Position start = 1;
+    Int32Position end = 2;
+}
+
+
+message Item {
+    string item_id = 1; // e.g. "desk_1", "chair_6"
+    bytes nft_token = 2;      // need to check nft token type. need to think more...
+	bool stackable = 3;
+}
+
+
+message LandItemTransform {
+    Int32Position position = 1;
+    int32 orientation = 2;
+}
+
+
+message LandPlaceable {
+    Item item = 1;
+    string instance_id = 2; // “desk_1-123e4567-e89b-12d3-a456-426614174000” globally unique 
+    LandItemTransform transform = 3;
+    Int32Range range = 4;
+}
+
+message LandMaterial {
+    LandPlaceable placeable = 1;
+}
+
+message InventoryItem {
+    Item item = 1;
+    string instance_id = 2; // “desk_1-123e4567-e89b-12d3-a456-426614174000” globally unique 
+    int32 quantity = 3;
+}
+
+message LandRequest {
+    bytes land_id = 1;
+}
+
+message LandResponse {
+    LandRequest request = 1;
+    repeated LandPlaceable placeables = 2;
+    repeated LandMaterial materials = 3;
+}

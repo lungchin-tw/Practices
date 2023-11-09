@@ -23,16 +23,26 @@ type Game struct {
 
 func TestReflectSliceCase01(t *testing.T) {
 	slice := make([]int, 10)
-	v := reflect.ValueOf(slice)
-	t.Log("Kind:", v.Kind())
-	t.Log("Len:", v.Len())
+	{
+		v := reflect.ValueOf(slice)
+		t.Log("Kind:", v.Kind())
+		t.Log("Len:", v.Len())
+	}
 }
 
 func TestReflectArrayCase01(t *testing.T) {
 	array := [2]int{}
-	v := reflect.ValueOf(array)
-	t.Log("Kind:", v.Kind())
-	t.Log("Len:", v.Len())
+	{
+		v := reflect.ValueOf(array)
+		t.Log("Kind:", v.Kind())
+		t.Log("Len:", v.Len())
+	}
+
+	{
+		v := reflect.ValueOf(&array)
+		t.Log("Kind:", v.Kind())
+		t.Log("Len:", v.Len())
+	}
 }
 
 func TestReflectStructCase01(t *testing.T) {

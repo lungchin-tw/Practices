@@ -1,0 +1,34 @@
+package atest
+
+import (
+	"fmt"
+	"io/ioutil"
+	"net/http"
+	"testing"
+)
+
+func TestWardrobe(t *testing.T) {
+	url := "https://wardrobe-api.devnet.zepetox.io/land/LID%2523324b644e-0b71-4e0f-9947-c925331315d1?access_token=eyJraWQiOiJMcWE3UCtNUHo1dFlsUFJLbHVVcGxuZmQraGprOFYyMEFVV3NiOWc5bTNFPSIsImFsZyI6IlJTMjU2In0.eyJhdF9oYXNoIjoiX1AtUG1wQl9uVHhzcVhRNFlHUmwwUSIsInN1YiI6IjljZDhhNjUyLTNmNTgtNGQ2NS1hZTlhLTQ5YjQ3ODNkMzRkOCIsImNvZ25pdG86Z3JvdXBzIjpbInVzLWVhc3QtMl9oYkltZDZPZ25fR29vZ2xlIl0sImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMi5hbWF6b25hd3MuY29tXC91cy1lYXN0LTJfaGJJbWQ2T2duIiwiY29nbml0bzp1c2VybmFtZSI6Ikdvb2dsZV8xMTEyNTAwNzg2NjkzMTgwNTM4NDYiLCJub25jZSI6IlktOURLdUR3UXY5QWdGbFJYbWxEaTRYM2RtcExKU2MwNzJZaU1sdWpWbm1GTmxwWmZndl8zQzZIUURsdTVLTW83ZUpQMDNkeU0tUkg1eWtYZlI4c1BZSWdiVFdhYzUzRGhOdUMwSGM2UzlWcUYxYnpxRjhtMUVSaUdJZjJ1X1BpZXh2SldYLThNdS1wYVZwRDRvU080Smxha3E0VVpBMDg0aXVMTURRM2s0byIsImF1ZCI6IjN1Nmxnc3VlMm1nc2ZubGc2M3RoYnIwbms5IiwiaWRlbnRpdGllcyI6W3sidXNlcklkIjoiMTExMjUwMDc4NjY5MzE4MDUzODQ2IiwicHJvdmlkZXJOYW1lIjoiR29vZ2xlIiwicHJvdmlkZXJUeXBlIjoiR29vZ2xlIiwiaXNzdWVyIjpudWxsLCJwcmltYXJ5IjoidHJ1ZSIsImRhdGVDcmVhdGVkIjoiMTY3MDkwOTM4MTg0MyJ9XSwidG9rZW5fdXNlIjoiaWQiLCJhdXRoX3RpbWUiOjE2NzY0MzA4NjksImV4cCI6MTY3NjUxNzI2OSwiaWF0IjoxNjc2NDMwODY5LCJqdGkiOiIwY2YzNmEzZi02ZTRmLTRkOGQtOTVjOC01NjI2NWEwOGM0MjUiLCJlbWFpbCI6ImphY2t5LmNoZW5AYW1iZXJzdHVkaW8uY29tIn0.oWIXikB73A6uS0LeLVnY9Z8T__8jICjgf3bVyNFquJm5MvbPOERgqTuOhx6xN4Sm4Hemi0_whn0ovF6YSPWSZ8FFfmqxYKxt-p0nP83qePWJZ0MnNihLIt42VoPj1y-qmEjgZ1Me56nborOoUg1DUoLUPjaaFxIaH1PvlqdYoMhMGDOZil6l2si8W41kRKVxuLdqwgmJgEEs3rIeWxHWlEG7Ngh1hFsUnGs3oePyrcBqeXMddaIWar6rnonVdFmW2LFk5HuBSWJT2CpOBgxZB_T67pxBueDD3vCzF3N5K4y8oPItddDr0fItJ1x_nCDMSN9HaYppV6qPBnnHvF4eQg"
+	method := "GET"
+
+	client := &http.Client{}
+	req, err := http.NewRequest(method, url, nil)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	res, err := client.Do(req)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer res.Body.Close()
+
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(body))
+}

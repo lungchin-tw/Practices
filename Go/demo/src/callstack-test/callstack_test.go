@@ -27,6 +27,8 @@ func DoNestCallStackCase01(t *testing.T) {
 }
 
 func DoNestNestCallStackCase01(t *testing.T) {
-	frame := CurFrame(4)
+	frame := CurFrame(2)
+	t.Logf("%v:%v", frame.Function, frame.Line)
+	frame = CurFrame(4)
 	t.Logf("%v:%v", frame.Function, frame.Line)
 }
